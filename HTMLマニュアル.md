@@ -16,9 +16,8 @@ HTMLの編集自体はWindowsに標準搭載されているメモ帳等でも可
 
 なお、HTMLを「ブラウザ」で開くとホームページがどのような見た目になるかを確認することができますが **編集することはできません** のでご注意ください。  
 
-:::note info
+[!TIP]
 リポジトリフォルダは今後ホームページの編集をする際によく使いますので、リポジトリフォルダのショートカットを作ってデスクトップに置いておくと便利です。  
-:::
 
 ## ステップ3: テキストを編集する
 
@@ -180,20 +179,20 @@ alt（代替テキスト）はExample imageのままでもさほど支障はあ�
     OB/OGは以下のような構造になっています。
     年度を増やしたい場合には`<li class="member-name-li">`と`</li>`に囲まれている部分をコピー＆ペーストして編集してください。
 
-```html
-<li class="member-li-wrapp" data-more="">
-    <h4>OB / OG</h4>
-        <ul class="member-li">
-            <li class="member-name-li">
-                <p class="member-year">1978年度</p>
-                  <div class="member-name">
-                    <p>山田　花 (芦田先端技研株式会社)</p>
-                    <p>佐々木　一郎 (星明技術研究所　研究員)</p>
-                  </div>
-            </li>    
-        </ul>
-</li>
-```
+    ```html
+    <li class="member-li-wrapp" data-more="">
+        <h4>OB / OG</h4>
+            <ul class="member-li">
+                <li class="member-name-li">
+                    <p class="member-year">1978年度</p>
+                    <div class="member-name">
+                        <p>山田　花 (芦田先端技研株式会社)</p>
+                        <p>佐々木　一郎 (星明技術研究所　研究員)</p>
+                    </div>
+                </li>    
+            </ul>
+    </li>
+    ```
 
 - 項目を増やしたい場合  
 `<li class="member-li-wrapp" data-more="">`と`</li>`に囲まれた部分をコピー＆ペーストして編集してください。  
