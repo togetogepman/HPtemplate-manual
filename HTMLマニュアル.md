@@ -101,29 +101,29 @@ headでは、検索したときに出てくるディスクリプション、ブ�
     `<div class="theme-body">`と`</div>`に囲まれている部分を編集します。  
     画像を表示させる場合、上部、文章の途中、下部に表示させる3つの表現が可能です。
 
-文章の途中に画像を表示させたい場合は、以下のように記述してください。
+    文章の途中に画像を表示させたい場合は、以下のように記述してください。
 
-```html
-<li class="theme-item">
-    <h3 class="h3-number">人工知能における機械学習アルゴリズムの最適化</h3>
-    <div class="theme-body">
-        <p>
-            当研究では、機械学習アルゴリズムの精度と効率を向上させる方法を探求しています。特に、データの前処理、特徴選択、モデル構築の各ステップでの最新の技術を組み合わせることに重点を置いています。
-        </p>
-        <div class="theme-img">
-            <picture>
-                <img src="./assets/images/sample-ph-02.png" alt="Example image"/>
-            </picture>
+    ```html
+    <li class="theme-item">
+        <h3 class="h3-number">人工知能における機械学習アルゴリズムの最適化</h3>
+        <div class="theme-body">
+            <p>
+                当研究では、機械学習アルゴリズムの精度と効率を向上させる方法を探求しています。特に、データの前処理、特徴選択、モデル構築の各ステップでの最新の技術を組み合わせることに重点を置いています。
+            </p>
+            <div class="theme-img">
+                <picture>
+                    <img src="./assets/images/sample-ph-02.png" alt="Example image"/>
+                </picture>
+            </div>
+            <p>
+                この研究により、さまざまな分野での応用が可能なより高度な人工知能システムの開発を目指しています。例えば、医療診断、金融市場分析、自動運転車の技術など、社会に大きな影響を与える分野に貢献することを期待しています。
+            </p>
         </div>
-        <p>
-            この研究により、さまざまな分野での応用が可能なより高度な人工知能システムの開発を目指しています。例えば、医療診断、金融市場分析、自動運転車の技術など、社会に大きな影響を与える分野に貢献することを期待しています。
-        </p>
-    </div>
-</li>
-```
+    </li>
+    ```
 
-imgのsrcには表示させたい画像のパスを入力してください。  
-alt（代替テキスト）はExample imageのままでもさほど支障はありませんが、画像の読み込み失敗時などに若干の影響が出る場合があります。  
+    imgのsrcには表示させたい画像のパスを入力してください。  
+    alt（代替テキスト）はExample imageのままでもさほど支障はありませんが、画像の読み込み失敗時などに若干の影響が出る場合があります。  
 
 ### 研究室のモットーを編集する
 
@@ -203,31 +203,31 @@ alt（代替テキスト）はExample imageのままでもさほど支障はあ�
 肩書と氏名は以下のような構造になっています。  
 各テキストを編集してください。
 
-```html
-<div class="profile-info-text-wrapp">
-    <p class="profile-info-position">教授</p>
-    <div class="profile-info-name">
-        <p class="profile-info-name-ja">佐藤 太郎</p>
-        <p>Sato Taro</p>
+    ```html
+    <div class="profile-info-text-wrapp">
+        <p class="profile-info-position">教授</p>
+        <div class="profile-info-name">
+            <p class="profile-info-name-ja">佐藤 太郎</p>
+            <p>Sato Taro</p>
+        </div>
     </div>
-</div>
-```
+    ```
 
 - Google Scholarなどの外部リンクを編集する
 Google ScholarやJREC-INなどの外部リンクを記載する場合は以下のように記述してください。  
 a hrefの「#」に外部リンクのURLを記述してください。
 
-```html
-<div class="profile-info-link-wrapp is-link">
-    <a href="#" target="_blank" class="link"
-        >Google Scholar<span class="ico"
-            ><svg viewBox="0 0 14 12">
-                <use
-                    xlink:href="./assets/images/ico/splite.svg#ico-link"
-                ></use></svg></span
-    ></a>
-</div>
-```
+    ```html
+    <div class="profile-info-link-wrapp is-link">
+        <a href="#" target="_blank" class="link"
+            >Google Scholar<span class="ico"
+                ><svg viewBox="0 0 14 12">
+                    <use
+                        xlink:href="./assets/images/ico/splite.svg#ico-link"
+                    ></use></svg></span
+        ></a>
+    </div>
+    ```
 
 - 経歴などを編集する  
     サンプルでは項目として経歴、受賞歴、所属学会を設定しています。項目名の変更は`<h4>`のテキストを編集します。
@@ -316,12 +316,12 @@ a hrefの「#」に外部リンクのURLを記述してください。
 - メールアドレスの編集  
 迷惑メール対策としてメールアドレスは表示させず、ボタンを押すことでコピーする仕様となっています（ボタンを押してもメーラーは立ち上がりません）  
 
-問い合わせ用のメールアドレスは`input`内にある`value=`に入力してください。  
+    問い合わせ用のメールアドレスは`input`内にある`value=`に入力してください。  
 
-```html
-<input id="tagText" type="text" value="sample@test.co.jp" hidden readonly
-/>  
-```
+    ```html
+    <input id="tagText" type="text" value="sample@test.co.jp" hidden readonly
+    />  
+    ```
 
 - 住所の編集
 `<div class="contact-adress">`と`</div>`に囲まれている部分の郵便番号、住所を差し替えてください。
@@ -376,13 +376,19 @@ jpgとpngはWindowsのペイント等で作成編集できますが、svgやico�
 -->
 
 - apple_touch_icon.png
+
     主にiOSデバイスでウェブサイトをホーム画面に追加する際に使用されるアイコンを指定するために用いられます。180×180サイズを推奨しています。
 - favicon.ico
+
     ブラウザのタブやブックマークに表示されるファビコンです。32×32サイズを推奨しています。
+
 - icon.svg
+
     ？？？
     <!--
     納品物ではfavicon.svgだったが、どこにも参照されていないのでおそらくicon.svgだと思う。favicon.icoと使い分けてこのサイズのものを用意する意味がよくわからん…windowsにショートカット作るときに使うとか？
     -->
+    
 - ogp.png
+
     SNSでシェアされたときに表示される画像です。1200×630サイズを推奨しています。
