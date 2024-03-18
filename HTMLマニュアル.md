@@ -40,24 +40,22 @@ headでは、検索したときに出てくるディスクリプション、ブ�
 ※<meta property="og:url" content="" />の部分にURL入れようねはどう解説したものか…
 ※<meta property="og:image" content="./assets/images/common/ogp.jpg" />のパスを絶対パスにしようねはどう解説したものか。相対パスでもいけるのか？
 -->
-※画像サイズ見る限り
+<!--※画像サイズ見る限り
 
-```html
-    <!-- 32×32 -->
-    <link rel="icon" href="./assets/images/common/favicon.ico" sizes="any" />
-    <!-- 180×180 -->
-    <link
-      rel="icon"
-      href="./assets/images/common/icon.svg"
-      type="image/svg+xml"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="./assets/images/common/apple-touch-icon.png"
-    />
-```
+    ```html
+        <link rel="icon" href="./assets/images/common/favicon.ico" sizes="any" />
+        <link
+        rel="icon"
+        href="./assets/images/common/icon.svg"
+        type="image/svg+xml"
+        />
+        <link
+        rel="apple-touch-icon"
+        href="./assets/images/common/apple-touch-icon.png"
+        />
+    ```
 
-なんじゃないか？
+なんじゃないか？-->
 <!--
 というか、この部分難しいからまるっと消してしまってもいいよという解説をつけたほうがいいような気もするが…
 -->
@@ -199,9 +197,10 @@ headでは、検索したときに出てくるディスクリプション、ブ�
 
 `<!-- START プロフィール -->`と`<!-- END プロフィール -->`に囲まれている部分です。
 
-- 肩書、氏名を編集する  
-肩書と氏名は以下のような構造になっています。  
-各テキストを編集してください。
+- 肩書、氏名を編集する 
+  
+    肩書と氏名は以下のような構造になっています。  
+    各テキストを編集してください。
 
     ```html
     <div class="profile-info-text-wrapp">
@@ -214,8 +213,9 @@ headでは、検索したときに出てくるディスクリプション、ブ�
     ```
 
 - Google Scholarなどの外部リンクを編集する
-Google ScholarやJREC-INなどの外部リンクを記載する場合は以下のように記述してください。  
-a hrefの「#」に外部リンクのURLを記述してください。
+
+    Google ScholarやJREC-INなどの外部リンクを記載する場合は以下のように記述してください。  
+    a hrefの「#」に外部リンクのURLを記述してください。
 
     ```html
     <div class="profile-info-link-wrapp is-link">
@@ -230,9 +230,11 @@ a hrefの「#」に外部リンクのURLを記述してください。
     ```
 
 - 経歴などを編集する  
+
     サンプルでは項目として経歴、受賞歴、所属学会を設定しています。項目名の変更は`<h4>`のテキストを編集します。
 
 - 年を入れた表記
+ 
     各項目に年を入れる場合は以下のように記述してください。  
 
     ```html
@@ -254,6 +256,7 @@ a hrefの「#」に外部リンクのURLを記述してください。
     異なる年の項目を追加したい場合は`<li class="profile-history-text-wrapp">`と`</li>`に囲まれた部分をコピー＆ペーストして編集してください。  
 
 - 年を入れない表記
+
     項目に年を入れない場合は以下のように記述してください。
 
     ```html
@@ -272,6 +275,7 @@ a hrefの「#」に外部リンクのURLを記述してください。
     ```
 
 - 項目を削除する  
+
     上記をすべて削除してください。  
 
 ### 論文・研究発表を編集する
@@ -279,32 +283,36 @@ a hrefの「#」に外部リンクのURLを記述してください。
 `<!-- START 論文・研究発表 -->`と`<!-- END 論文・研究発表 -->`に囲まれている部分です。  
 
 1. タブを編集する  
-テンプレートではタブとして、論文誌、学会発表、外部記事、書籍、その他の5つを設定しています。  
-`<div class="swiper-slide" data-index="論⽂誌">論⽂誌</div>`を編集してください。
 
-`data-index=`はグローバルナビのアコーディオンに出現する部分にな
-りますので、"論文誌"の部分も忘れずに編集してください。
+    テンプレートではタブとして、論文誌、学会発表、外部記事、書籍、その他の5つを設定しています。  
+    `<div class="swiper-slide" data-index="論⽂誌">論⽂誌</div>`を編集してください。
 
-タブの項目自体が不要な場合は`<div class~>`から`</div>`までをすべて削除してください。
+    `data-index=`はグローバルナビのアコーディオンに出現する部分になりますので、"論文誌"の部分も忘れずに編集してください。
+
+    タブの項目自体が不要な場合は`<div class~>`から`</div>`までをすべて削除してください。
 
 1. リストを編集する
-`<ul class="paper num">`と`</ul>`に囲まれた部分を編集します
+   
+   `<ul class="paper num">`と`</ul>`に囲まれた部分を編集します
 
-- 数字の番号を振る場合
-`<ul class="paper num">`としてください。上から順番に採番されます。
+   - 数字の番号を振る場合
 
-- 箇条書きにする場合  
-`<ul class="paper">`としてください。  
+       `<ul class="paper num">`としてください。上から順番に採番されます。
 
-年ごとに分類したい場合は、表示させたい箇所に  
+   - 箇条書きにする場合  
 
-```html
-<li style="list-style-type: none;">
-    <span class="list-history-year">2023年</span>
-</li>
-```
+       `<ul class="paper">`としてください。
 
-と入れると年を表示させることができます。
+> [!TIP]
+> 年ごとに分類したい場合は、表示させたい箇所に  
+>
+>```html
+><li style="list-style-type: none;">
+>    <span class="list-history-year">2023年</span>
+></li>
+>```
+>
+>と入れると年を表示させることができます。
 
 ### Contactを編集する
 
