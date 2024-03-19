@@ -21,8 +21,8 @@ GitHub Pagesを利用するにあたってまずGitHubのアカウントを作�
 
 2. **サインアップ**
     - 「Sign up」ボタンをクリックします。
-    - 必要な情報（ユーザ名、メールアドレス、パスワード）を入力し、GitHubアカウントを作成します。　　
-    ※ここで設定するユーザ名が公開するWebページのURLに反映されます。  
+    - 必要な情報（ユーザ名、メールアドレス、パスワード）を入力し、GitHubアカウントを作成します。  
+    - **ここで設定するユーザ名が公開するWebページのURLに反映されます**  
     例）ユーザ名を *academeia* にした場合  
     「https:// *academeia* .github.io/index.html/」  
 
@@ -87,4 +87,4 @@ GitHubでは、リポジトリを公開する　**Public** と非公開にする
     - 最下段の **Danger Zone** にある「Change repository visibility」の「Change visibility」を押す
     - 「Change to public」に変更する  
 
-これで、GitHub Pagesを通じてWebページが公開されます。変更が反映されるまで数分かかりますが、しばらくするとGitHubから提供されるURLでWebページにアクセスできるようになります。
+これで、GitHub Pagesを通じてWebページが公開されます。変更が反映されるまで数分かかりますが、しばらくすると **https://ユーザ名.github.io/** でWebページにアクセスできるようになります。
