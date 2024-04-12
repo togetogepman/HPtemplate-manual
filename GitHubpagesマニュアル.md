@@ -78,7 +78,7 @@ GitHub PagesでWebページを公開するためには、データの保管場�
     その下の「Description」は省略可能です。
     - 「Commit to main」をクリックして変更を確定します。
 3. **プッシュ**
-    - 「Repository」メニューから「Push」を選択し、ローカルの変更をGitHubにプッシュします。
+    - 「Repository」メニューから「Push」を選択、もしくは「Push origin」をクリックしローカルの変更をGitHubにプッシュします。
 
 > [!TIP]
 > GitHubの用語と仕組みについてもう少し詳しく解説します。
