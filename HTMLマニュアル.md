@@ -29,8 +29,7 @@ HTMLの編集自体はWindowsに標準搭載されているメモ帳等でも可
 > [!TIP]
 > HTMLの各部分がどのような処理をしているのか知りたい場合には、ChatGPTなどの生成AIを活用すると便利です。  
 > 生成AIのメッセージ欄に「以下のコードはどのような処理をしているのか」と書いた上で、知りたい部分のソースコードをコピー＆ペーストするとわかりやすく回答してくれます。無料版でも十分ですのでご活用ください。
-> <img width="681" alt="chatgptsample" src="https://github.com/togetogepman/HPtemplate-manual/assets/8207604/c6c6e1e7-3761-4c3a-9869-5316489e711d">
-  
+> <img width="594" alt="chatgptsample" src="https://github.com/togetogepman/HPtemplate-manual/assets/8207604/8df6facf-4c5f-4b18-ab3c-50103fae7ac1">
 
 ### ディスクリプションやOGPを編集する
 
