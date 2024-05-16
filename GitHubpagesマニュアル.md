@@ -68,8 +68,8 @@ GitHub PagesでWebページを公開するためにはデータの保管場所�
 
 1. **ローカルリポジトリにファイルを追加**
     - 作成したリポジトリのディレクトリ（デフォルトの場合、ドキュメント>GitHub>ユーザ名.github.io）を開きます。GitHub Desktopの「Show in Explorer」でも開くことができます。
-    - [テンプレート配布ページ]()からダウンロードした2つのデータ（assetsフォルダとindex.html）を上記のフォルダに移動します。
-![githubdesktop](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/abebb6bd-2e9b-498b-9abd-086af7e06cbd)
+![showinexp](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/9b9b803e-35da-44dc-970f-603dbaadd181)
+    - [テンプレート配布ページ]()からダウンロードした2つのデータ（assetsフォルダとindex.html）を上記に移動します。
 > [!WARNING]
 > このフォルダに入れたデータはGitHubを通じて **全世界に公開されます** 。後にデータを消しても **ログはずっと残ってしまう** のでデータの扱いにはくれぐれも注意してください。
 
@@ -78,7 +78,7 @@ GitHub PagesでWebページを公開するためにはデータの保管場所�
     - ファイル一覧の下の「Summary(requited)」とある入力欄には今回の変更がどのような変更なのか手がかりとなるような記述を行います。内容はなんでも構いませんが、たとえば「テンプレート追加」のように何をしたのかわかりやすい記述が好ましいです。  
     その下の「Description」は省略可能です。
     - 「Commit to main」をクリックして変更を確定します。
-![committomain](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/fd8bbad4-ff2c-42b6-b5fd-67b3600d593b)
+![summary](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/a9173059-128f-4172-ab3f-c72b8fac1b7d)
 
 3. **プッシュ**
     - 「Repository」メニューから「Push」を選択、もしくは「Push origin」をクリックしローカルリポジトリの変更をGitHubにプッシュします。処理が完了するまでにしばらく時間がかかりますが、これでローカルリポジトリの変更をGitHub上に反映させることができます。  
@@ -92,9 +92,9 @@ GitHubではリポジトリを公開する　**Public** と非公開にする **
 
 2. **GitHub Pagesの設定**   
     - 上部にある⚙settingsをクリックします。  
-![githubsetting](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/9a2d1554-0f66-48fb-b397-e344e921289b)
+![setting](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/53a82d24-c0c2-4f44-b194-c5d6463634da)
     - 「General」最下段の **Danger Zone** にある「Change repository visibility」の「Change visibility」をクリックします。
-![githubdanger](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/0ca21da8-0632-4760-9821-8f9302ca39d3)
+![danger](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/9cd79383-fb98-4ec9-90d0-e889ebe1785d)
     - 表示されたリポジトリ名を確認し「I want to make repository public」をクリックします。
 
 これでGitHub PagesでWebページが公開されます。初回は変更箇所も多く反映されるまで数分かかりますが、しばらくすると **https://ユーザ名.github.io/** でWebページにアクセスできるようになります。  
