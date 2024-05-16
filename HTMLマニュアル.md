@@ -287,15 +287,15 @@ headでは、検索したときに出てくるディスクリプション、ブ�
 > 年ごとに分類した箇条書きにしたい場合は以下のように記述してください。  
 >
 >```html
-  <ul class="paper">
-    <li style="list-style-type: none;">
-      <span class="list-history-year">2023年</span>
-    </li>
-    <li class="list-item">佐藤 太郎(2023).生成モデルによるクリエイティブコンテンツの自動生成（2023年5月，全国人工知能研究学会 第38回大会）
-    </li>
-    <li class="list-item">佐藤 太郎(2023).スマートシティにおけるAIの役割と将来展望（2023年9月，先端AIイノベーション学会 第10回大会）
-    </li><br>
-  </ul>
+>  <ul class="paper">
+>    <li style="list-style-type: none;">
+>      <span class="list-history-year">2023年</span>
+>    </li>
+>    <li class="list-item">佐藤 太郎(2023).生成モデルによるクリエイティブコンテンツの自動生成（2023年5月，全国人工知能研究学会 第38回大会）
+>    </li>
+>    <li class="list-item">佐藤 太郎(2023).スマートシティにおけるAIの役割と将来展望（2023年9月，先端AIイノベーション学会 第10回大会）
+>    </li><br>
+>  </ul>
 >```
 
 ### Contactを編集する
