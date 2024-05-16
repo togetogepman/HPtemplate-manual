@@ -44,10 +44,10 @@ headでは、検索したときに出てくるディスクリプション、ブ�
 > [!TIP]
 > OGPを適切に設定するにはページのURLと画像のURLを「絶対パス」で記述することが推奨されています。  
 > 以下、GitHubユーザ名をacademeiaに設定した場合の絶対パスの記載例です。
-    ```html
-     <meta property="og:url" content="https://academeia.github.io/index.html" />
-     ...
-     <meta property="og:image" content="https://academeia.github.io/assets/images/common/ogp.jpg" />
+    ```  
+     <meta property="og:url" content="https://academeia.github.io/index.html" />  
+     ...  
+     <meta property="og:image" content="https://academeia.github.io/assets/images/common/ogp.jpg" />  
     ```
 
 ### Newsを編集する
