@@ -56,7 +56,7 @@ GitHub PagesでWebページを公開するためにはデータの保管場所�
     ※ユーザ名はGitHubアカウント作成時に設定したものです  
     - 「Description」は省略可能です
     - 「Local path」（保存先）を設定します。  
-    デフォルトではドキュメントの中に *GitHub* フォルダが作成され、その中にある *ユーザ名.github.io* にリポジトリが保存されます。  
+    ※Windowsの場合、デフォルトでは*ドキュメント*の中に*GitHub*フォルダが作成され、その中にある*ユーザ名.github.io*が保存先に設定されます。  
     - 「Create repository」をクリックします。
 
 3. **パブリッシュ**
@@ -64,10 +64,10 @@ GitHub PagesでWebページを公開するためにはデータの保管場所�
 
 ## ステップ4: Webページの作成
 
-テンプレートのデータをローカルリポジトリに移動させ、GitHubにプッシュします。  
+テンプレートのデータをローカルリポジトリに移動させGitHubにプッシュします。  
 
 1. **ローカルリポジトリにファイルを追加**
-    - 作成したリポジトリのディレクトリ（デフォルトの場合、ドキュメント>GitHub>ユーザ名.github.io）に、テンプレートのデータをコピーします。GitHub Desktopの「Show in Explorer」で開くこともできます。
+    - 作成したリポジトリのディレクトリ（デフォルトの場合、ドキュメント>GitHub>ユーザ名.github.io）に、テンプレートのデータを移動させます。GitHub Desktopの「Show in Explorer」で開くことができます。
 ![githubdesktop](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/abebb6bd-2e9b-498b-9abd-086af7e06cbd)
 > [!WARNING]
 > このフォルダに入れたデータはGitHubを通じて **全世界に公開されます** 。後にデータを消しても **ログはずっと残ってしまう** のでデータの扱いにはくれぐれも注意してください。
