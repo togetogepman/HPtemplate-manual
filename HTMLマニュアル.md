@@ -48,7 +48,7 @@ headでは、検索したときに出てくるディスクリプション、ブ�
 ``` html
   <meta property="og:url" content="https://academeia.github.io/index.html" />
   ...
-<meta property="og:image" content="https://academeia.github.io/assets/images/common/ogp.jpg" />  
+  <meta property="og:image" content="https://academeia.github.io/assets/images/common/ogp.jpg" />  
 ```
 
 ### Newsを編集する
