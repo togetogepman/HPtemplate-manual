@@ -1,12 +1,11 @@
 # GitHub Pagesを使ったWebページ公開マニュアル
 
-GitHub Pagesとは、GitHubが提供している静的Webページのためのホスティングサービスです。  
+GitHub Pagesとは、GitHub社が提供している静的Webページのためのホスティングサービスです。  
 特徴としては
 
-- サーバ、ドメインなど、初期費用、維持費用ゼロで利用できる  
-- github.ioのドメインが使える  
+- ドメイン(github.io)とサーバが初期費用と維持費用ゼロで利用できる  
 - 独自ドメインを利用することも可能  
-- ソースコードが公開される  
+- ソースコードが変更履歴とともに公開される  
 
 といったことが挙げられます。  
 
@@ -31,7 +30,7 @@ GitHub Pagesを利用するにあたってまずGitHubのアカウントを作�
 
 ## ステップ2: GitHub Desktopのインストール
 
-GitHub自体はブラウザで利用できますが、日々の更新やデータの管理を行うのは大変なので、手元のPCで作業できるようにするために **GitHub Desktop** をインストールします。  
+GitHubとGitHub Pagesはブラウザだけでも利用できますが、更新やデータの管理をするには不便なので手元のPCで作業できるようにするために **GitHub Desktop** をインストールします。  
 
 1. **GitHub Desktopのダウンロード**
     - [GitHub Desktopのダウンロードページ](https://desktop.github.com/)にアクセスします。
@@ -51,6 +50,7 @@ GitHub PagesでWebページを公開するためには、データの保管場�
     - 初めてGitHub Desktopを使う場合は「+ Create New Repository on your Hard Drive」をクリックします
     - チュートリアルが表示されない場合には「File」メニューから「New repository」を選択します。
 ![lets-get-started](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/f7ce6f99-87b8-48d6-81dc-2b58efee426f)
+
 2. **リポジトリ情報の入力**
     - 「name」は **ユーザ名.github.io** にしてください  
     ※ユーザ名はGitHubアカウント作成時に設定したものです  
@@ -58,6 +58,7 @@ GitHub PagesでWebページを公開するためには、データの保管場�
     - 「Local path」（保存先）を設定します。  
     デフォルトではドキュメントの中に *GitHub* フォルダが作成され、その中にある *ユーザ名.github.io* にリポジトリが保存されます。  
     - 「Create repository」をクリックします。
+
 3. **パブリッシュ**
     - ローカルで作成したリポジトリをGitHub上に反映させるためにパブリッシュします。「Publish repository」をクリックし、出てきたウインドウでも「Publish repository」をクリックします。  
 > [!TIP]
@@ -79,27 +80,25 @@ GitHub PagesでWebページを公開するためには、データの保管場�
     その下の「Description」は省略可能です。
     - 「Commit to main」をクリックして変更を確定します。
 ![committomain](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/fd8bbad4-ff2c-42b6-b5fd-67b3600d593b)
-3. **プッシュ**
-    - 「Repository」メニューから「Push」を選択、もしくは「Push origin」をクリックしローカルの変更をGitHubにプッシュします。
 
-> [!TIP]
-> GitHubの用語と仕組みについてもう少し詳しく解説します。
-> GitHub PagesでWebページを公開するには、GitHub Desktopで作成したローカルのリポジトリをGitHub上にあるリポジトリに反映させる必要があります。
-> そのためにはまず、ローカルで作成した新しいリポジトリをGitHub上で公開する「パブリッシュ」を行います。次にローカルで行った変更を確認して記録する「コミット」を行った後に、変更をGitHub上に反映させる「プッシュ」を行います。また、GitHub上のリポジトリで行われた変更をローカルで取得するのが「フェッチ」で、その変更をローカルリポジトリのデータと統合するのが「プル」です。
-> これらは一見するとまわりくどいように思われますが、バージョン管理によって共同作業を円滑にするというGitHubの本来の目的を考えると合理的な作業だと言えます。
+3. **プッシュ**
+    - 「Repository」メニューから「Push」を選択、もしくは「Push origin」をクリックしローカルの変更をGitHubにプッシュします。処理が完了するまでにしばらく時間がかかりますが、これでローカルのデータをGitHub上にアップロードすることができます。  
 
 ## ステップ5: GitHub Pagesで公開
 
-GitHubでは、リポジトリを公開する　**Public** と非公開にする **Private** の2つのモードがあります。GitHub Pagesを公開するには **Public** に設定を変更する必要があります。
-![githubdanger](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/0ca21da8-0632-4760-9821-8f9302ca39d3)
+GitHubでは、リポジトリを公開する　**Public** と非公開にする **Private** の2つのモードがあります。GitHub Pagesを公開するには **Public** に設定を変更する必要があります。  
 
 1. **GitHubでリポジトリにアクセス**
     - GitHub Desktopにある「View on Github」ボタン、もしくは「Repository」メニューの「View on Github」を選択し、ブラウザでリポジトリを開きます。
+
 2. **GitHub Pagesの設定**   
     - 上部にある⚙settingsをクリックします。  
 ![githubsetting](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/9a2d1554-0f66-48fb-b397-e344e921289b)
     - 「General」最下段の **Danger Zone** にある「Change repository visibility」の「Change visibility」をクリックします。
-![githubdesktop](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/28ce82d9-8d1e-48b1-8526-4e7f930ebc07)
+![githubdanger](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/0ca21da8-0632-4760-9821-8f9302ca39d3)
     - 表示されたリポジトリ名を確認し「I want to make repository public」をクリックします。
 
-これで、GitHub Pagesを通じてWebページが公開されます。初回は変更箇所も多く反映されるまで数分かかりますが、しばらくすると **https://ユーザ名.github.io/** でWebページにアクセスできるようになります。
+これでGitHub Pagesを通じてWebページが公開されます。初回は変更箇所も多く反映されるまで数分かかりますが、しばらくすると **https://ユーザ名.github.io/** でWebページにアクセスできるようになります。  
+なお、このままだとテンプレートのまま公開しつづけることになってしまいますので、公開を確認できたら上記と同様の手順でPublicからPrivateに変更した上でHTML編集することをお勧めします。  
+
+[HTML編集マニュアル]()へ続く
