@@ -67,7 +67,8 @@ GitHub PagesでWebページを公開するためにはデータの保管場所�
 テンプレートのデータをローカルリポジトリに移動させGitHubにプッシュします。  
 
 1. **ローカルリポジトリにファイルを追加**
-    - 作成したリポジトリのディレクトリ（デフォルトの場合、ドキュメント>GitHub>ユーザ名.github.io）に、テンプレートのデータを移動させます。GitHub Desktopの「Show in Explorer」で開くことができます。
+    - 作成したリポジトリのディレクトリ（デフォルトの場合、ドキュメント>GitHub>ユーザ名.github.io）を開きます。GitHub Desktopの「Show in Explorer」でも開くことができます。
+    - [テンプレート配布ページ]()からダウンロードした2つのデータ（assetsフォルダとindex.html）を上記のフォルダに移動します。
 ![githubdesktop](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/abebb6bd-2e9b-498b-9abd-086af7e06cbd)
 > [!WARNING]
 > このフォルダに入れたデータはGitHubを通じて **全世界に公開されます** 。後にデータを消しても **ログはずっと残ってしまう** のでデータの扱いにはくれぐれも注意してください。
