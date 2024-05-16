@@ -14,16 +14,16 @@ HTMLの編集自体はWindowsに標準搭載されているメモ帳等でも可
 
 ## ステップ2: テンプレートのHTMLを開く
 
-テンプレートのHTMLはGitHub Desktopのインストール時に設定した[Local path]内のリポジトリフォルダに格納されています。  
-デフォルトでは **ドキュメント** のGitHubフォルダ内に作成されますが、もし見つけられない場合にはGitHub Desktopを立ち上げ、リポジトリにある **Show in Explorer** をクリックすれば開くことができます。リポジトリフォルダ内にある **index.html** を右クリックし「テキストエディタ」で開いてください。  
+GitHub Desktopのインストール時に設定した[Local path]内のリポジトリフォルダを開きます。場所がわからない場合はGitHub Desktopを立ち上げ**Show in Explorer** をクリックしても開くことができます。  
+リポジトリフォルダ内にある **index.html** を右クリックしインストールした「テキストエディタ」で開いてください。  
 
-なお、HTMLを「ブラウザ」で開くとホームページがどのような見た目になるかを確認することができますが **編集することはできません** のでご注意ください。  
+なお、index.htmlを「ブラウザ」で開くとホームページがどのような見た目になるかを確認することができます。  
 
 > [!TIP]
 > リポジトリフォルダは今後ホームページの編集をする際によく使いますので、リポジトリフォルダのショートカットを作ってデスクトップに置いておくと便利です。  
 
 > [!TIP]
-> HTMLの各部分がどのような処理をしているのか知りたい場合には、ChatGPTなど無料で使える生成AIを活用すると便利です。  
+> テンプレートのHTMLがどのような処理をしているのか知りたい場合には、ChatGPTなど無料で使える生成AIを活用すると便利です。  
 > 以下のように知りたい部分のソースコードをコピー＆ペーストしてプロンプトを作成するとわかりやすく回答してくれます。
 > 
 > <img width="594" alt="chatgptsample" src="https://github.com/togetogepman/HPtemplate-manual/assets/8207604/8df6facf-4c5f-4b18-ab3c-50103fae7ac1">
@@ -43,7 +43,12 @@ headでは、検索したときに出てくるディスクリプション、ブ�
 
 > [!TIP]
 > OGPを適切に設定するにはページのURLと画像のURLを「絶対パス」で記述することが推奨されています。  
-> その場合は`<meta property="og:url" content="" />`と`<meta property="og:image" content="./assets/images/common/ogp.jpg" />`の`content=`の部分をそれぞれ`content="https:// *academeia* .github.io/index.html/"`および`"https:// *academeia* .github.io/assets/images/common/ogp.jpg"`とGitHub Pagesで作成した絶対パスで指定してください。 
+> 以下、GitHubユーザ名をacademeiaに設定した場合の絶対パスの記載例です。
+    ```html
+     <meta property="og:url" content="https://academeia.github.io/index.html" />
+     ...
+     <meta property="og:image" content="https://academeia.github.io/assets/images/common/ogp.jpg" />
+    ```
 
 ### Newsを編集する
 
