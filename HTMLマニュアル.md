@@ -337,12 +337,14 @@ GoogleMapを使って研究室の地図を表示させることができます�
 ## ステップ4: 画像データを編集する
 画像データはリポジトリフォルダ内の **assets** > **images** に格納されています。  
 
-画像は用途に応じて.jpg,.png,.svg,.icoという4種類の画像形式を用いており、差し替えたい場合は同ファイル名、同拡張子のもので上書きすればhtmlを修正することなくそのまま利用できます。別のファイル名の画像を用いる場合はサンプル画像と同じフォルダ内に保存し、該当するパスのファイル名を書き換えてください。(altの変更は任意です)  
+画像は用途に応じて.jpg,.png,.svg,.icoという4種類の画像形式を用いており、差し替えたい場合は同ファイル名、同拡張子のもので上書きすればhtmlを修正することなくそのまま利用できます。  
+別のファイル名の画像を用いる場合はサンプル画像と同じフォルダ内に保存し、該当するパスのファイル名を書き換えてください。(altの変更は任意です)  
 
 例：メインビジュアルをlab-photo.jpgに差し替える場合  
-`<img src="./assets/images/sample-mv.png" alt="Example image" />`
-↓
-`<img src="./assets/images/lab-photo.jpg" alt="Lab Photo2023" />`
+`<img src="./assets/images/sample-mv.png" alt="Example image" />`  
+↓  
+`<img src="./assets/images/lab-photo.jpg" alt="Lab Photo2023" />`  
+
 jpgとpngはWindowsのペイント等で作成編集できますが、svgやicoの編集はWindows標準搭載のアプリケーションではできません。jpg等を無料でsvgやicoに変換できるツールがありますので、インターネットで「png svg 変換ツール」「png ico 変換ツール」などと検索して探してみてください。  
 
 それぞれの画像は以下のとおりです。  
