@@ -296,6 +296,7 @@ headでは、検索したときに出てくるディスクリプション、ブ�
       </li><br>
     </ul>
     ```
+    このように表示されます。
     ![kajo-nen](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/32cc2f0b-9610-41c2-ad4c-159e61ae172e)
     
 ### Contactを編集する
