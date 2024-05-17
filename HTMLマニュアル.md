@@ -322,9 +322,9 @@ headでは、検索したときに出てくるディスクリプション、ブ�
 - GoogleMapの編集  
 GoogleMapを使って研究室の地図を表示させることができます。
 
-1. GoogleMapで表示させたい位置にピンを立て、共有アイコンを押す。
+1. GoogleMapで表示させたい位置にピンを立て、共有アイコンを押してください。
    ![pin](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/c2a16d2c-fd18-4452-8ee6-34d4301b067c)
-1. 地図を埋め込むを選択し、HTMLをコピーするを選択する。
+1. 地図を埋め込むを選択し、HTMLをコピーを押してください。
    ![pin-kyo](https://github.com/togetogepman/HPtemplate-manual/assets/8207604/fa9332a2-a72e-4aa2-bef4-6336e2adb07d)
 1. `<iframe src="https...">`から`</iframe>`までの部分をコピーした内容に差し替えてください。
   
@@ -332,13 +332,17 @@ GoogleMapを使って研究室の地図を表示させることができます�
 `<!-- START フッター -->`と`<!-- END フッター -->`に囲まれている部分です。  
 
 - コピーライトの編集  
-`Copyright (C) 研究室名. All Rights Reserved.`の箇所を編集してください。
+テンプレートでは`Copyright (C) 研究室名. All Rights Reserved.`と記載していますので差し替えてください。
 
 ## ステップ4: 画像データを編集する
-画像データは、リポジトリフォルダ> **assets** > **images** に格納されています。  
+画像データはリポジトリフォルダ内の **assets** > **images** に格納されています。  
 
-画像は用途ごとに.jpg,.png,.svg,.icoという4種類の画像形式を用いており、差し替えたい場合は同ファイル名、同拡張子のもので上書きすればhtmlを修正することなくそのまま利用できます。  
+画像は用途に応じて.jpg,.png,.svg,.icoという4種類の画像形式を用いており、差し替えたい場合は同ファイル名、同拡張子のもので上書きすればhtmlを修正することなくそのまま利用できます。別のファイル名の画像を用いる場合はサンプル画像と同じフォルダ内に保存し、該当するパスのファイル名を書き換えてください。(altの変更は任意です)  
 
+例：メインビジュアルをlab-photo.jpgに差し替える場合  
+`<img src="./assets/images/sample-mv.png" alt="Example image" />`
+↓
+`<img src="./assets/images/lab-photo.jpg" alt="Lab Photo2023" />`
 jpgとpngはWindowsのペイント等で作成編集できますが、svgやicoの編集はWindows標準搭載のアプリケーションではできません。jpg等を無料でsvgやicoに変換できるツールがありますので、インターネットで「png svg 変換ツール」「png ico 変換ツール」などと検索して探してみてください。  
 
 それぞれの画像は以下のとおりです。  
