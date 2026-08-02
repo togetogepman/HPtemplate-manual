@@ -31,35 +31,217 @@
         <div class="container container--reading">
           <p class="eyebrow">HTML Guide</p>
           <h1>HTMLを編集する</h1>
-          <p class="lead">文字や画像など、ホームページの内容を編集する流れを案内します。</p>
+          <p class="lead">HTMLを直接編集する人に向けて、文字や画像を安全に変更するための基本手順を案内します。</p>
         </div>
       </header>
 
-      <div class="container container--reading section-list">
-        <section class="manual-section" aria-labelledby="html-preparation">
+      <aside class="container container--reading callout callout--note page-intro-callout" aria-label="編集するファイル">
+        <p class="callout__title">編集するファイル</p>
+        <p>実際に編集するファイルは<code>index.html</code>です。<code>sample.html</code>は完成見本なので、通常は編集しません。</p>
+        <p>タグやclassを不用意に削除すると表示が崩れます。基本的には、このページで案内する文字や画像のファイル名だけを変更してください。</p>
+      </aside>
+
+      <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
+        <h2 id="page-nav-title">このページの内容</h2>
+        <ol>
+          <li><a href="#html-preparation">編集前の準備</a></li>
+          <li><a href="#html-text">文字を変更する</a></li>
+          <li><a href="#html-image">画像を変更する</a></li>
+          <li><a href="#html-sections">各セクションを編集する</a></li>
+          <li><a href="#html-browser">ブラウザで確認する</a></li>
+        </ol>
+      </nav>
+
+      <div class="container container--reading section-list section-list--manual">
+        <section class="manual-section manual-section--detailed" aria-labelledby="html-preparation">
           <p class="step-number" aria-hidden="true">01</p>
-          <h2 id="html-preparation">編集前の準備</h2>
-          <p>編集を始める前に必要な準備を確認します。</p>
+          <div class="manual-section__content">
+            <h2 id="html-preparation">編集前の準備</h2>
+            <p class="manual-section__intro">編集するリポジトリとファイルを間違えないように準備します。</p>
+            <ol class="manual-steps">
+              <li>
+                <p>GitHub Desktopを開き、編集する自分のリポジトリを選びます。</p>
+              </li>
+              <li>
+                <p>メニューの<strong>Show in Explorer</strong>から、リポジトリの保存フォルダを開きます。OSによって表示名が異なる場合があります。</p>
+              </li>
+              <li>
+                <p>Visual Studio Codeなどのテキストエディタで、保存フォルダ内の<code>index.html</code>を開きます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="open-index-html">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：index.htmlを開く</div>
+                  <figcaption>完成見本のsample.htmlではなく、編集用のindex.htmlを開きます。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>編集を始める前に、現在の状態をGitでCommitしておきます。変更前の状態が記録されるため、後から差分を確認しやすくなります。</p>
+              </li>
+            </ol>
+          </div>
         </section>
-        <section class="manual-section" aria-labelledby="html-text">
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="html-text">
           <p class="step-number" aria-hidden="true">02</p>
-          <h2 id="html-text">文字を変更する</h2>
-          <p>見出しや本文の文字を変更する方法を確認します。</p>
+          <div class="manual-section__content">
+            <h2 id="html-text">文字を変更する</h2>
+            <p class="manual-section__intro">まず、テンプレート内の入力案内を自分の研究室の情報へ置き換えます。</p>
+            <ol class="manual-steps">
+              <li>
+                <p>エディタの検索機能で「入力してください」を検索します。ページタイトル、説明、研究室名、各セクションの入力箇所を見つけやすくなります。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="find-placeholder-text">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：「入力してください」を検索</div>
+                  <figcaption>検索機能を使って、テンプレート内の主な編集箇所を探します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>ページタイトルと説明、研究室名の日本語・英語表記を変更します。開始タグと終了タグの間にある文字だけを置き換えます。</p>
+                <div class="code-example" aria-label="研究室名を変更するコード例">
+                  <pre><code>&lt;span class="header-name-wrapp-ja"&gt;○○大学 △△研究室&lt;/span&gt;</code></pre>
+                </div>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="edit-text">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：文字を編集</div>
+                  <figcaption>タグを残したまま、開始タグと終了タグの間の文字を変更します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>「［～を入力してください］」の部分と、NEWS、研究テーマ、モットー、メンバー、プロフィール、Contactなどの文章を確認済みの内容へ変更します。</p>
+              </li>
+              <li>
+                <p>入力後に、氏名、所属、研究内容、論文、受賞歴などが正しいか原資料と照合します。</p>
+              </li>
+            </ol>
+            <aside class="callout callout--warning" aria-label="文字編集の注意">
+              <p class="callout__title">タグは原則として消さない</p>
+              <p><code>&lt;</code>と<code>&gt;</code>で囲まれたタグやclassは、表示や機能に使われています。不要な項目でも、範囲が分からないまま削除しないでください。</p>
+            </aside>
+            <aside class="callout callout--warning" aria-label="掲載内容の注意">
+              <p class="callout__title">事実を確認して入力</p>
+              <p>実在しない研究内容、論文、受賞歴などを作らないでください。不要な項目は適当な情報で埋めず、公開前に掲載方法を確認します。</p>
+            </aside>
+          </div>
         </section>
-        <section class="manual-section" aria-labelledby="html-image">
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="html-image">
           <p class="step-number" aria-hidden="true">03</p>
-          <h2 id="html-image">画像を変更する</h2>
-          <p>ホームページに表示する画像を変更する方法を確認します。</p>
+          <div class="manual-section__content">
+            <h2 id="html-image">画像を変更する</h2>
+            <p class="manual-section__intro">画像ファイルを保存し、HTMLからそのファイルを読み込むように変更します。</p>
+            <ol class="manual-steps">
+              <li>
+                <p>使用する画像をリポジトリ内の<code>assets/images/</code>へ保存します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="images-folder">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：assets/imagesフォルダ</div>
+                  <figcaption>ホームページで使用する画像をassets/images内へ保存します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p><code>index.html</code>内の<code>src</code>を、保存した画像のファイル名に合わせます。</p>
+                <div class="code-example" aria-label="画像を変更するコード例">
+                  <pre><code>&lt;img src="./assets/images/lab-photo.jpg" alt="研究室の活動風景" /&gt;</code></pre>
+                </div>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="edit-image-path">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：画像のsrcを編集</div>
+                  <figcaption>画像の保存場所とファイル名に合わせてsrcを変更します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p><code>alt</code>へ「研究室の活動風景」のような、画像内容の短い説明を書きます。</p>
+              </li>
+              <li>
+                <p><code>index.html</code>をブラウザで開き、画像が正しく表示されるか確認します。</p>
+              </li>
+            </ol>
+            <aside class="callout callout--warning" aria-label="画像ファイルの注意">
+              <p class="callout__title">ファイル名と掲載許可を確認</p>
+              <ul class="manual-list">
+                <li>ファイル名の大文字と小文字は区別されます。</li>
+                <li>日本語や空白を避け、<code>lab-photo.jpg</code>のような分かりやすい英数字を使います。</li>
+                <li>ファイル名を変えた場合は、HTML側の<code>src</code>も変更します。</li>
+                <li>元画像と同じ名前でも、拡張子が変われば<code>src</code>の修正が必要です。</li>
+                <li>人物、学生、大学ロゴなどは掲載許可を確認します。</li>
+              </ul>
+            </aside>
+          </div>
         </section>
-        <section class="manual-section" aria-labelledby="html-sections">
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="html-sections">
           <p class="step-number" aria-hidden="true">04</p>
-          <h2 id="html-sections">各セクションを編集する</h2>
-          <p>ホームページの各部分を編集する流れを確認します。</p>
+          <div class="manual-section__content">
+            <h2 id="html-sections">各セクションを編集する</h2>
+            <p class="manual-section__intro"><code>index.html</code>内のSTARTとENDのコメントを目印に、編集する範囲を探します。</p>
+            <div class="code-example" aria-label="研究テーマセクションのコメント例">
+              <pre><code>&lt;!-- START 研究テーマ --&gt;
+...
+&lt;!-- END 研究テーマ --&gt;</code></pre>
+            </div>
+            <figure class="manual-figure manual-figure--placeholder" data-screenshot="section-comments">
+              <div class="manual-image-placeholder">スクリーンショット追加予定：セクションコメント</div>
+              <figcaption>STARTとENDのコメントを目印に、編集するセクションの範囲を確認します。</figcaption>
+            </figure>
+            <h3>主なセクション</h3>
+            <ul class="manual-list">
+              <li>研究テーマ</li>
+              <li>NEWS</li>
+              <li>研究室のモットー</li>
+              <li>研究室メンバー</li>
+              <li>プロフィール</li>
+              <li>論文・研究発表</li>
+              <li>Contact</li>
+            </ul>
+            <h3>編集時の基本ルール</h3>
+            <ul class="manual-list">
+              <li>見出しや本文は、既存の入力案内を確認済みの内容へ置き換えます。</li>
+              <li>項目を増やす場合は、対応する<code>li</code>要素をひとまとまりで複製します。</li>
+              <li>コピーする範囲が分からない場合は無理に増やさず、Codexなどへ変更を依頼します。</li>
+              <li>ナビゲーション部分へリンクを直接書き足しません。テンプレートのナビゲーションは各セクションの情報から生成されます。</li>
+            </ul>
+            <aside class="callout callout--warning" aria-label="帰属表示の注意">
+              <p class="callout__title">無料利用時の帰属表示</p>
+              <p>フッターのアカデメイア帰属表示は、削除、非表示、別URLへの変更を行わないでください。</p>
+            </aside>
+          </div>
         </section>
-        <section class="manual-section" aria-labelledby="html-browser">
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="html-browser">
           <p class="step-number" aria-hidden="true">05</p>
-          <h2 id="html-browser">ブラウザで確認する</h2>
-          <p>編集した内容を公開前に確認します。</p>
+          <div class="manual-section__content">
+            <h2 id="html-browser">ブラウザで確認する</h2>
+            <p class="manual-section__intro">公開前に、編集した内容と表示を自分の目で確認します。</p>
+            <ol class="manual-steps">
+              <li>
+                <p>編集した<code>index.html</code>を保存します。</p>
+              </li>
+              <li>
+                <p>保存した<code>index.html</code>をブラウザで開きます。</p>
+              </li>
+              <li>
+                <p>変更した文字や画像が意図どおり表示されるか確認します。</p>
+              </li>
+              <li>
+                <p>PC幅とスマートフォン相当の幅で表示を確認します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="browser-preview">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ブラウザで表示確認</div>
+                  <figcaption>PCとスマートフォン相当の幅で、文字、画像、レイアウトを確認します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>問題がなければ、GitHub DesktopでCommitとPushを行います。</p>
+              </li>
+            </ol>
+            <h3>公開前の確認事項</h3>
+            <ul class="manual-list">
+              <li>文字化けしていない</li>
+              <li>画像が表示されている</li>
+              <li>不要なサンプル文言が残っていない</li>
+              <li>リンク先が正しい</li>
+              <li>横スクロールや大きな表示崩れがない</li>
+              <li>氏名、所属、論文、住所、メールアドレスなどが正しい</li>
+              <li>未公開情報や個人情報が含まれていない</li>
+            </ul>
+            <aside class="callout callout--note" aria-label="GitHubへ反映する方法">
+              <p class="callout__title">GitHubへ反映する</p>
+              <p>CommitとPushの詳しい操作は、<a href="./github.html#github-desktop">GitHubで公開・更新するマニュアル</a>を確認してください。</p>
+            </aside>
+          </div>
         </section>
       </div>
     </main>
