@@ -25,17 +25,16 @@
     </header>
 
     <main id="main-content">
-      <nav class="container container--reading journey-progress" aria-label="公開までの進捗">
+      <section class="container container--reading journey-progress" aria-label="公開までの進捗">
         <ol>
-          <li><a href="./setup.html" aria-current="step">1. 準備</a></li>
-          <li><a href="./edit.html">2. 編集</a></li>
-          <li><a href="./publish.html">3. 公開</a></li>
+          <li aria-current="step">1. 準備</li>
+          <li>2. 編集</li>
+          <li>3. 公開</li>
         </ol>
-      </nav>
+      </section>
 
       <header class="page-header">
         <div class="container container--reading">
-          <p class="eyebrow">STEP 1 OF 3</p>
           <h1>利用環境とテンプレートを準備する</h1>
           <p class="lead">必要なアカウントとアプリを用意し、自分用リポジトリをChatGPTから参照できるようにして、パソコンへcloneします。</p>
         </div>
@@ -43,17 +42,16 @@
 
       <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
         <h2 id="page-nav-title">このページで行うこと</h2>
-        <ol>
-          <li><a href="#prepare-tools">1-1. 利用環境を準備する</a></li>
-          <li><a href="#prepare-template">1-2. 自分用のテンプレートを準備する</a></li>
-        </ol>
+        <ul>
+          <li><a href="#prepare-tools">利用環境を準備する</a></li>
+          <li><a href="#prepare-template">自分用のテンプレートを準備する</a></li>
+        </ul>
       </nav>
 
       <div class="container container--reading section-list section-list--manual">
         <section class="manual-section manual-section--detailed" aria-labelledby="prepare-tools">
-          <p class="step-number" aria-hidden="true">1-1</p>
           <div class="manual-section__content">
-            <h2 id="prepare-tools">1-1. 利用環境を準備する</h2>
+            <h2 id="prepare-tools">利用環境を準備する</h2>
             <p class="manual-section__intro">GitHub、GitHub Desktop、Windows版ChatGPTデスクトップアプリへサインインします。この段階では、まだCodexへ切り替えません。</p>
             <ol class="manual-steps">
               <li><p><a href="https://github.com/">GitHub</a>でアカウントを作成します。GitHubは、ホームページのファイルと変更履歴をインターネット上で管理するサービスです。</p></li>
@@ -67,9 +65,8 @@
         </section>
 
         <section class="manual-section manual-section--detailed" aria-labelledby="prepare-template">
-          <p class="step-number" aria-hidden="true">1-2</p>
           <div class="manual-section__content">
-            <h2 id="prepare-template">1-2. 自分用のテンプレートを準備する</h2>
+            <h2 id="prepare-template">自分用のテンプレートを準備する</h2>
             <p class="manual-section__intro">配布用テンプレートから自分のリポジトリを作り、ChatGPTへ接続してから、GitHub Desktopでパソコンへcloneします。</p>
             <dl class="term-list">
               <div><dt>リモートリポジトリ</dt><dd>GitHub上に保存されているホームページのファイルと変更履歴です。</dd></div>
@@ -130,8 +127,8 @@
               <p class="callout__title">公開できない情報を入れない</p>
               <p>Publicリポジトリの内容は誰でも確認できます。パスワード、個人情報、未公開資料を入れないでください。</p>
             </aside>
-            <aside class="completion-condition" aria-label="Step 1の完了条件">
-              <p class="completion-condition__title">Step 1の完了</p>
+            <aside class="completion-condition" aria-label="このページの完了条件">
+              <p class="completion-condition__title">このページの完了条件</p>
               <p>自分用リポジトリが作成され、ChatGPTから参照でき、パソコンへcloneされたことを確認できれば準備完了です。</p>
             </aside>
           </div>
@@ -144,7 +141,7 @@
 
       <nav class="container container--reading page-actions" aria-label="前後の工程">
         <a class="page-actions__back" href="./index.html">前へ：ホーム</a>
-        <a class="primary-action" href="./edit.html">次へ：2. 編集へ進む <span aria-hidden="true">→</span></a>
+        <a class="primary-action" href="./edit.html">次へ：編集へ進む <span aria-hidden="true">→</span></a>
       </nav>
     </main>
 

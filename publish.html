@@ -25,17 +25,16 @@
     </header>
 
     <main id="main-content">
-      <nav class="container container--reading journey-progress" aria-label="公開までの進捗">
+      <section class="container container--reading journey-progress" aria-label="公開までの進捗">
         <ol>
-          <li><a href="./setup.html">1. 準備</a></li>
-          <li><a href="./edit.html">2. 編集</a></li>
-          <li><a href="./publish.html" aria-current="step">3. 公開</a></li>
+          <li>1. 準備</li>
+          <li>2. 編集</li>
+          <li aria-current="step">3. 公開</li>
         </ol>
-      </nav>
+      </section>
 
       <header class="page-header">
         <div class="container container--reading">
-          <p class="eyebrow">STEP 3 OF 3</p>
           <h1>GitHub Pagesで公開・更新する</h1>
           <p class="lead">Codexの変更がGitHubへPushされていることを確認し、GitHub Pagesで研究室サイトを公開します。</p>
         </div>
@@ -43,18 +42,17 @@
 
       <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
         <h2 id="page-nav-title">このページで行うこと</h2>
-        <ol>
-          <li><a href="#confirm-github">3-1. GitHubへの反映を確認する</a></li>
-          <li><a href="#github-pages">3-2. GitHub Pagesで公開する</a></li>
-          <li><a href="#daily-update">3-3. 公開後に更新する</a></li>
-        </ol>
+        <ul>
+          <li><a href="#confirm-github">GitHubへの反映を確認する</a></li>
+          <li><a href="#github-pages">GitHub Pagesで公開する</a></li>
+          <li><a href="#daily-update">公開後に更新する</a></li>
+        </ul>
       </nav>
 
       <div class="container container--reading section-list section-list--manual">
         <section class="manual-section manual-section--detailed" aria-labelledby="confirm-github">
-          <p class="step-number" aria-hidden="true">3-1</p>
           <div class="manual-section__content">
-            <h2 id="confirm-github">3-1. GitHubへの反映を確認する</h2>
+            <h2 id="confirm-github">GitHubへの反映を確認する</h2>
             <p class="manual-section__intro">Codexが今回の変更をCommitし、作業branchをGitHubへPushしたことを確認します。</p>
             <dl class="term-list">
               <div>
@@ -97,9 +95,8 @@
         </section>
 
         <section class="manual-section manual-section--detailed" aria-labelledby="github-pages">
-          <p class="step-number" aria-hidden="true">3-2</p>
           <div class="manual-section__content">
-            <h2 id="github-pages">3-2. GitHub Pagesで公開する</h2>
+            <h2 id="github-pages">GitHub Pagesで公開する</h2>
             <p class="manual-section__intro">GitHub上の自分のリポジトリを、ホームページとして公開します。</p>
             <ol class="manual-steps">
               <li><p>ブラウザで、テンプレートから作成した自分のリポジトリを開きます。</p></li>
@@ -128,9 +125,8 @@
         </section>
 
         <section class="manual-section manual-section--detailed manual-section--secondary" aria-labelledby="daily-update">
-          <p class="step-number" aria-hidden="true">3-3</p>
           <div class="manual-section__content">
-            <h2 id="daily-update">3-3. 公開後に更新する</h2>
+            <h2 id="daily-update">公開後に更新する</h2>
             <p class="manual-section__intro">ここからは初回公開後の日常更新です。最初に作った同じローカルリポジトリを使います。</p>
             <ol class="manual-steps">
               <li><p>同じローカルリポジトリをCodexで開きます。</p></li>
@@ -143,8 +139,8 @@
               <p class="callout__title">更新のたびにリポジトリを作り直さない</p>
               <p>テンプレートから新しいリポジトリを作る操作は初回だけです。以後は、同じリポジトリ内のファイルを更新します。</p>
             </aside>
-            <aside class="completion-condition" aria-label="Step 3の完了条件">
-              <p class="completion-condition__title">Step 3の完了</p>
+            <aside class="completion-condition" aria-label="このページの完了条件">
+              <p class="completion-condition__title">このページの完了条件</p>
               <p>公開URLで研究室サイトを表示し、内容が正しいことを確認できれば公開完了です。</p>
             </aside>
           </div>
@@ -156,7 +152,7 @@
       </aside>
 
       <nav class="container container--reading page-actions page-actions--final" aria-label="前後の工程">
-        <a class="page-actions__back" href="./edit.html">前へ：2. 編集へ戻る</a>
+        <a class="page-actions__back" href="./edit.html">前へ：編集へ戻る</a>
         <a class="page-actions__home" href="./index.html">ホームへ戻る</a>
       </nav>
     </main>

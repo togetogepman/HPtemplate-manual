@@ -25,17 +25,16 @@
     </header>
 
     <main id="main-content">
-      <nav class="container container--reading journey-progress" aria-label="公開までの進捗">
+      <section class="container container--reading journey-progress" aria-label="公開までの進捗">
         <ol>
-          <li><a href="./setup.html">1. 準備</a></li>
-          <li><a href="./edit.html" aria-current="step">2. 編集</a></li>
-          <li><a href="./publish.html">3. 公開</a></li>
+          <li>1. 準備</li>
+          <li aria-current="step">2. 編集</li>
+          <li>3. 公開</li>
         </ol>
-      </nav>
+      </section>
 
       <header class="page-header">
         <div class="container container--reading">
-          <p class="eyebrow">STEP 2 OF 3</p>
           <h1>ChatGPTとCodexでサイトを編集する</h1>
           <p class="lead">ChatGPTにテンプレートと研究室資料を照合させて依頼文を作り、その依頼文をCodexへ貼り付けて、編集と結果確認を進めます。</p>
         </div>
@@ -48,19 +47,18 @@
 
       <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
         <h2 id="page-nav-title">このページで行うこと</h2>
-        <ol>
-          <li><a href="#prepare-information">2-1. ChatGPTでCodex用の依頼文を作る</a></li>
-          <li><a href="#codex-edit">2-2. Codexでサイトを編集する</a></li>
-          <li><a href="#review-result">2-3. 変更結果を確認する</a></li>
+        <ul>
+          <li><a href="#prepare-information">ChatGPTでCodex用の依頼文を作る</a></li>
+          <li><a href="#codex-edit">Codexでサイトを編集する</a></li>
+          <li><a href="#review-result">変更結果を確認する</a></li>
           <li><a href="#manual-editing">補足：HTMLを直接編集する場合</a></li>
-        </ol>
+        </ul>
       </nav>
 
       <div class="container container--reading section-list section-list--manual">
         <section class="manual-section manual-section--detailed" aria-labelledby="prepare-information">
-          <p class="step-number" aria-hidden="true">2-1</p>
           <div class="manual-section__content">
-            <h2 id="prepare-information">2-1. ChatGPTでCodex用の依頼文を作る</h2>
+            <h2 id="prepare-information">ChatGPTでCodex用の依頼文を作る</h2>
             <p class="manual-section__intro">GitHubへ接続済みの通常のChatGPTチャットで、テンプレートの確認、資料整理、Codex用依頼文の作成までを原則として同じチャット内で行います。</p>
 
             <h3>ChatGPTで新しいチャットを開く</h3>
@@ -133,12 +131,11 @@ PCとスマートフォンでの表示確認、
         </section>
 
         <section class="manual-section manual-section--detailed" aria-labelledby="codex-edit">
-          <p class="step-number" aria-hidden="true">2-2</p>
           <div class="manual-section__content">
-            <h2 id="codex-edit">2-2. Codexでサイトを編集する</h2>
+            <h2 id="codex-edit">Codexでサイトを編集する</h2>
             <p class="manual-section__intro">ChatGPTデスクトップアプリでCodexへ切り替え、準備でcloneしたローカルリポジトリを開きます。</p>
 
-            <h3>2種類の接続を区別する</h3>
+            <h3>接続の役割を区別する</h3>
             <div class="table-wrapper">
               <table class="comparison-table">
                 <thead><tr><th scope="col">用途</th><th scope="col">対象</th></tr></thead>
@@ -151,7 +148,7 @@ PCとスマートフォンでの表示確認、
             <p>ChatGPTのGitHub接続は資料整理と依頼文作成のための参照です。Codexがローカルリポジトリを変更し、Commit・Pushした後にGitHub上へ変更が反映されます。</p>
 
             <ol class="manual-steps">
-              <li><p><a href="https://learn.chatgpt.com/docs/quickstart">OpenAI公式の利用案内</a>を必要に応じて確認し、ChatGPTデスクトップアプリ左上の選択から<strong>Codex</strong>へ切り替えます。通常のChatGPTとCodexは別のビューで、チャット履歴も別です。そのため、2-1で作った依頼文は利用者がコピーしてCodexへ貼り付けます。</p></li>
+              <li><p><a href="https://learn.chatgpt.com/docs/quickstart">OpenAI公式の利用案内</a>を必要に応じて確認し、ChatGPTデスクトップアプリ左上の選択から<strong>Codex</strong>へ切り替えます。通常のChatGPTとCodexは別のビューで、チャット履歴も別です。そのため、ChatGPTが作った依頼文は利用者がコピーしてCodexへ貼り付けます。</p></li>
               <li><p><strong>Add project</strong>、フォルダを開く操作など、現在の画面に表示されるプロジェクト追加の操作を選びます。</p></li>
               <li><p>準備で保存場所を確認した、clone済みのローカルリポジトリ全体を選びます。</p></li>
               <li><p>Codexの画面に自分のリポジトリ名またはフォルダ名が表示され、<code>index.html</code>と<code>prompts</code>が入った正しいフォルダであることを確認します。</p></li>
@@ -164,7 +161,7 @@ PCとスマートフォンでの表示確認、
                 </div>
                 <p>remoteが配布元ではなく自分用リポジトリを指し、対象branchと既存の未コミット変更の有無が把握できてから進みます。</p>
               </li>
-              <li><p>2-1でChatGPTが作成したCodex用依頼文をコピーして貼り付けます。</p></li>
+              <li><p>ChatGPTが作成したCodex用依頼文をコピーして貼り付けます。</p></li>
               <li><p>Codex自身にも、ローカルリポジトリの<code>prompts/INITIAL_CUSTOMIZATION.md</code>を読んでから作業するよう指示します。</p></li>
               <li><p>変更、PCとスマートフォンでのブラウザ確認、関連テスト、今回の変更だけのCommit、現在のbranchへのPushまで実行させます。</p></li>
             </ol>
@@ -176,9 +173,8 @@ PCとスマートフォンでの表示確認、
         </section>
 
         <section class="manual-section manual-section--detailed" aria-labelledby="review-result">
-          <p class="step-number" aria-hidden="true">2-3</p>
           <div class="manual-section__content">
-            <h2 id="review-result">2-3. 変更結果を確認する</h2>
+            <h2 id="review-result">変更結果を確認する</h2>
             <p class="manual-section__intro">公開へ進む前に、Codexの報告、変更内容、ブラウザ表示、掲載する事実を人が確認します。</p>
             <ol class="manual-steps">
               <li><p>Codexの最終報告を読み、実施内容、変更ファイル、テスト結果、未確認事項、残課題を確認します。</p></li>
@@ -188,15 +184,14 @@ PCとスマートフォンでの表示確認、
               <li><p>関連テストが成功していることと、commit hash、push先、working tree、remoteとの同期状態を最終報告で確認します。</p></li>
               <li><p>問題があれば同じCodexチャットで、場所、現在の状態、期待する状態を具体的に伝えて修正を依頼します。</p></li>
             </ol>
-            <aside class="completion-condition" aria-label="Step 2の完了条件">
-              <p class="completion-condition__title">Step 2の完了</p>
+            <aside class="completion-condition" aria-label="このページの完了条件">
+              <p class="completion-condition__title">このページの完了条件</p>
               <p>内容と表示に問題がなく、Codexによるテスト、Commit、Pushを確認できれば編集完了です。</p>
             </aside>
           </div>
         </section>
 
         <section class="manual-section manual-section--detailed" aria-labelledby="manual-editing">
-          <p class="step-number" aria-hidden="true">補足</p>
           <div class="manual-section__content">
             <h2 id="manual-editing">HTMLを直接編集する場合</h2>
             <p class="manual-section__intro">HTMLの手作業編集は、仕組みを理解している人や軽微な修正を行う場合の補足的な方法です。</p>
@@ -211,8 +206,8 @@ PCとスマートフォンでの表示確認、
       </div>
 
       <nav class="container container--reading page-actions" aria-label="前後の工程">
-        <a class="page-actions__back" href="./setup.html">前へ：1. 準備へ戻る</a>
-        <a class="primary-action" href="./publish.html">次へ：3. 公開へ進む <span aria-hidden="true">→</span></a>
+        <a class="page-actions__back" href="./setup.html">前へ：準備へ戻る</a>
+        <a class="primary-action" href="./publish.html">次へ：公開へ進む <span aria-hidden="true">→</span></a>
       </nav>
     </main>
 
