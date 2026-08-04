@@ -72,10 +72,6 @@
               </li>
               <li>
                 <p>必要な場合はGitHub Desktopで<strong>History</strong>を開き、今回のCommitを確認します。未コミット変更が残っていないかは<strong>Changes</strong>で確認できます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="changes-summary">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：ChangesとSummary</div>
-                  <figcaption>変更の有無と、Commitする内容を確認する画面です。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>CommitだけでPushされていない場合は、GitHub上のリポジトリへ変更が反映されていません。</p>
@@ -91,17 +87,9 @@
                 </li>
                 <li>
                   <p><strong>Commit to main</strong>を押します。別のbranchを選んでいる場合は、そのbranch名がボタンに表示されます。</p>
-                  <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-commit">
-                    <div class="manual-image-placeholder">スクリーンショット追加予定：Commit</div>
-                    <figcaption>確認した変更を一つの記録として保存します。</figcaption>
-                  </figure>
                 </li>
                 <li>
                   <p>Commit後に<strong>Push origin</strong>を押し、変更をGitHubへ送ります。</p>
-                  <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-push">
-                    <div class="manual-image-placeholder">スクリーンショット追加予定：Push origin</div>
-                    <figcaption>パソコン上のCommitをGitHubへ送ります。</figcaption>
-                  </figure>
                 </li>
               </ol>
             </aside>
@@ -120,19 +108,16 @@
               <li><p><strong>Build and deployment</strong>の<strong>Source</strong>で、<strong>Deploy from a branch</strong>を選びます。</p></li>
               <li>
                 <p>公開元のbranchに<strong>main</strong>、フォルダに<strong>/(root)</strong>を選び、<strong>Save</strong>を押します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="pages-settings">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：GitHub Pages設定</div>
-                  <figcaption>Deploy from a branch、main、/(root)を選んで保存します。</figcaption>
+                <figure class="manual-figure manual-figure--pair">
+                  <img src="./assets/images/manual/github/publishing-source-drop-down.png" alt="GitHub Pagesの設定画面で、公開元のbranchを選ぶドロップダウンを示す画面" />
+                  <img src="./assets/images/manual/github/publishing-source-folder-drop-down.png" alt="GitHub Pagesの設定画面で、公開元のfolderとして/(root)を選ぶドロップダウンを示す画面" />
+                  <figcaption>GitHub Docsの公式画像：公開元のbranchで<strong>main</strong>、folderで<strong>/(root)</strong>を選びます。</figcaption>
                 </figure>
               </li>
               <li><p>設定を保存します。</p></li>
               <li><p>公開処理が完了するまで待ちます。初回は表示まで数分かかる場合があります。</p></li>
               <li>
                 <p>Pagesに表示された公開URLを開き、文字や画像が正しく表示されるか確認します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="pages-published">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：公開URL</div>
-                  <figcaption>公開URLを開き、研究室サイトの内容を確認します。</figcaption>
-                </figure>
               </li>
             </ol>
             <aside class="callout callout--warning" aria-label="公開範囲の注意">
@@ -165,6 +150,10 @@
           </div>
         </section>
       </div>
+
+      <aside class="container container--reading manual-attribution" aria-label="GitHub Docs画像の出典">
+        <p>GitHubおよびGitHub Desktopの操作画像はGitHub Docsから使用しています（CC BY 4.0、改変なし）。詳しい出典は<a href="./THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>を参照してください。</p>
+      </aside>
 
       <nav class="container container--reading page-actions page-actions--final" aria-label="前後の工程">
         <a class="page-actions__back" href="./html.html">前へ：ChatGPTとCodexで編集する</a>

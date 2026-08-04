@@ -71,10 +71,6 @@
               </li>
               <li>
                 <p>研究室名、所属、研究テーマ、NEWS、メンバー、プロフィール、論文・研究発表、Contact、使用する画像ごとに整理します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="prepare-lab-information">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：研究室情報をChatGPTで整理する</div>
-                  <figcaption>確認済み資料をもとに、掲載項目ごとの情報を整理します。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>分からない項目は「不明」または「未定」、掲載しない項目は「非公開」と明記します。</p>
@@ -107,32 +103,16 @@
             </dl>
             <ol class="manual-steps">
               <li>
-                <p>ChatGPTデスクトップアプリの新しいチャット画面で、ChatGPTドロップダウンなどから<strong>Codex</strong>へ切り替えます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="select-codex">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：ChatGPTからCodexへ切り替える</div>
-                  <figcaption>サイト編集を始めるときにCodexへ切り替えます。</figcaption>
-                </figure>
+                <p><a href="https://learn.chatgpt.com/docs/quickstart">OpenAI公式の利用案内</a>を必要に応じて参照し、ChatGPTデスクトップアプリの新しいチャット画面で、ChatGPTドロップダウンなどから<strong>Codex</strong>へ切り替えます。</p>
               </li>
               <li>
                 <p><strong>Add new project</strong>、<strong>Add folder</strong>、<strong>Open folder</strong>など、プロジェクトへフォルダを追加する操作を選びます。Windowsでは<kbd>Ctrl</kbd>+<kbd>O</kbd>で開ける場合もあります。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-add-project">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexでプロジェクトを追加する</div>
-                  <figcaption>ボタン名が異なっても、パソコン上のフォルダを追加する操作を選びます。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>前のページで確認した、<code>index.html</code>、<code>prompts</code>、<code>assets</code>などが入っているローカルリポジトリ全体を選びます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-select-local-repository">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：ローカルリポジトリを選択する</div>
-                  <figcaption><code>prompts</code>だけではなく、その一つ上のリポジトリ全体を選びます。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>Codexの画面に、自分のリポジトリ名またはフォルダ名が表示されることを確認します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-repository-ready">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexが認識したリポジトリ</div>
-                  <figcaption>Codexの作業対象が、意図した自分のリポジトリであることを確認します。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>編集前に、Codexへ次の確認だけを依頼します。</p>
@@ -145,28 +125,12 @@ remoteとoriginとの差分、主要ファイルを報告してください。</
               </li>
               <li>
                 <p>正しいリポジトリだと確認できたら、Codexへ<code>prompts/INITIAL_CUSTOMIZATION.md</code>を読むよう依頼します。利用者が全文を手作業でコピーする必要はありません。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="initial-customization-prompt">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：初期カスタマイズ用プロンプト</div>
-                  <figcaption>リポジトリ確認後に、Codexが目的別プロンプトを読みます。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>Step 3で整理した研究室情報を貼り付け、入力資料にない事実を推測して追加しないよう伝えます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="send-codex-request">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexへ編集を依頼する</div>
-                  <figcaption>確認済み情報と作業条件をまとめて伝えます。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>変更、PCとスマートフォンでのブラウザ確認、関連テスト、今回の変更だけのCommit、現在のbranchへのPushまで依頼します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-working">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexの作業中画面</div>
-                  <figcaption>Codexの進捗と、追加確認が必要な項目を確認します。</figcaption>
-                </figure>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-result">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexの最終報告</div>
-                  <figcaption>変更内容、テスト結果、commit hash、push先、残課題が報告されます。</figcaption>
-                </figure>
               </li>
             </ol>
 
@@ -208,17 +172,9 @@ prompts/INITIAL_CUSTOMIZATION.mdを読んでください。
             <ol class="manual-steps">
               <li>
                 <p>Codexの最終報告を読み、実施内容、変更ファイル、テスト結果、未確認事項、残課題を確認します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="review-codex-result">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexの変更結果を確認する</div>
-                  <figcaption>変更ファイル、テスト結果、commit hash、push先を確認します。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>ブラウザでPC表示とスマートフォン表示を確認し、文字、画像、リンク、レイアウトに問題がないか見ます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="review-browser-preview">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：PCとスマートフォンの表示確認</div>
-                  <figcaption>公開予定のページをPCとスマートフォンの両方で確認します。</figcaption>
-                </figure>
               </li>
               <li>
                 <p>氏名、所属、研究テーマ、論文、住所、メールアドレスを原資料と照合し、人物写真やロゴを含む画像の掲載許可を確認します。</p>
