@@ -74,7 +74,7 @@
                 </figure>
               </li>
               <li>
-                <p>掲載内容の相談や整理には<strong>ChatGPT</strong>を使い、コードやローカルファイルを変更するときは製品選択から<strong>Codex</strong>へ切り替えます。</p>
+                <p>掲載内容の相談や整理には<strong>ChatGPT</strong>を使い、コードやローカルファイルを変更するときは、新しいチャット画面のChatGPTドロップダウンなどから<strong>Codex</strong>へ切り替えます。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="select-codex">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：ChatGPTからCodexへ切り替える</div>
                   <figcaption>サイト編集を始めるときは、アプリ内の製品選択からCodexへ切り替えます。</figcaption>
@@ -117,16 +117,16 @@
             <h3>初期カスタマイズ用プロンプトを使う</h3>
             <ol class="manual-steps">
               <li>
-                <p>GitHub Desktopでcloneした<code>HPtemplate</code>リポジトリの<code>prompts/INITIAL_CUSTOMIZATION.md</code>を開きます。</p>
+                <p>ChatGPTで、確認済みの研究室情報を整理します。不明な項目は「未定」とし、事実を補わせないようにします。</p>
               </li>
               <li>
-                <p>「利用者入力欄」へ確認済みの情報を記入し、不明な項目は「未定」とします。</p>
+                <p>後の手順でリポジトリをCodexに開いたら、<code>prompts/INITIAL_CUSTOMIZATION.md</code>を読むよう依頼します。利用者がファイルを別のアプリで開き、全文をコピーする必要はありません。</p>
               </li>
               <li>
-                <p>入力欄と「Codexへの依頼」を、後の手順でCodexへ渡します。</p>
+                <p>ChatGPTで整理した情報をCodexへ貼り付け、入力資料にない事実を追加しないよう伝えます。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="initial-customization-prompt">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：初期カスタマイズ用プロンプト</div>
-                  <figcaption>HPtemplateに用意されたプロンプトへ、確認済み情報を記入します。</figcaption>
+                  <figcaption>Codexがリポジトリ内のプロンプトを読み、確認済み情報に沿って作業します。</figcaption>
                 </figure>
               </li>
             </ol>
@@ -141,32 +141,114 @@
           <p class="step-number" aria-hidden="true">03</p>
           <div class="manual-section__content">
             <h2 id="codex-repository">Codexでリポジトリを開く</h2>
-            <p class="manual-section__intro">GitHub Desktopでcloneした自分のリポジトリを、Codexのローカルプロジェクトとして開きます。</p>
+            <p class="manual-section__intro">GitHub Desktopでパソコンへcloneしたリポジトリのフォルダを、ChatGPTデスクトップアプリのCodexでプロジェクトとして開きます。</p>
+            <dl class="term-list">
+              <div>
+                <dt>リモートリポジトリ</dt>
+                <dd>GitHub上に保存されているホームページのファイルと変更履歴です。</dd>
+              </div>
+              <div>
+                <dt>ローカルリポジトリ</dt>
+                <dd>GitHub Desktopでcloneして、パソコン上へ保存した作業用フォルダです。</dd>
+              </div>
+              <div>
+                <dt>Codexのプロジェクト</dt>
+                <dd>Codexが内容を読み、変更や検証を行うことを許可されたローカルフォルダです。</dd>
+              </div>
+            </dl>
+            <h3>GitHub Desktopで保存場所を確認する</h3>
             <ol class="manual-steps">
               <li>
-                <p>ChatGPTデスクトップアプリ内で<strong>Codex</strong>へ切り替えます。</p>
-              </li>
-              <li>
-                <p><strong>Add new project</strong>やフォルダを開く操作を選びます。Windowsでは<kbd>Ctrl</kbd>+<kbd>O</kbd>でもフォルダ選択を開けます。</p>
-              </li>
-              <li>
-                <p>GitHub Desktopでcloneした自分の<code>HPtemplate</code>リポジトリのフォルダを選びます。配布元や別のリポジトリを選ばないよう、フォルダ名を確認します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-open-repository">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexでローカルリポジトリを開く</div>
-                  <figcaption>GitHub Desktopでcloneした編集対象のリポジトリを選びます。</figcaption>
+                <p>GitHub Desktopを開き、左上の現在のリポジトリ名を確認します。リポジトリ一覧から、テンプレートをもとに作成した<strong>自分のリポジトリ</strong>を選びます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="github-desktop-select-repository">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：GitHub Desktopで自分のリポジトリを選ぶ</div>
+                  <figcaption>配布元ではなく、これから編集する自分のリポジトリ名を確認します。</figcaption>
                 </figure>
               </li>
               <li>
-                <p>最初の依頼で、現在のディレクトリ、branch、HEAD、working tree、remoteとの差分、リポジトリ内の指示文書を確認するようCodexへ伝えます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-repository-ready">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexが認識したリポジトリ</div>
-                  <figcaption>Codexの作業対象とGitの状態が、意図したリポジトリであることを確認します。</figcaption>
+                <p>GitHub Desktopの<strong>Repository</strong>メニューから<strong>Show in Explorer</strong>を選びます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="github-desktop-show-in-explorer">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Show in Explorerを選ぶ</div>
+                  <figcaption>選択中のローカルリポジトリをWindowsのエクスプローラーで開きます。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>エクスプローラーで開いたフォルダの場所を確認します。中に<code>index.html</code>、<code>prompts</code>、<code>assets</code>などがあれば、そのフォルダがCodexで選ぶローカルリポジトリです。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="local-repository-folder">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ローカルリポジトリのフォルダ</div>
+                  <figcaption>リポジトリ全体のフォルダ名、場所、主要ファイルを確認します。</figcaption>
                 </figure>
               </li>
             </ol>
+            <aside class="callout callout--warning" aria-label="自分のリポジトリを選ぶ注意">
+              <p class="callout__title">配布元や別のリポジトリを選ばない</p>
+              <p><code>academeia/hp_template</code>ではなく、自分用に作成したリポジトリを選びます。複数ある場合は名前をよく確認し、場所が分からなければ編集を始めません。</p>
+            </aside>
+            <h3>ChatGPTデスクトップアプリでCodexを開く</h3>
+            <ol class="manual-steps">
+              <li>
+                <p>ChatGPTデスクトップアプリを起動してサインインし、新しいチャット画面のメニューから<strong>Codex</strong>を選びます。</p>
+              </li>
+              <li>
+                <p>初回画面やプロジェクト選択画面で、<strong>Add new project</strong>、<strong>Add folder</strong>、<strong>Open folder</strong>など、プロジェクトへフォルダを追加する操作を選びます。Windowsでは<kbd>Ctrl</kbd>+<kbd>O</kbd>でフォルダ選択を開ける場合もあります。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-add-project">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexでプロジェクトを追加する</div>
+                  <figcaption>ボタン名や位置が異なっても、パソコン上のフォルダをプロジェクトへ追加する操作を選びます。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>先ほどGitHub Desktopから確認した、自分のローカルリポジトリのフォルダを選びます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-select-local-repository">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ローカルリポジトリを選択する</div>
+                  <figcaption><code>index.html</code>や<code>prompts</code>が入っているリポジトリ全体を選びます。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>フォルダへのアクセス確認が表示された場合は、対象の名前と場所が正しいことを確認して許可します。</p>
+              </li>
+              <li>
+                <p>Codexの画面に、選択したリポジトリ名またはフォルダ名が表示されることを確認します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-repository-ready">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexが認識したリポジトリ</div>
+                  <figcaption>Codexの作業対象が、意図した自分のリポジトリであることを確認します。</figcaption>
+                </figure>
+              </li>
+            </ol>
+            <aside class="callout callout--warning" aria-label="画面表示の違い">
+              <p class="callout__title">操作名はアプリによって異なる場合があります</p>
+              <p>アプリのバージョンや提供状況により、ボタン名や位置は異なる場合があります。目的は、パソコン上にcloneしたHPtemplateのフォルダを、Codexが作業するプロジェクトとして選ぶことです。</p>
+            </aside>
+            <h3>選択するフォルダ</h3>
+            <p>選ぶのは、次の「自分のリポジトリ名」のフォルダです。</p>
+            <div class="code-example" role="region" aria-label="選択するフォルダの例">
+              <pre><code>Documents
+└─ GitHub
+   └─ 自分のリポジトリ名  ← このフォルダを選ぶ
+      ├─ index.html
+      ├─ sample.html
+      ├─ prompts
+      ├─ assets
+      └─ README.md</code></pre>
+            </div>
+            <aside class="callout callout--warning" aria-label="選択しないフォルダ">
+              <p class="callout__title">リポジトリの一部や広すぎるフォルダを選ばない</p>
+              <p><code>Documents</code>全体、<code>GitHub</code>全体、<code>prompts</code>だけ、<code>INITIAL_CUSTOMIZATION.md</code>だけ、無関係な別リポジトリは選びません。</p>
+            </aside>
+            <h3>Codexが正しいリポジトリを開いたか確認する</h3>
+            <p>編集を依頼する前に、Codexへ次の確認だけを依頼します。</p>
+            <div class="code-example" role="region" aria-label="リポジトリ確認の依頼例">
+              <pre><code>このプロジェクトがHPtemplateのリポジトリであることを確認してください。
+変更は行わず、現在のディレクトリ、branch、HEAD、working tree、
+remoteとoriginとの差分、主要ファイルを報告してください。</code></pre>
+            </div>
+            <p>報告で、対象のリポジトリ名、<code>index.html</code>、<code>prompts/INITIAL_CUSTOMIZATION.md</code>、cleanなworking tree、自分用のGitHubリポジトリを指すremoteを確認します。</p>
             <aside class="callout callout--warning" aria-label="既存変更の注意">
-              <p class="callout__title">未コミットの変更がある場合</p>
-              <p>自分や別の人の未コミット変更がある場合は、Codexへ勝手に破棄、stash、reset、checkout、rebase、commitしないよう伝えます。今回の作業と分離できない場合は、変更を始めず報告させます。</p>
+              <p class="callout__title">結果が違う場合は編集を始めない</p>
+              <p>remoteが配布元の<code>academeia/hp_template</code>を直接指している場合、対象が分からない場合、未コミット変更がある場合は、編集を始めず確認します。既存変更を勝手に破棄、stash、reset、checkout、rebase、commitさせないでください。</p>
+            </aside>
+            <aside class="callout callout--note" aria-label="GitHubとの関係">
+              <p class="callout__title">フォルダを開いただけではGitHubは変わりません</p>
+              <p>Codexが開くのはGitHub上のWebページではなく、パソコン上のローカルフォルダです。Codexがファイルを変更しても、CommitしてPushするまではGitHubへ反映されません。Push時にGitHubの認証や許可を求められる場合があります。</p>
             </aside>
           </div>
         </section>
@@ -178,11 +260,14 @@
             <p class="manual-section__intro">整理した情報と作業条件を渡し、変更から検証、Commit、Pushまでを一つの依頼として明確に伝えます。</p>
             <ol class="manual-steps">
               <li>
-                <p>ChatGPTで整理した確認済み情報、または<code>prompts/INITIAL_CUSTOMIZATION.md</code>など目的に合うプロンプトをCodexへ渡します。</p>
+                <p>初期カスタマイズでは、Codexへ<code>prompts/INITIAL_CUSTOMIZATION.md</code>を読むよう依頼します。Codexがリポジトリ内から読むため、利用者が全文を手作業でコピーする必要はありません。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="send-codex-request">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：Codexへ編集を依頼する</div>
-                  <figcaption>確認済み情報と、変更・検証・Commit・Pushの条件をまとめて伝えます。</figcaption>
+                  <figcaption>使用するプロンプトのパスと、確認済みの研究室情報をCodexへ伝えます。</figcaption>
                 </figure>
+              </li>
+              <li>
+                <p>ChatGPTで整理した確認済みの研究室情報を貼り付け、入力資料にない研究内容、氏名、所属、論文、受賞歴などを推測して追加しないよう伝えます。</p>
               </li>
               <li>
                 <p>初期カスタマイズ、NEWS追加、メンバー更新など、目的が異なる変更はできるだけ別の依頼に分けます。</p>
@@ -207,9 +292,22 @@
             </ol>
             <h3>初心者向けの依頼例</h3>
             <div class="code-example" role="region" aria-label="Codexへの依頼例">
-              <pre><code>このリポジトリの初期カスタマイズを行ってください。
-添付した確認済みの研究室情報を使い、入力資料にない事実は追加しないでください。
-PCとスマートフォンで表示を確認し、テスト成功後に今回の変更だけをcommit・pushしてください。</code></pre>
+              <pre><code>このリポジトリの
+prompts/INITIAL_CUSTOMIZATION.mdを読んでください。
+
+以下はChatGPTで整理した、確認済みの研究室情報です。
+この情報だけを使ってindex.htmlを初期カスタマイズしてください。
+
+［ここに研究室情報を貼り付ける］
+
+入力資料にない研究内容、氏名、所属、論文、受賞歴等は
+推測して追加しないでください。
+
+作業前に現在のリポジトリ状態を確認してください。
+変更後はPCとスマートフォンで表示を確認し、
+関連するテストを実行してください。
+テスト成功後、今回の変更だけをcommitし、
+現在のbranchをremoteへpushしてください。</code></pre>
             </div>
             <aside class="callout callout--warning" aria-label="生成内容の確認">
               <p class="callout__title">研究情報は必ず人が確認</p>
