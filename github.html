@@ -32,10 +32,15 @@
           <p class="eyebrow">GitHub Guide</p>
           <h1>GitHubで公開・更新する</h1>
           <p class="lead">
-            GitHubを初めて使う人に向けて、テンプレートの準備からホームページの公開・更新までを順番に案内します。
+            GitHubを初めて使う人に向けて、テンプレートをパソコンへ用意し、Codexの変更結果を確認して公開するまでを案内します。
           </p>
         </div>
       </header>
+
+      <aside class="container container--reading callout page-intro-callout" aria-label="GitHub DesktopとCodexの役割">
+        <p class="callout__title">GitHub DesktopとCodexの役割</p>
+        <p>GitHub Desktopは、リポジトリをパソコンへ用意し、変更履歴を確認してGitHubへ送るために使います。サイト内容の作成やHTML、CSS、画像の変更は原則としてCodexへ依頼し、利用者は変更内容と表示結果を確認します。</p>
+      </aside>
 
       <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
         <h2 id="page-nav-title">このページの内容</h2>
@@ -138,7 +143,7 @@
           <p class="step-number" aria-hidden="true">03</p>
           <div class="manual-section__content">
             <h2 id="github-desktop">GitHub Desktopで変更を反映する</h2>
-            <p class="manual-section__intro">パソコン上で編集した内容を確認し、GitHubへ送ります。</p>
+            <p class="manual-section__intro">Codexがパソコン上で変更した内容を確認し、必要に応じてGitHub Desktopでも状態を確認します。</p>
             <dl class="term-list">
               <div>
                 <dt>Commit（コミット）</dt>
@@ -161,27 +166,27 @@
                 </figure>
               </li>
               <li>
-                <p>保存フォルダ内のHTMLや画像を編集し、上書き保存します。</p>
+                <p>サイト内容の作成やHTML、CSS、画像の変更は、原則として<a href="./html.html#codex-request">Codexへ依頼</a>します。毎回利用者がHTMLを直接編集する必要はありません。</p>
               </li>
               <li>
-                <p>GitHub Desktopへ戻り、<strong>Changes</strong>で変更されたファイルと内容を確認します。</p>
+                <p>Codexの作業後、GitHub Desktopの<strong>Changes</strong>で変更されたファイルと内容を確認できます。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="changes-summary">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：ChangesとSummary</div>
                   <figcaption>送信する変更を確認し、変更内容をSummaryへ入力します。</figcaption>
                 </figure>
               </li>
               <li>
-                <p><strong>Summary</strong>へ変更内容を短く入力します。「研究テーマを更新」「画像を差し替え」のように、後から見て分かる文にします。</p>
+                <p>利用者がGitHub DesktopからCommitする場合は、<strong>Summary</strong>へ「研究テーマを更新」のような短い説明を入力します。</p>
               </li>
               <li>
-                <p><strong>Commit to main</strong>を押します。別のbranchを選んでいる場合は、ボタンにそのbranch名が表示されます。</p>
+                <p>利用者が操作する場合は、変更内容を確認して<strong>Commit to main</strong>を押します。別のbranchを選んでいる場合は、ボタンにそのbranch名が表示されます。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-commit">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：Commit</div>
                   <figcaption>確認した変更を、一つの記録として保存します。</figcaption>
                 </figure>
               </li>
               <li>
-                <p>Commit後に表示される<strong>Push origin</strong>を押し、変更をGitHubへ送ります。</p>
+                <p>利用者が操作する場合は、Commit後に表示される<strong>Push origin</strong>を押し、変更をGitHubへ送ります。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-push">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：Push origin</div>
                   <figcaption>パソコン上のCommitをGitHubへ送ります。</figcaption>
@@ -191,6 +196,10 @@
             <aside class="callout callout--warning" aria-label="Pushの注意">
               <p class="callout__title">最後にPushまで行います</p>
               <p>CommitしただけではGitHub上の内容は更新されません。必ずPush originまで行ってください。</p>
+            </aside>
+            <aside class="callout callout--note" aria-label="CodexがCommitとPushを行った場合">
+              <p class="callout__title">CodexがCommitとPushを行った場合</p>
+              <p>Codexへテスト、Commit、Pushまで依頼した場合は、最終報告にあるテスト結果、commit hash、push先を確認します。GitHub Desktopの手順は、変更状態を理解したいときや手動操作が必要なときに利用してください。</p>
             </aside>
           </div>
         </section>
@@ -242,22 +251,22 @@
           <p class="step-number" aria-hidden="true">05</p>
           <div class="manual-section__content">
             <h2 id="github-update">更新する</h2>
-            <p class="manual-section__intro">公開後は、同じリポジトリで編集、Commit、Pushを繰り返します。</p>
+            <p class="manual-section__intro">公開後も同じリポジトリをCodexで開き、編集、確認、Commit、Pushの流れを繰り返します。</p>
             <ol class="manual-steps">
               <li>
-                <p>パソコン上にcloneした同じリポジトリのファイルを編集し、保存します。</p>
+                <p>パソコン上にcloneした同じリポジトリをCodexで開きます。</p>
               </li>
               <li>
-                <p>パソコンのブラウザでHTMLを開き、表示を確認します。</p>
+                <p>変更したい内容をCodexへ具体的に伝え、入力資料にない事実を追加しないよう依頼します。</p>
               </li>
               <li>
-                <p>GitHub DesktopのChangesで、変更したファイルと内容を確認します。</p>
+                <p>Codexの最終報告と変更ファイルを確認し、パソコンのブラウザでも表示を確認します。</p>
               </li>
               <li>
-                <p>Summaryを入力し、Commitします。</p>
+                <p>テストが成功したことを確認し、Codexが報告したcommit hashとpush先を確認します。</p>
               </li>
               <li>
-                <p><strong>Push origin</strong>を押して、GitHubへ変更を送ります。</p>
+                <p>必要に応じてGitHub DesktopのChangesや履歴を開き、変更がCommit・Pushされていることを確認します。</p>
               </li>
               <li>
                 <p>公開ページを再読み込みし、更新が反映されたことを確認します。</p>

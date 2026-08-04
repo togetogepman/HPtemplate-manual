@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="研究室ホームページのHTMLを編集するためのマニュアルです。"
+      content="ChatGPTで研究室情報を整理し、Codexへ研究室ホームページの編集を依頼するためのマニュアルです。"
     />
-    <title>HTMLを編集する | 研究室HPテンプレート マニュアル</title>
+    <title>ChatGPTとCodexでサイトを編集する | 研究室HPテンプレート マニュアル</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -29,218 +29,246 @@
     <main id="main-content">
       <header class="page-header">
         <div class="container container--reading">
-          <p class="eyebrow">HTML Guide</p>
-          <h1>HTMLを編集する</h1>
-          <p class="lead">HTMLを直接編集する人に向けて、文字や画像を安全に変更するための基本手順を案内します。</p>
+          <p class="eyebrow">ChatGPT &amp; Codex Guide</p>
+          <h1>ChatGPTとCodexでサイトを編集する</h1>
+          <p class="lead">ChatGPTで掲載内容を整理し、Codexへリポジトリの変更、表示確認、テスト、Commit、Pushまで依頼する基本手順を案内します。</p>
         </div>
       </header>
 
-      <aside class="container container--reading callout callout--note page-intro-callout" aria-label="編集するファイル">
-        <p class="callout__title">編集するファイル</p>
-        <p>実際に編集するファイルは<code>index.html</code>です。<code>sample.html</code>は完成見本なので、通常は編集しません。</p>
-        <p>タグやclassを不用意に削除すると表示が崩れます。基本的には、このページで案内する文字や画像のファイル名だけを変更してください。</p>
+      <aside class="container container--reading callout page-intro-callout" aria-label="ChatGPTとCodexの役割">
+        <p class="callout__title">ChatGPTとCodexの役割</p>
+        <p>ChatGPTは研究室情報や依頼内容の整理に使い、CodexはローカルリポジトリのHTML、CSS、画像などを変更するために使います。AIの作業結果はそのまま公開せず、最後に人が事実と表示を確認します。</p>
       </aside>
 
       <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
         <h2 id="page-nav-title">このページの内容</h2>
         <ol>
-          <li><a href="#html-preparation">編集前の準備</a></li>
-          <li><a href="#html-text">文字を変更する</a></li>
-          <li><a href="#html-image">画像を変更する</a></li>
-          <li><a href="#html-sections">各セクションを編集する</a></li>
-          <li><a href="#html-browser">ブラウザで確認する</a></li>
+          <li><a href="#chatgpt-app">ChatGPTアプリを準備する</a></li>
+          <li><a href="#prepare-information">研究室の情報を整理する</a></li>
+          <li><a href="#codex-repository">Codexでリポジトリを開く</a></li>
+          <li><a href="#codex-request">Codexへ編集を依頼する</a></li>
+          <li><a href="#review-result">変更結果を確認する</a></li>
+          <li><a href="#manual-editing">HTMLを直接編集する場合</a></li>
         </ol>
       </nav>
 
       <div class="container container--reading section-list section-list--manual">
-        <section class="manual-section manual-section--detailed" aria-labelledby="html-preparation">
+        <section class="manual-section manual-section--detailed" aria-labelledby="chatgpt-app">
           <p class="step-number" aria-hidden="true">01</p>
           <div class="manual-section__content">
-            <h2 id="html-preparation">編集前の準備</h2>
-            <p class="manual-section__intro">編集するリポジトリとファイルを間違えないように準備します。</p>
+            <h2 id="chatgpt-app">ChatGPTアプリを準備する</h2>
+            <p class="manual-section__intro">Windows版ChatGPTデスクトップアプリを用意し、ChatGPTとCodexを同じアプリ内で使える状態にします。</p>
             <ol class="manual-steps">
               <li>
-                <p>GitHub Desktopを開き、編集する自分のリポジトリを選びます。</p>
-              </li>
-              <li>
-                <p>メニューの<strong>Show in Explorer</strong>から、リポジトリの保存フォルダを開きます。OSによって表示名が異なる場合があります。</p>
-              </li>
-              <li>
-                <p>Visual Studio Codeなどのテキストエディタで、保存フォルダ内の<code>index.html</code>を開きます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="open-index-html">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：index.htmlを開く</div>
-                  <figcaption>完成見本のsample.htmlではなく、編集用のindex.htmlを開きます。</figcaption>
+                <p><a href="https://learn.chatgpt.com/docs/windows/windows-app">OpenAI公式のWindows版案内</a>を確認し、案内先からChatGPTデスクトップアプリをインストールします。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="chatgpt-download">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Windows版ChatGPTアプリのダウンロード</div>
+                  <figcaption>OpenAI公式案内からWindows版ChatGPTデスクトップアプリを入手します。</figcaption>
                 </figure>
               </li>
               <li>
-                <p>編集を始める前に、現在の状態をGitでCommitしておきます。変更前の状態が記録されるため、後から差分を確認しやすくなります。</p>
+                <p>アプリを起動し、普段使用するChatGPTアカウントでサインインします。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="chatgpt-sign-in">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ChatGPTへのサインイン</div>
+                  <figcaption>ChatGPTアカウントでデスクトップアプリへサインインします。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>掲載内容の相談や整理には<strong>ChatGPT</strong>を使い、コードやローカルファイルを変更するときは製品選択から<strong>Codex</strong>へ切り替えます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="select-codex">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ChatGPTからCodexへ切り替える</div>
+                  <figcaption>サイト編集を始めるときは、アプリ内の製品選択からCodexへ切り替えます。</figcaption>
+                </figure>
               </li>
             </ol>
+            <aside class="callout callout--note" aria-label="デスクトップアプリを使う理由">
+              <p class="callout__title">デスクトップアプリを使う理由</p>
+              <p>デスクトップアプリでは、選んだローカルフォルダをCodexの作業対象にできます。Web版だけで相談する場合と異なり、Codexがリポジトリ内のファイルを読み、変更やテストを行えます。</p>
+            </aside>
+            <aside class="callout callout--warning" aria-label="画面表示の違い">
+              <p class="callout__title">表示は異なる場合があります</p>
+              <p>製品選択の名称や位置、利用できる機能は、アプリの更新、契約プラン、所属組織の設定、段階的な提供状況によって異なる場合があります。</p>
+            </aside>
           </div>
         </section>
 
-        <section class="manual-section manual-section--detailed" aria-labelledby="html-text">
+        <section class="manual-section manual-section--detailed" aria-labelledby="prepare-information">
           <p class="step-number" aria-hidden="true">02</p>
           <div class="manual-section__content">
-            <h2 id="html-text">文字を変更する</h2>
-            <p class="manual-section__intro">まず、テンプレート内の入力案内を自分の研究室の情報へ置き換えます。</p>
-            <ol class="manual-steps">
-              <li>
-                <p>エディタの検索機能で「入力してください」を検索します。ページタイトル、説明、研究室名、各セクションの入力箇所を見つけやすくなります。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="find-placeholder-text">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：「入力してください」を検索</div>
-                  <figcaption>検索機能を使って、テンプレート内の主な編集箇所を探します。</figcaption>
-                </figure>
-              </li>
-              <li>
-                <p>ページタイトルと説明、研究室名の日本語・英語表記を変更します。開始タグと終了タグの間にある文字だけを置き換えます。</p>
-                <div class="code-example" aria-label="研究室名を変更するコード例">
-                  <pre><code>&lt;span class="header-name-wrapp-ja"&gt;○○大学 △△研究室&lt;/span&gt;</code></pre>
-                </div>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="edit-text">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：文字を編集</div>
-                  <figcaption>タグを残したまま、開始タグと終了タグの間の文字を変更します。</figcaption>
-                </figure>
-              </li>
-              <li>
-                <p>「［～を入力してください］」の部分と、NEWS、研究テーマ、モットー、メンバー、プロフィール、Contactなどの文章を確認済みの内容へ変更します。</p>
-              </li>
-              <li>
-                <p>入力後に、氏名、所属、研究内容、論文、受賞歴などが正しいか原資料と照合します。</p>
-              </li>
-            </ol>
-            <aside class="callout callout--warning" aria-label="文字編集の注意">
-              <p class="callout__title">タグは原則として消さない</p>
-              <p><code>&lt;</code>と<code>&gt;</code>で囲まれたタグやclassは、表示や機能に使われています。不要な項目でも、範囲が分からないまま削除しないでください。</p>
-            </aside>
-            <aside class="callout callout--warning" aria-label="掲載内容の注意">
-              <p class="callout__title">事実を確認して入力</p>
-              <p>実在しない研究内容、論文、受賞歴などを作らないでください。不要な項目は適当な情報で埋めず、公開前に掲載方法を確認します。</p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="manual-section manual-section--detailed" aria-labelledby="html-image">
-          <p class="step-number" aria-hidden="true">03</p>
-          <div class="manual-section__content">
-            <h2 id="html-image">画像を変更する</h2>
-            <p class="manual-section__intro">画像ファイルを保存し、HTMLからそのファイルを読み込むように変更します。</p>
-            <ol class="manual-steps">
-              <li>
-                <p>使用する画像をリポジトリ内の<code>assets/images/</code>へ保存します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="images-folder">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：assets/imagesフォルダ</div>
-                  <figcaption>ホームページで使用する画像をassets/images内へ保存します。</figcaption>
-                </figure>
-              </li>
-              <li>
-                <p><code>index.html</code>内の<code>src</code>を、保存した画像のファイル名に合わせます。</p>
-                <div class="code-example" aria-label="画像を変更するコード例">
-                  <pre><code>&lt;img src="./assets/images/lab-photo.jpg" alt="研究室の活動風景" /&gt;</code></pre>
-                </div>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="edit-image-path">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：画像のsrcを編集</div>
-                  <figcaption>画像の保存場所とファイル名に合わせてsrcを変更します。</figcaption>
-                </figure>
-              </li>
-              <li>
-                <p><code>alt</code>へ「研究室の活動風景」のような、画像内容の短い説明を書きます。</p>
-              </li>
-              <li>
-                <p><code>index.html</code>をブラウザで開き、画像が正しく表示されるか確認します。</p>
-              </li>
-            </ol>
-            <aside class="callout callout--warning" aria-label="画像ファイルの注意">
-              <p class="callout__title">ファイル名と掲載許可を確認</p>
-              <ul class="manual-list">
-                <li>ファイル名の大文字と小文字は区別されます。</li>
-                <li>日本語や空白を避け、<code>lab-photo.jpg</code>のような分かりやすい英数字を使います。</li>
-                <li>ファイル名を変えた場合は、HTML側の<code>src</code>も変更します。</li>
-                <li>元画像と同じ名前でも、拡張子が変われば<code>src</code>の修正が必要です。</li>
-                <li>人物、学生、大学ロゴなどは掲載許可を確認します。</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="manual-section manual-section--detailed" aria-labelledby="html-sections">
-          <p class="step-number" aria-hidden="true">04</p>
-          <div class="manual-section__content">
-            <h2 id="html-sections">各セクションを編集する</h2>
-            <p class="manual-section__intro"><code>index.html</code>内のSTARTとENDのコメントを目印に、編集する範囲を探します。</p>
-            <div class="code-example" aria-label="研究テーマセクションのコメント例">
-              <pre><code>&lt;!-- START 研究テーマ --&gt;
-...
-&lt;!-- END 研究テーマ --&gt;</code></pre>
-            </div>
-            <figure class="manual-figure manual-figure--placeholder" data-screenshot="section-comments">
-              <div class="manual-image-placeholder">スクリーンショット追加予定：セクションコメント</div>
-              <figcaption>STARTとENDのコメントを目印に、編集するセクションの範囲を確認します。</figcaption>
-            </figure>
-            <h3>主なセクション</h3>
+            <h2 id="prepare-information">研究室の情報を整理する</h2>
+            <p class="manual-section__intro">Codexへ変更を依頼する前に、掲載する事実と掲載しない情報をChatGPTで整理します。</p>
+            <h3>整理する情報</h3>
             <ul class="manual-list">
+              <li>研究室名</li>
+              <li>所属</li>
               <li>研究テーマ</li>
               <li>NEWS</li>
-              <li>研究室のモットー</li>
-              <li>研究室メンバー</li>
+              <li>メンバー</li>
               <li>プロフィール</li>
               <li>論文・研究発表</li>
               <li>Contact</li>
+              <li>使用する画像と用途</li>
+              <li>掲載しない情報</li>
             </ul>
-            <h3>編集時の基本ルール</h3>
-            <ul class="manual-list">
-              <li>見出しや本文は、既存の入力案内を確認済みの内容へ置き換えます。</li>
-              <li>項目を増やす場合は、対応する<code>li</code>要素をひとまとまりで複製します。</li>
-              <li>コピーする範囲が分からない場合は無理に増やさず、Codexなどへ変更を依頼します。</li>
-              <li>ナビゲーション部分へリンクを直接書き足しません。テンプレートのナビゲーションは各セクションの情報から生成されます。</li>
-            </ul>
-            <aside class="callout callout--warning" aria-label="帰属表示の注意">
-              <p class="callout__title">無料利用時の帰属表示</p>
-              <p>フッターのアカデメイア帰属表示は、削除、非表示、別URLへの変更を行わないでください。</p>
+            <figure class="manual-figure manual-figure--placeholder" data-screenshot="prepare-lab-information">
+              <div class="manual-image-placeholder">スクリーンショット追加予定：研究室情報をChatGPTで整理する</div>
+              <figcaption>確認済み資料をもとに、掲載項目と不足している項目を整理します。</figcaption>
+            </figure>
+            <h3>初期カスタマイズ用プロンプトを使う</h3>
+            <ol class="manual-steps">
+              <li>
+                <p>GitHub Desktopでcloneした<code>HPtemplate</code>リポジトリの<code>prompts/INITIAL_CUSTOMIZATION.md</code>を開きます。</p>
+              </li>
+              <li>
+                <p>「利用者入力欄」へ確認済みの情報を記入し、不明な項目は「未定」とします。</p>
+              </li>
+              <li>
+                <p>入力欄と「Codexへの依頼」を、後の手順でCodexへ渡します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="initial-customization-prompt">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：初期カスタマイズ用プロンプト</div>
+                  <figcaption>HPtemplateに用意されたプロンプトへ、確認済み情報を記入します。</figcaption>
+                </figure>
+              </li>
+            </ol>
+            <aside class="callout callout--warning" aria-label="事実と機密情報の注意">
+              <p class="callout__title">推測させない・公開できない情報を入れない</p>
+              <p>資料にない研究内容、氏名、論文、受賞歴、連絡先などをAIに推測させないでください。個人情報、未公開の研究情報、パスワード、公開許可のない画像は、不用意にChatGPTへ入力したりリポジトリへ保存したりしないでください。</p>
             </aside>
           </div>
         </section>
 
-        <section class="manual-section manual-section--detailed" aria-labelledby="html-browser">
-          <p class="step-number" aria-hidden="true">05</p>
+        <section class="manual-section manual-section--detailed" aria-labelledby="codex-repository">
+          <p class="step-number" aria-hidden="true">03</p>
           <div class="manual-section__content">
-            <h2 id="html-browser">ブラウザで確認する</h2>
-            <p class="manual-section__intro">公開前に、編集した内容と表示を自分の目で確認します。</p>
+            <h2 id="codex-repository">Codexでリポジトリを開く</h2>
+            <p class="manual-section__intro">GitHub Desktopでcloneした自分のリポジトリを、Codexのローカルプロジェクトとして開きます。</p>
             <ol class="manual-steps">
               <li>
-                <p>編集した<code>index.html</code>を保存します。</p>
+                <p>ChatGPTデスクトップアプリ内で<strong>Codex</strong>へ切り替えます。</p>
               </li>
               <li>
-                <p>保存した<code>index.html</code>をブラウザで開きます。</p>
+                <p><strong>Add new project</strong>やフォルダを開く操作を選びます。Windowsでは<kbd>Ctrl</kbd>+<kbd>O</kbd>でもフォルダ選択を開けます。</p>
               </li>
               <li>
-                <p>変更した文字や画像が意図どおり表示されるか確認します。</p>
-              </li>
-              <li>
-                <p>PC幅とスマートフォン相当の幅で表示を確認します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="browser-preview">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：ブラウザで表示確認</div>
-                  <figcaption>PCとスマートフォン相当の幅で、文字、画像、レイアウトを確認します。</figcaption>
+                <p>GitHub Desktopでcloneした自分の<code>HPtemplate</code>リポジトリのフォルダを選びます。配布元や別のリポジトリを選ばないよう、フォルダ名を確認します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-open-repository">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexでローカルリポジトリを開く</div>
+                  <figcaption>GitHub Desktopでcloneした編集対象のリポジトリを選びます。</figcaption>
                 </figure>
               </li>
               <li>
-                <p>問題がなければ、GitHub DesktopでCommitとPushを行います。</p>
+                <p>最初の依頼で、現在のディレクトリ、branch、HEAD、working tree、remoteとの差分、リポジトリ内の指示文書を確認するようCodexへ伝えます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-repository-ready">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexが認識したリポジトリ</div>
+                  <figcaption>Codexの作業対象とGitの状態が、意図したリポジトリであることを確認します。</figcaption>
+                </figure>
               </li>
             </ol>
-            <h3>公開前の確認事項</h3>
-            <ul class="manual-list">
-              <li>文字化けしていない</li>
-              <li>画像が表示されている</li>
-              <li>不要なサンプル文言が残っていない</li>
-              <li>リンク先が正しい</li>
-              <li>横スクロールや大きな表示崩れがない</li>
-              <li>氏名、所属、論文、住所、メールアドレスなどが正しい</li>
-              <li>未公開情報や個人情報が含まれていない</li>
-            </ul>
-            <aside class="callout callout--note" aria-label="GitHubへ反映する方法">
-              <p class="callout__title">GitHubへ反映する</p>
-              <p>CommitとPushの詳しい操作は、<a href="./github.html#github-desktop">GitHubで公開・更新するマニュアル</a>を確認してください。</p>
+            <aside class="callout callout--warning" aria-label="既存変更の注意">
+              <p class="callout__title">未コミットの変更がある場合</p>
+              <p>自分や別の人の未コミット変更がある場合は、Codexへ勝手に破棄、stash、reset、checkout、rebase、commitしないよう伝えます。今回の作業と分離できない場合は、変更を始めず報告させます。</p>
             </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="codex-request">
+          <p class="step-number" aria-hidden="true">04</p>
+          <div class="manual-section__content">
+            <h2 id="codex-request">Codexへ編集を依頼する</h2>
+            <p class="manual-section__intro">整理した情報と作業条件を渡し、変更から検証、Commit、Pushまでを一つの依頼として明確に伝えます。</p>
+            <ol class="manual-steps">
+              <li>
+                <p>ChatGPTで整理した確認済み情報、または<code>prompts/INITIAL_CUSTOMIZATION.md</code>など目的に合うプロンプトをCodexへ渡します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="send-codex-request">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexへ編集を依頼する</div>
+                  <figcaption>確認済み情報と、変更・検証・Commit・Pushの条件をまとめて伝えます。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>初期カスタマイズ、NEWS追加、メンバー更新など、目的が異なる変更はできるだけ別の依頼に分けます。</p>
+              </li>
+              <li>
+                <p>CodexへPC幅とスマートフォン幅の表示確認、関連テスト、今回の変更だけのCommit、現在のbranchへのPushまで依頼します。</p>
+              </li>
+              <li>
+                <p>作業中に確認や許可を求められた場合は、対象と影響を読んでから回答します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-working">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexの作業中画面</div>
+                  <figcaption>Codexの進捗と、追加確認が必要な項目を確認します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>Codexの作業が終わったら、最終報告が表示されるまで確認します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="codex-result">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexの最終報告</div>
+                  <figcaption>変更内容、テスト結果、commit hash、push先、残課題を確認します。</figcaption>
+                </figure>
+              </li>
+            </ol>
+            <h3>初心者向けの依頼例</h3>
+            <div class="code-example" role="region" aria-label="Codexへの依頼例">
+              <pre><code>このリポジトリの初期カスタマイズを行ってください。
+添付した確認済みの研究室情報を使い、入力資料にない事実は追加しないでください。
+PCとスマートフォンで表示を確認し、テスト成功後に今回の変更だけをcommit・pushしてください。</code></pre>
+            </div>
+            <aside class="callout callout--warning" aria-label="生成内容の確認">
+              <p class="callout__title">研究情報は必ず人が確認</p>
+              <p>AIが生成・整理した研究内容、氏名、所属、論文、受賞歴、連絡先は、原資料と照合してください。文章が自然でも、事実であるとは限りません。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="review-result">
+          <p class="step-number" aria-hidden="true">05</p>
+          <div class="manual-section__content">
+            <h2 id="review-result">変更結果を確認する</h2>
+            <p class="manual-section__intro">公開前に、Codexの報告、変更ファイル、ブラウザ表示、掲載内容を人が確認します。</p>
+            <ol class="manual-steps">
+              <li>
+                <p>Codexの最終報告を読み、実施済み、未実施、テスト結果、未確認事項、残課題を区別します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="review-codex-result">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Codexの変更結果を確認する</div>
+                  <figcaption>変更ファイル、テスト結果、commit hash、push先を最終報告で確認します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>変更ファイルと差分を確認し、依頼していない変更や削除がないか確認します。</p>
+              </li>
+              <li>
+                <p>ブラウザでサイトを開き、PC幅とスマートフォン幅の両方で文字、画像、リンク、レイアウトを確認します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="review-browser-preview">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：PCとスマートフォンの表示確認</div>
+                  <figcaption>PCとスマートフォンで、公開予定のページを人が確認します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>氏名、論文、住所、メールアドレスが正しいことと、人物写真やロゴを含む画像の掲載許可を確認します。</p>
+              </li>
+              <li>
+                <p>Codexが報告したcommit hashとpush先が、今回のbranchとリポジトリに対応していることを確認します。</p>
+              </li>
+              <li>
+                <p>問題があれば同じCodexチャットで、場所、現在の状態、期待する状態を具体的に伝えて修正を依頼します。</p>
+              </li>
+            </ol>
+            <aside class="callout callout--note" aria-label="GitHub Pagesで公開する">
+              <p class="callout__title">GitHub Pagesで公開する</p>
+              <p>確認済みのサイトを公開する手順は、<a href="./github.html#github-pages">GitHub Pagesで公開する</a>を参照してください。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="manual-editing">
+          <p class="step-number" aria-hidden="true">補足</p>
+          <div class="manual-section__content">
+            <h2 id="manual-editing">HTMLを直接編集する場合</h2>
+            <p class="manual-section__intro">HTMLの手作業編集は、仕組みを理解している人や軽微な修正を行う場合の補足的な方法です。</p>
+            <ul class="manual-list">
+              <li>公開用の編集対象は<code>index.html</code>です。</li>
+              <li><code>sample.html</code>は完成見本なので編集しません。</li>
+              <li>タグやclassは表示や機能に使われるため、不用意に削除しません。</li>
+              <li>詳しい手作業の説明は、既存の<a href="./HTMLマニュアル.md">HTMLマニュアル</a>を参照してください。</li>
+            </ul>
           </div>
         </section>
       </div>
