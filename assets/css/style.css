@@ -177,6 +177,137 @@ code {
   font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
 }
 
+.journey-progress {
+  margin-top: 1.5rem;
+}
+
+.journey-progress ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  background: var(--color-surface);
+  list-style: none;
+  overflow: hidden;
+}
+
+.journey-progress li {
+  padding: 0.75rem 0.5rem;
+  border-right: 1px solid var(--color-border);
+  color: var(--color-text-subtle);
+  font-weight: 700;
+  text-align: center;
+}
+
+.journey-progress li:last-child {
+  border-right: 0;
+}
+
+.journey-progress li.is-complete {
+  background: #eef4fc;
+  color: var(--color-primary);
+}
+
+.journey-progress li[aria-current="step"] {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.journey-progress__status {
+  display: block;
+  margin-bottom: 0.375rem;
+  color: var(--color-text-subtle);
+  font-size: 0.875rem;
+}
+
+.workflow-overview {
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.workflow-overview > h2:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
+.workflow-steps {
+  display: grid;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.workflow-steps li {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  background: var(--color-surface);
+  gap: 0.75rem;
+}
+
+.workflow-steps span {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  place-items: center;
+}
+
+.start-action {
+  margin-top: 2rem;
+}
+
+.primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  padding: 0.875rem 1.5rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 0.375rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.primary-action:hover {
+  border-color: var(--color-primary-dark);
+  background: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+.resume-links {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.resume-links p {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-subtle);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.resume-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+}
+
 .page-nav {
   margin-top: clamp(2rem, 5vw, 3rem);
   padding: clamp(1.25rem, 4vw, 2rem);
@@ -391,6 +522,45 @@ code {
   margin-bottom: 0;
 }
 
+.completion-condition {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 0.375rem;
+  background: #ffffff;
+}
+
+.completion-condition__title {
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.completion-condition p:last-child {
+  margin-bottom: 0;
+}
+
+.manual-section--secondary {
+  border-style: dashed;
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+  gap: 1rem 2rem;
+}
+
+.page-actions__back,
+.page-actions__home {
+  font-weight: 700;
+}
+
+.page-actions--final {
+  justify-content: flex-start;
+}
+
 .page-intro-callout {
   margin-top: clamp(2rem, 5vw, 3rem);
 }
@@ -453,7 +623,8 @@ code {
 
   .global-nav a {
     justify-content: center;
-    padding-inline: 0.5rem;
+    padding-inline: 0.375rem;
+    font-size: 0.875rem;
   }
 
   .card-grid {
@@ -481,6 +652,21 @@ code {
   .manual-section--detailed .step-number {
     grid-row: auto;
     margin-bottom: 0.5rem;
+  }
+
+  .journey-progress li {
+    padding-inline: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .primary-action {
+    width: 100%;
+  }
+
+  .page-actions,
+  .page-actions--final {
+    align-items: stretch;
+    flex-direction: column-reverse;
   }
 }
 

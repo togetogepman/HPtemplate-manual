@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ChatGPTとCodexを使った研究室ホームページテンプレートの編集・公開手順を案内するマニュアルです。"
+      content="ChatGPTとCodexを使い、研究室ホームページを準備・編集・公開する順序を案内するマニュアルです。"
     />
     <title>研究室HPテンプレート マニュアル</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -18,48 +18,63 @@
         <a class="site-name" href="./index.html">研究室HPテンプレート マニュアル</a>
         <nav class="global-nav" aria-label="主要ナビゲーション">
           <ul>
-            <li><a href="./index.html" aria-current="page">Home</a></li>
-            <li><a href="./github.html">GitHub</a></li>
-            <li><a href="./html.html">HTML</a></li>
+            <li><a href="./index.html" aria-current="page">ホーム</a></li>
+            <li><a href="./github.html">1. 準備</a></li>
+            <li><a href="./html.html">2. 編集</a></li>
+            <li><a href="./publish.html">3. 公開</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
+      <nav class="container container--reading journey-progress journey-progress--before" aria-label="公開までの進捗">
+        <span class="journey-progress__status">開始前</span>
+        <ol>
+          <li>1. 準備</li>
+          <li>2. 編集</li>
+          <li>3. 公開</li>
+        </ol>
+      </nav>
+
       <section class="hero" aria-labelledby="page-title">
         <div class="container container--reading">
-          <p class="eyebrow">Manual</p>
+          <p class="eyebrow">Start here</p>
           <h1 id="page-title">研究室HPテンプレート マニュアル</h1>
-          <p class="lead">
-            ChatGPTで掲載内容を整理し、Codexへサイト編集を依頼して、GitHub Pagesで公開する流れを案内します。
-          </p>
+          <p class="lead">ChatGPTで研究室情報を整理し、Codexでサイトを編集して、GitHub Pagesで公開するところまでを上から順に案内します。</p>
         </div>
       </section>
 
-      <section class="container container--reading page-nav" aria-labelledby="workflow-title">
-        <h2 id="workflow-title">基本の流れ</h2>
-        <ol>
-          <li>ChatGPTデスクトップアプリを準備する</li>
-          <li>GitHubでテンプレートを手元に用意する</li>
-          <li>Codexへサイト編集を依頼する</li>
-          <li>完成したサイトをGitHub Pagesで公開する</li>
+      <section class="container container--reading workflow-overview" aria-labelledby="workflow-title">
+        <h2 id="workflow-title">このマニュアルでできること</h2>
+        <p>初めての方でも、必要なアプリとテンプレートの準備から、内容確認、公開までを一つの流れで進められます。</p>
+
+        <h2>公開までの6ステップ</h2>
+        <ol class="workflow-steps">
+          <li><span>1</span>ChatGPTアプリとGitHubを準備する</li>
+          <li><span>2</span>自分用のテンプレートをパソコンへ用意する</li>
+          <li><span>3</span>ChatGPTで研究室情報を整理する</li>
+          <li><span>4</span>Codexへサイト編集を依頼する</li>
+          <li><span>5</span>変更結果を確認する</li>
+          <li><span>6</span>GitHub Pagesで公開する</li>
         </ol>
-      </section>
 
-      <section class="guide-links" aria-label="マニュアルを選ぶ">
-        <div class="container card-grid">
-          <a class="guide-card" href="./github.html">
-            <span class="guide-card__label">公開・更新</span>
-            <span class="guide-card__title">GitHubで公開・更新する</span>
-            <span class="guide-card__link">マニュアルを見る <span aria-hidden="true">→</span></span>
-          </a>
-          <a class="guide-card" href="./html.html">
-            <span class="guide-card__label">内容の編集</span>
-            <span class="guide-card__title">ChatGPTとCodexでサイトを編集する</span>
-            <span class="guide-card__link">マニュアルを見る <span aria-hidden="true">→</span></span>
-          </a>
+        <aside class="callout callout--note" aria-label="初めて利用する方へ">
+          <p class="callout__title">初めての方へ</p>
+          <p>ステップ1から順番に進んでください。各ページの「完了条件」を確認してから、次へ進みます。</p>
+        </aside>
+
+        <div class="start-action">
+          <a class="primary-action" href="./github.html">ステップ1から始める <span aria-hidden="true">→</span></a>
         </div>
+
+        <nav class="resume-links" aria-label="途中から再開する">
+          <p>途中から再開する方</p>
+          <ul>
+            <li><a href="./html.html">編集から再開する</a></li>
+            <li><a href="./publish.html">公開から再開する</a></li>
+          </ul>
+        </nav>
       </section>
     </main>
 

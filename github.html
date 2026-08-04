@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="研究室ホームページをGitHubで公開・更新するためのマニュアルです。"
-    />
-    <title>GitHubで公開・更新する | 研究室HPテンプレート マニュアル</title>
+    <meta name="description" content="研究室ホームページの利用環境と自分用テンプレートを準備する手順です。" />
+    <title>利用環境とテンプレートを準備する | 研究室HPテンプレート マニュアル</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -18,85 +15,91 @@
         <a class="site-name" href="./index.html">研究室HPテンプレート マニュアル</a>
         <nav class="global-nav" aria-label="主要ナビゲーション">
           <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./github.html" aria-current="page">GitHub</a></li>
-            <li><a href="./html.html">HTML</a></li>
+            <li><a href="./index.html">ホーム</a></li>
+            <li><a href="./github.html" aria-current="page">1. 準備</a></li>
+            <li><a href="./html.html">2. 編集</a></li>
+            <li><a href="./publish.html">3. 公開</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
+      <nav class="container container--reading journey-progress" aria-label="公開までの進捗">
+        <ol>
+          <li aria-current="step">1. 準備</li>
+          <li>2. 編集</li>
+          <li>3. 公開</li>
+        </ol>
+      </nav>
+
       <header class="page-header">
         <div class="container container--reading">
-          <p class="eyebrow">GitHub Guide</p>
-          <h1>GitHubで公開・更新する</h1>
-          <p class="lead">
-            GitHubを初めて使う人に向けて、テンプレートをパソコンへ用意し、Codexの変更結果を確認して公開するまでを案内します。
-          </p>
+          <p class="eyebrow">Steps 1–2</p>
+          <h1>利用環境とテンプレートを準備する</h1>
+          <p class="lead">必要なアカウントとアプリを用意し、自分用のテンプレートをパソコンへcloneして、サイト編集を始められる状態にします。</p>
         </div>
       </header>
 
-      <aside class="container container--reading callout page-intro-callout" aria-label="GitHub DesktopとCodexの役割">
-        <p class="callout__title">GitHub DesktopとCodexの役割</p>
-        <p>GitHub Desktopは、リポジトリをパソコンへ用意し、変更履歴を確認してGitHubへ送るために使います。サイト内容の作成やHTML、CSS、画像の変更は原則としてCodexへ依頼し、利用者は変更内容と表示結果を確認します。</p>
-      </aside>
-
       <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
-        <h2 id="page-nav-title">このページの内容</h2>
+        <h2 id="page-nav-title">このページで行うこと</h2>
         <ol>
-          <li><a href="#github-preparation">準備</a></li>
-          <li><a href="#github-template">テンプレートを手元に用意する</a></li>
-          <li><a href="#github-desktop">GitHub Desktopで変更を反映する</a></li>
-          <li><a href="#github-pages">GitHub Pagesで公開する</a></li>
-          <li><a href="#github-update">更新する</a></li>
+          <li><a href="#prepare-tools">Step 1：利用環境を準備する</a></li>
+          <li><a href="#prepare-template">Step 2：自分用のテンプレートを用意する</a></li>
         </ol>
       </nav>
 
       <div class="container container--reading section-list section-list--manual">
-        <section class="manual-section manual-section--detailed" aria-labelledby="github-preparation">
-          <p class="step-number" aria-hidden="true">01</p>
+        <section class="manual-section manual-section--detailed" aria-labelledby="prepare-tools">
+          <p class="step-number" aria-hidden="true">STEP 1</p>
           <div class="manual-section__content">
-            <h2 id="github-preparation">準備</h2>
-            <p class="manual-section__intro">作業を始める前に、GitHubとGitHub Desktopを使える状態にします。</p>
+            <h2 id="prepare-tools">利用環境を準備する</h2>
+            <p class="manual-section__intro">GitHub、GitHub Desktop、Windows版ChatGPTデスクトップアプリへサインインします。この段階では、まだCodexへ切り替えません。</p>
             <ol class="manual-steps">
               <li>
-                <p>
-                  <a href="https://github.com/">GitHub</a>でアカウントを用意します。GitHubは、ホームページのファイルと変更履歴をインターネット上で管理するサービスです。
-                </p>
+                <p><a href="https://github.com/">GitHub</a>でアカウントを作成します。GitHubは、ホームページのファイルと変更履歴をインターネット上で管理するサービスです。</p>
               </li>
               <li>
-                <p>
-                  <a href="https://desktop.github.com/">GitHub Desktop公式ダウンロードページ</a>から、パソコンに合うアプリをインストールします。
-                </p>
+                <p><a href="https://desktop.github.com/">GitHub Desktop公式ダウンロードページ</a>から、Windows版GitHub Desktopをインストールします。</p>
               </li>
               <li>
-                <p>ブラウザのGitHubとGitHub Desktopの両方に、同じGitHubアカウントでログインします。</p>
+                <p>GitHub Desktopを開き、ブラウザのGitHubと同じGitHubアカウントでサインインします。</p>
               </li>
               <li>
-                <p>公開する文章、画像、連絡先に問題がないか確認します。</p>
+                <p><a href="https://learn.chatgpt.com/docs/windows/windows-app">OpenAI公式のWindows版案内</a>を確認し、ChatGPTデスクトップアプリをインストールします。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="chatgpt-download">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Windows版ChatGPTアプリのダウンロード</div>
+                  <figcaption>OpenAI公式案内からWindows版ChatGPTデスクトップアプリを入手します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>ChatGPTデスクトップアプリを起動し、普段使用するChatGPTアカウントでサインインします。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="chatgpt-sign-in">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ChatGPTへのサインイン</div>
+                  <figcaption>ChatGPTアカウントでデスクトップアプリへサインインします。</figcaption>
+                </figure>
               </li>
             </ol>
-            <aside class="callout callout--warning" aria-label="公開前の注意">
-              <p class="callout__title">注意</p>
-              <p>作成したホームページはインターネット上へ公開されます。パスワード、個人情報、未公開資料はリポジトリへ入れないでください。</p>
+            <aside class="completion-condition" aria-label="Step 1の完了条件">
+              <p class="completion-condition__title">完了条件</p>
+              <p>GitHub、GitHub Desktop、ChatGPTデスクトップアプリへサインインできれば完了です。</p>
             </aside>
           </div>
         </section>
 
-        <section class="manual-section manual-section--detailed" aria-labelledby="github-template">
-          <p class="step-number" aria-hidden="true">02</p>
+        <section class="manual-section manual-section--detailed" aria-labelledby="prepare-template">
+          <p class="step-number" aria-hidden="true">STEP 2</p>
           <div class="manual-section__content">
-            <h2 id="github-template">テンプレートを手元に用意する</h2>
-            <p class="manual-section__intro">配布用テンプレートから自分のリポジトリを作り、パソコンへコピーします。</p>
+            <h2 id="prepare-template">自分用のテンプレートを用意する</h2>
+            <p class="manual-section__intro">配布用テンプレートから自分のリポジトリを作り、GitHub Desktopでパソコンへcloneします。</p>
             <dl class="term-list">
               <div>
-                <dt>リポジトリ</dt>
-                <dd>ホームページのファイルと変更履歴を保存する場所です。</dd>
+                <dt>リモートリポジトリ</dt>
+                <dd>GitHub上に保存されているホームページのファイルと変更履歴です。</dd>
               </div>
               <div>
-                <dt>clone（クローン）</dt>
-                <dd>GitHub上のリポジトリを、自分のパソコンへコピーする操作です。</dd>
+                <dt>ローカルリポジトリ</dt>
+                <dd>GitHub Desktopでcloneして、パソコン上へ保存した作業用フォルダです。</dd>
               </div>
             </dl>
             <ol class="manual-steps">
@@ -104,186 +107,64 @@
                 <p><a href="https://github.com/academeia/hp_template"><code>academeia/hp_template</code></a>をブラウザで開きます。</p>
               </li>
               <li>
-                <p><strong>Use this template</strong>を押し、表示されたメニューから新しいリポジトリを作成する項目を選びます。</p>
+                <p><strong>Use this template</strong>を押し、新しいリポジトリを作成する項目を選びます。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="use-template">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：Use this template</div>
-                  <figcaption>テンプレートから新しいリポジトリを作成する操作を示します。</figcaption>
+                  <figcaption>配布用テンプレートから自分用のリポジトリを作ります。</figcaption>
                 </figure>
               </li>
               <li>
-                <p>所有者を確認し、後から見つけやすいリポジトリ名を入力します。公開してよい内容であることを確認して<strong>Public</strong>を選び、作成ボタンを押します。</p>
+                <p>所有者、リポジトリ名、公開範囲を確認します。公開してよい内容であることを確認して<strong>Public</strong>を選び、作成します。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="create-repository">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：新しいリポジトリ作成</div>
                   <figcaption>所有者、リポジトリ名、公開範囲を確認して作成します。</figcaption>
                 </figure>
               </li>
               <li>
-                <p>作成した自分のリポジトリをGitHub Desktopでcloneします。GitHub Desktopのclone画面で対象を選び、パソコン上の保存先を指定して<strong>Clone</strong>を押します。</p>
+                <p>作成した自分のリポジトリをGitHub Desktopでcloneします。対象とパソコン上の保存先を選び、<strong>Clone</strong>を押します。</p>
                 <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-clone">
                   <div class="manual-image-placeholder">スクリーンショット追加予定：GitHub Desktopでclone</div>
                   <figcaption>自分のリポジトリとパソコン上の保存先を選びます。</figcaption>
                 </figure>
               </li>
               <li>
-                <p>cloneが完了したら、GitHub Desktopに表示されたリポジトリ名とパソコン上の保存場所を確認します。</p>
+                <p>GitHub Desktop左上のリポジトリ一覧から、いま作成した自分のリポジトリを選びます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="github-desktop-select-repository">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：GitHub Desktopで自分のリポジトリを選ぶ</div>
+                  <figcaption>配布元ではなく、自分用に作成したリポジトリ名を確認します。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p><strong>Repository</strong>メニューから<strong>Show in Explorer</strong>を選び、保存場所を開きます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="github-desktop-show-in-explorer">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：Show in Explorerを選ぶ</div>
+                  <figcaption>選択中のローカルリポジトリをWindowsのエクスプローラーで開きます。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>開いたフォルダに、<code>index.html</code>、<code>sample.html</code>、<code>prompts</code>、<code>assets</code>、<code>README.md</code>が含まれていることを確認します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="local-repository-folder">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ローカルリポジトリのフォルダ</div>
+                  <figcaption>次のページでCodexに選ぶ、リポジトリ全体のフォルダです。</figcaption>
+                </figure>
               </li>
             </ol>
-            <aside class="callout callout--warning" aria-label="Use this templateが表示されない場合">
-              <p class="callout__title">Use this templateが表示されない場合</p>
-              <p>配布元リポジトリの設定が完了していない可能性があります。無理に別の操作をせず、配布元へ確認してください。</p>
-            </aside>
             <aside class="callout callout--warning" aria-label="公開するファイルの注意">
-              <p class="callout__title">公開するファイルに注意</p>
-              <p>Publicを選んだリポジトリの内容は誰でも確認できます。パスワード、個人情報、未公開資料を入れないでください。</p>
+              <p class="callout__title">公開できない情報を入れない</p>
+              <p>Publicリポジトリの内容は誰でも確認できます。パスワード、個人情報、未公開資料を入れないでください。</p>
             </aside>
-          </div>
-        </section>
-
-        <section class="manual-section manual-section--detailed" aria-labelledby="github-desktop">
-          <p class="step-number" aria-hidden="true">03</p>
-          <div class="manual-section__content">
-            <h2 id="github-desktop">GitHub Desktopで変更を反映する</h2>
-            <p class="manual-section__intro">Codexがパソコン上で変更した内容を確認し、必要に応じてGitHub Desktopでも状態を確認します。</p>
-            <dl class="term-list">
-              <div>
-                <dt>Commit（コミット）</dt>
-                <dd>選んだ変更内容を、一つの記録としてパソコン上に保存することです。</dd>
-              </div>
-              <div>
-                <dt>Push（プッシュ）</dt>
-                <dd>パソコン上のCommitをGitHubへ送ることです。</dd>
-              </div>
-            </dl>
-            <ol class="manual-steps">
-              <li>
-                <p>GitHub Desktopのリポジトリ一覧から、編集する自分のリポジトリを選びます。</p>
-              </li>
-              <li>
-                <p>メニューの<strong>Show in Explorer</strong>など、保存フォルダを開く項目を選びます。表示名はOSによって異なる場合があります。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="open-local-folder">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：保存フォルダを開く</div>
-                  <figcaption>GitHub Desktopから、編集対象のファイルがあるフォルダを開きます。</figcaption>
-                </figure>
-                <p>Codexで選ぶフォルダと確認方法は、<a href="./html.html#codex-repository">Codexでリポジトリを開く</a>を参照してください。</p>
-              </li>
-              <li>
-                <p>サイト内容の作成やHTML、CSS、画像の変更は、原則として<a href="./html.html#codex-request">Codexへ依頼</a>します。毎回利用者がHTMLを直接編集する必要はありません。</p>
-              </li>
-              <li>
-                <p>Codexの作業後、GitHub Desktopの<strong>Changes</strong>で変更されたファイルと内容を確認できます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="changes-summary">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：ChangesとSummary</div>
-                  <figcaption>送信する変更を確認し、変更内容をSummaryへ入力します。</figcaption>
-                </figure>
-              </li>
-              <li>
-                <p>利用者がGitHub DesktopからCommitする場合は、<strong>Summary</strong>へ「研究テーマを更新」のような短い説明を入力します。</p>
-              </li>
-              <li>
-                <p>利用者が操作する場合は、変更内容を確認して<strong>Commit to main</strong>を押します。別のbranchを選んでいる場合は、ボタンにそのbranch名が表示されます。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-commit">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Commit</div>
-                  <figcaption>確認した変更を、一つの記録として保存します。</figcaption>
-                </figure>
-              </li>
-              <li>
-                <p>利用者が操作する場合は、Commit後に表示される<strong>Push origin</strong>を押し、変更をGitHubへ送ります。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-push">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：Push origin</div>
-                  <figcaption>パソコン上のCommitをGitHubへ送ります。</figcaption>
-                </figure>
-              </li>
-            </ol>
-            <aside class="callout callout--warning" aria-label="Pushの注意">
-              <p class="callout__title">最後にPushまで行います</p>
-              <p>CommitしただけではGitHub上の内容は更新されません。必ずPush originまで行ってください。</p>
-            </aside>
-            <aside class="callout callout--note" aria-label="CodexがCommitとPushを行った場合">
-              <p class="callout__title">CodexがCommitとPushを行った場合</p>
-              <p>Codexへテスト、Commit、Pushまで依頼した場合は、最終報告にあるテスト結果、commit hash、push先を確認します。GitHub Desktopの手順は、変更状態を理解したいときや手動操作が必要なときに利用してください。</p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="manual-section manual-section--detailed" aria-labelledby="github-pages">
-          <p class="step-number" aria-hidden="true">04</p>
-          <div class="manual-section__content">
-            <h2 id="github-pages">GitHub Pagesで公開する</h2>
-            <p class="manual-section__intro">GitHub Pagesは、リポジトリ内のHTMLをホームページとして公開する機能です。</p>
-            <ol class="manual-steps">
-              <li>
-                <p>ブラウザで、テンプレートから作成した自分のリポジトリを開きます。</p>
-              </li>
-              <li>
-                <p>リポジトリの<strong>Settings</strong>を開きます。見当たらない場合は、リポジトリ上部の追加メニューも確認します。</p>
-              </li>
-              <li>
-                <p>Settings内の<strong>Pages</strong>を開きます。</p>
-              </li>
-              <li>
-                <p><strong>Build and deployment</strong>の<strong>Source</strong>で、<strong>Deploy from a branch</strong>を選びます。</p>
-              </li>
-              <li>
-                <p>公開元のbranchに<strong>main</strong>、フォルダに<strong>/(root)</strong>を選び、<strong>Save</strong>を押します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="pages-settings">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：GitHub Pages設定</div>
-                  <figcaption>Deploy from a branch、main、/(root)を選んで保存します。</figcaption>
-                </figure>
-              </li>
-              <li>
-                <p>設定の保存後、公開処理が完了するまで待ちます。初回は表示まで数分かかる場合があります。</p>
-              </li>
-              <li>
-                <p>Pagesに表示された公開URLを開き、文字や画像が正しく表示されるか確認します。</p>
-                <figure class="manual-figure manual-figure--placeholder" data-screenshot="pages-published">
-                  <div class="manual-image-placeholder">スクリーンショット追加予定：公開URL</div>
-                  <figcaption>表示されたURLを開き、公開されたホームページを確認します。</figcaption>
-                </figure>
-              </li>
-            </ol>
-            <aside class="callout callout--warning" aria-label="GitHub Pages公開の注意">
-              <p class="callout__title">公開範囲を確認</p>
-              <p>GitHub Pagesのサイトはインターネット上から見えます。公開URLを開き、意図しない文章、画像、個人情報が含まれていないか確認してください。</p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="manual-section manual-section--detailed" aria-labelledby="github-update">
-          <p class="step-number" aria-hidden="true">05</p>
-          <div class="manual-section__content">
-            <h2 id="github-update">更新する</h2>
-            <p class="manual-section__intro">公開後も同じリポジトリをCodexで開き、編集、確認、Commit、Pushの流れを繰り返します。</p>
-            <ol class="manual-steps">
-              <li>
-                <p>パソコン上にcloneした同じリポジトリをCodexで開きます。</p>
-              </li>
-              <li>
-                <p>変更したい内容をCodexへ具体的に伝え、入力資料にない事実を追加しないよう依頼します。</p>
-              </li>
-              <li>
-                <p>Codexの最終報告と変更ファイルを確認し、パソコンのブラウザでも表示を確認します。</p>
-              </li>
-              <li>
-                <p>テストが成功したことを確認し、Codexが報告したcommit hashとpush先を確認します。</p>
-              </li>
-              <li>
-                <p>必要に応じてGitHub DesktopのChangesや履歴を開き、変更がCommit・Pushされていることを確認します。</p>
-              </li>
-              <li>
-                <p>公開ページを再読み込みし、更新が反映されたことを確認します。</p>
-              </li>
-            </ol>
-            <aside class="callout callout--note" aria-label="更新が表示されない場合">
-              <p class="callout__title">表示が変わらない場合</p>
-              <p>Pushを忘れていないか確認し、ブラウザを再読み込みします。公開ページへの反映まで少し待つ場合もあります。</p>
-            </aside>
-            <aside class="callout callout--warning" aria-label="更新時の注意">
-              <p class="callout__title">リポジトリを作り直さない</p>
-              <p>更新のたびに新しいリポジトリを作る必要はありません。最初に作った同じリポジトリ内のファイルを編集します。</p>
+            <aside class="completion-condition" aria-label="Step 2の完了条件">
+              <p class="completion-condition__title">完了条件</p>
+              <p>自分用のリポジトリがパソコンへcloneされ、保存フォルダを確認できれば準備完了です。</p>
             </aside>
           </div>
         </section>
       </div>
+
+      <nav class="container container--reading page-actions" aria-label="前後の工程">
+        <a class="page-actions__back" href="./index.html">トップへ戻る</a>
+        <a class="primary-action" href="./html.html">次へ：ChatGPTとCodexで編集する <span aria-hidden="true">→</span></a>
+      </nav>
     </main>
 
     <footer class="site-footer">

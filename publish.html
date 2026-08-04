@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Codexの変更をGitHubで確認し、GitHub Pagesで公開・更新する手順です。" />
+    <title>GitHub Pagesで公開・更新する | 研究室HPテンプレート マニュアル</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-name" href="./index.html">研究室HPテンプレート マニュアル</a>
+        <nav class="global-nav" aria-label="主要ナビゲーション">
+          <ul>
+            <li><a href="./index.html">ホーム</a></li>
+            <li><a href="./github.html">1. 準備</a></li>
+            <li><a href="./html.html">2. 編集</a></li>
+            <li><a href="./publish.html" aria-current="page">3. 公開</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <nav class="container container--reading journey-progress" aria-label="公開までの進捗">
+        <ol>
+          <li class="is-complete">1. 準備</li>
+          <li class="is-complete">2. 編集</li>
+          <li aria-current="step">3. 公開</li>
+        </ol>
+      </nav>
+
+      <header class="page-header">
+        <div class="container container--reading">
+          <p class="eyebrow">Step 6</p>
+          <h1>GitHub Pagesで公開・更新する</h1>
+          <p class="lead">Codexの変更がGitHubへPushされていることを確認し、GitHub Pagesで研究室サイトを公開します。</p>
+        </div>
+      </header>
+
+      <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
+        <h2 id="page-nav-title">このページで行うこと</h2>
+        <ol>
+          <li><a href="#confirm-github">Step 6：GitHubへ反映されたことを確認する</a></li>
+          <li><a href="#github-pages">GitHub Pagesで公開する</a></li>
+          <li><a href="#daily-update">公開後に更新する</a></li>
+        </ol>
+      </nav>
+
+      <div class="container container--reading section-list section-list--manual">
+        <section class="manual-section manual-section--detailed" aria-labelledby="confirm-github">
+          <p class="step-number" aria-hidden="true">STEP 6</p>
+          <div class="manual-section__content">
+            <h2 id="confirm-github">GitHubへ反映されたことを確認する</h2>
+            <p class="manual-section__intro">Codexが今回の変更をCommitし、作業branchをGitHubへPushしたことを確認します。</p>
+            <dl class="term-list">
+              <div>
+                <dt>Commit（コミット）</dt>
+                <dd>選んだ変更内容を、一つの記録としてパソコン上に保存することです。</dd>
+              </div>
+              <div>
+                <dt>Push（プッシュ）</dt>
+                <dd>パソコン上のCommitをGitHubへ送ることです。</dd>
+              </div>
+            </dl>
+            <ol class="manual-steps">
+              <li>
+                <p>Codexの最終報告で、commit hashとpush先が自分のリポジトリと作業branchに対応していることを確認します。</p>
+              </li>
+              <li>
+                <p>必要な場合はGitHub Desktopで<strong>History</strong>を開き、今回のCommitを確認します。未コミット変更が残っていないかは<strong>Changes</strong>で確認できます。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="changes-summary">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：ChangesとSummary</div>
+                  <figcaption>変更の有無と、Commitする内容を確認する画面です。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>CommitだけでPushされていない場合は、GitHub上のリポジトリへ変更が反映されていません。</p>
+              </li>
+            </ol>
+
+            <aside class="callout callout--note" aria-labelledby="manual-push-title">
+              <p class="callout__title" id="manual-push-title">CodexがCommit・Pushしていない場合</p>
+              <p>利用者が手動操作する必要がある場合だけ、次の最小手順を行います。</p>
+              <ol class="manual-steps">
+                <li>
+                  <p>GitHub Desktopの<strong>Changes</strong>で変更ファイルを確認し、<strong>Summary</strong>へ短い説明を入力します。</p>
+                </li>
+                <li>
+                  <p><strong>Commit to main</strong>を押します。別のbranchを選んでいる場合は、そのbranch名がボタンに表示されます。</p>
+                  <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-commit">
+                    <div class="manual-image-placeholder">スクリーンショット追加予定：Commit</div>
+                    <figcaption>確認した変更を一つの記録として保存します。</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <p>Commit後に<strong>Push origin</strong>を押し、変更をGitHubへ送ります。</p>
+                  <figure class="manual-figure manual-figure--placeholder" data-screenshot="desktop-push">
+                    <div class="manual-image-placeholder">スクリーンショット追加予定：Push origin</div>
+                    <figcaption>パソコン上のCommitをGitHubへ送ります。</figcaption>
+                  </figure>
+                </li>
+              </ol>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="github-pages">
+          <p class="step-number" aria-hidden="true">公開</p>
+          <div class="manual-section__content">
+            <h2 id="github-pages">GitHub Pagesで公開する</h2>
+            <p class="manual-section__intro">GitHub上の自分のリポジトリを、ホームページとして公開します。</p>
+            <ol class="manual-steps">
+              <li><p>ブラウザで、テンプレートから作成した自分のリポジトリを開きます。</p></li>
+              <li><p>リポジトリの<strong>Settings</strong>を開きます。見当たらない場合は、リポジトリ上部の追加メニューも確認します。</p></li>
+              <li><p>Settings内の<strong>Pages</strong>を開きます。</p></li>
+              <li><p><strong>Build and deployment</strong>の<strong>Source</strong>で、<strong>Deploy from a branch</strong>を選びます。</p></li>
+              <li>
+                <p>公開元のbranchに<strong>main</strong>、フォルダに<strong>/(root)</strong>を選び、<strong>Save</strong>を押します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="pages-settings">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：GitHub Pages設定</div>
+                  <figcaption>Deploy from a branch、main、/(root)を選んで保存します。</figcaption>
+                </figure>
+              </li>
+              <li><p>設定を保存します。</p></li>
+              <li><p>公開処理が完了するまで待ちます。初回は表示まで数分かかる場合があります。</p></li>
+              <li>
+                <p>Pagesに表示された公開URLを開き、文字や画像が正しく表示されるか確認します。</p>
+                <figure class="manual-figure manual-figure--placeholder" data-screenshot="pages-published">
+                  <div class="manual-image-placeholder">スクリーンショット追加予定：公開URL</div>
+                  <figcaption>公開URLを開き、研究室サイトの内容を確認します。</figcaption>
+                </figure>
+              </li>
+            </ol>
+            <aside class="callout callout--warning" aria-label="公開範囲の注意">
+              <p class="callout__title">公開範囲を確認</p>
+              <p>GitHub Pagesのサイトはインターネット上から見えます。意図しない文章、画像、個人情報が含まれていないか確認してください。</p>
+            </aside>
+            <aside class="completion-condition" aria-label="公開の完了条件">
+              <p class="completion-condition__title">完了条件</p>
+              <p>公開URLで自分の研究室サイトを表示し、内容を確認できれば公開完了です。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed manual-section--secondary" aria-labelledby="daily-update">
+          <p class="step-number" aria-hidden="true">更新</p>
+          <div class="manual-section__content">
+            <h2 id="daily-update">公開後に更新する</h2>
+            <p class="manual-section__intro">ここからは初回公開後の日常更新です。最初に作った同じローカルリポジトリを使います。</p>
+            <ol class="manual-steps">
+              <li><p>同じローカルリポジトリをCodexで開きます。</p></li>
+              <li><p>変更したい内容を具体的に依頼します。詳しい依頼方法は<a href="./html.html#codex-edit">Codexで編集する</a>を参照してください。</p></li>
+              <li><p>変更後の表示と、氏名や研究内容などの事実を確認します。</p></li>
+              <li><p>Commit・Pushの完了と、push先を確認します。</p></li>
+              <li><p>公開ページを再読み込みし、更新が反映されたことを確認します。</p></li>
+            </ol>
+            <aside class="callout callout--warning" aria-label="更新時の注意">
+              <p class="callout__title">更新のたびにリポジトリを作り直さない</p>
+              <p>テンプレートから新しいリポジトリを作る操作は初回だけです。以後は、同じリポジトリ内のファイルを更新します。</p>
+            </aside>
+          </div>
+        </section>
+      </div>
+
+      <nav class="container container--reading page-actions page-actions--final" aria-label="前後の工程">
+        <a class="page-actions__back" href="./html.html">前へ：ChatGPTとCodexで編集する</a>
+        <a class="page-actions__home" href="./index.html">トップへ戻る</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container"><p>研究室HPテンプレート マニュアル</p></div>
+    </footer>
+  </body>
+</html>
