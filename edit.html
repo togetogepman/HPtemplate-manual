@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ChatGPTで研究室資料から依頼文を作り、Codexでサイトを編集・確認する手順です。" />
+    <title>ChatGPTとCodexでサイトを編集する | 研究室HPテンプレート マニュアル</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-name" href="./index.html">研究室HPテンプレート マニュアル</a>
+        <nav class="global-nav" aria-label="主要ナビゲーション">
+          <ul>
+            <li><a href="./index.html">ホーム</a></li>
+            <li><a href="./setup.html">1. 準備</a></li>
+            <li><a href="./edit.html" aria-current="page">2. 編集</a></li>
+            <li><a href="./publish.html">3. 公開</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <nav class="container container--reading journey-progress" aria-label="公開までの進捗">
+        <ol>
+          <li class="is-complete">1. 準備</li>
+          <li aria-current="step">2. 編集</li>
+          <li>3. 公開</li>
+        </ol>
+      </nav>
+
+      <header class="page-header">
+        <div class="container container--reading">
+          <p class="eyebrow">Steps 3–5</p>
+          <h1>ChatGPTとCodexでサイトを編集する</h1>
+          <p class="lead">ChatGPTにテンプレートと研究室資料を照合させて依頼文を作り、その依頼文をCodexへ貼り付けて、編集と結果確認を進めます。</p>
+        </div>
+      </header>
+
+      <aside class="container container--reading callout page-intro-callout" aria-label="ChatGPTとCodexの役割">
+        <p class="callout__title">ChatGPTとCodexの役割</p>
+        <p>ChatGPTはGitHub上の自分用リポジトリを読み、研究室資料からCodex用の依頼文を作ります。Codexはパソコン上のclone済みリポジトリを変更・検証します。最後に人が事実と表示を確認します。</p>
+      </aside>
+
+      <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
+        <h2 id="page-nav-title">このページで行うこと</h2>
+        <ol>
+          <li><a href="#prepare-information">Step 3：ChatGPTで初期カスタマイズ情報を作る</a></li>
+          <li><a href="#codex-edit">Step 4：Codexでサイトを編集する</a></li>
+          <li><a href="#review-result">Step 5：変更結果を確認する</a></li>
+          <li><a href="#manual-editing">補足：HTMLを直接編集する場合</a></li>
+        </ol>
+      </nav>
+
+      <div class="container container--reading section-list section-list--manual">
+        <section class="manual-section manual-section--detailed" aria-labelledby="prepare-information">
+          <p class="step-number" aria-hidden="true">STEP 3</p>
+          <div class="manual-section__content">
+            <h2 id="prepare-information">ChatGPTで初期カスタマイズ情報を作る</h2>
+            <p class="manual-section__intro">GitHubへ接続済みの通常のChatGPTチャットで、テンプレートの確認、資料整理、Codex用依頼文の作成までを原則として同じチャット内で行います。</p>
+
+            <h3>3-1. ChatGPTで新しいチャットを開く</h3>
+            <p>ChatGPTデスクトップアプリで<strong>ChatGPT</strong>の通常チャットを新しく開きます。Step 3の途中で別のチャットへ移らず、ChatGPTからの質問への回答もこのチャットへ続けて入力します。</p>
+
+            <h3>3-2. テンプレートの構造を確認させる</h3>
+            <p>Step 2で接続した自分用リポジトリを指定し、次のように依頼します。</p>
+            <div class="code-example" role="region" aria-label="テンプレート構造確認の依頼例">
+              <pre><code>GitHubで接続した自分のHPtemplateリポジトリを確認してください。
+
+README.mdと
+prompts/INITIAL_CUSTOMIZATION.mdを読み、
+初期カスタマイズに必要な情報を整理してください。
+
+必要に応じてindex.htmlも確認してください。
+
+まだコードの変更は行わないでください。</code></pre>
+            </div>
+            <p>この段階のChatGPTはGitHub上の内容を読み取って参照するだけで、GitHub上やパソコン上のファイルを変更しません。GitHubアプリを利用できずファイルを添付した場合は、添付した<code>README.md</code>、<code>prompts/INITIAL_CUSTOMIZATION.md</code>、必要に応じて<code>index.html</code>を基準に同じ作業を依頼します。</p>
+
+            <h3>3-3. 研究室資料を渡す</h3>
+            <p>次のうち、内容と公開可否を確認できる資料をChatGPTへ渡します。</p>
+            <ul class="manual-list">
+              <li>既存の研究室ホームページ、研究室紹介資料</li>
+              <li>研究者プロフィール、研究テーマの説明、メンバー一覧</li>
+              <li>論文・研究発表一覧、NEWS原稿、Contact情報</li>
+              <li>掲載候補画像と、掲載してはいけない情報の指定</li>
+            </ul>
+            <p>ファイルを添付する、本文へ貼り付ける、公開WebページのURLを渡す、複数資料を順番に追加する、のいずれかで渡せます。ログインが必要なページ、ChatGPTが取得できないURL、非公開資料は、必要な部分だけをファイルまたは本文として渡します。</p>
+            <aside class="callout callout--warning" aria-label="機密情報の注意">
+              <p class="callout__title">公開できない情報を入力しない</p>
+              <p>パスワードや認証情報、未公開研究情報、作業に不要な個人情報は入力しません。資料にない事実をAIに推測させないでください。</p>
+            </aside>
+
+            <h3>3-4. テンプレートの項目へ対応付ける</h3>
+            <p>単なる要約ではなく、<code>prompts/INITIAL_CUSTOMIZATION.md</code>が求める項目へ資料を対応付けさせます。</p>
+            <div class="code-example" role="region" aria-label="テンプレート項目への整理依頼例">
+              <pre><code>接続したリポジトリの
+prompts/INITIAL_CUSTOMIZATION.mdに沿って、
+提供した資料から入力できる項目を整理してください。
+
+資料にない事実は推測しないでください。
+
+不足している情報、
+内容の確認が必要な情報、
+掲載許可が必要な画像を一覧にし、
+私へ一つずつ確認してください。</code></pre>
+            </div>
+
+            <h3>3-5. ChatGPTの質問へ回答する</h3>
+            <p>ChatGPTから確認された内容へ、原資料を確かめながら回答します。不明な項目は無理に埋めず、「未定」「掲載しない」「後で確認する」「プレースホルダーのままにする」のいずれかを伝え、事実を補完させません。</p>
+
+            <h3>3-6. Codex用の完成済み依頼文を作らせる</h3>
+            <div class="code-example" role="region" aria-label="Codex用依頼文の作成依頼例">
+              <pre><code>ここまでに確認した内容と、
+接続したリポジトリの
+prompts/INITIAL_CUSTOMIZATION.mdに基づいて、
+Codexへそのまま貼り付けられる
+初期カスタマイズ依頼文を作成してください。
+
+入力資料にない事実を追加しないこと、
+作業前のGit状態確認、
+PCとスマートフォンでの表示確認、
+関連テスト、
+今回の変更だけのcommit、
+現在のbranchへのpushを含めてください。</code></pre>
+            </div>
+            <p>ChatGPTが作った依頼文を読み、研究室名、氏名、研究内容、論文、連絡先、公開しない情報、作業範囲が正しいことを人が確認します。</p>
+            <aside class="completion-condition" aria-label="Step 3の完了条件">
+              <p class="completion-condition__title">このステップの完了</p>
+              <p>ChatGPTがテンプレートの構造と研究室資料を照合し、確認済み情報だけを使ったCodex用依頼文を完成させれば完了です。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="codex-edit">
+          <p class="step-number" aria-hidden="true">STEP 4</p>
+          <div class="manual-section__content">
+            <h2 id="codex-edit">Codexでサイトを編集する</h2>
+            <p class="manual-section__intro">ChatGPTデスクトップアプリでCodexへ切り替え、Step 2でcloneしたローカルリポジトリを開きます。</p>
+
+            <h3>2種類の接続を区別する</h3>
+            <div class="table-wrapper">
+              <table class="comparison-table">
+                <thead><tr><th scope="col">用途</th><th scope="col">対象</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">ChatGPTでテンプレートを読む</th><td>GitHub上の自分用リポジトリ</td></tr>
+                  <tr><th scope="row">Codexでファイルを変更する</th><td>パソコン上のclone済みローカルリポジトリ</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>ChatGPTのGitHub接続は資料整理と依頼文作成のための参照です。Codexがローカルリポジトリを変更し、Commit・Pushした後にGitHub上へ変更が反映されます。</p>
+
+            <ol class="manual-steps">
+              <li><p><a href="https://learn.chatgpt.com/docs/quickstart">OpenAI公式の利用案内</a>を必要に応じて確認し、ChatGPTデスクトップアプリ左上の選択から<strong>Codex</strong>へ切り替えます。通常のChatGPTとCodexは別のビューで、チャット履歴も別です。そのため、Step 3で作った依頼文は利用者がコピーしてCodexへ貼り付けます。</p></li>
+              <li><p><strong>Add project</strong>、フォルダを開く操作など、現在の画面に表示されるプロジェクト追加の操作を選びます。</p></li>
+              <li><p>Step 2で保存場所を確認した、clone済みのローカルリポジトリ全体を選びます。</p></li>
+              <li><p>Codexの画面に自分のリポジトリ名またはフォルダ名が表示され、<code>index.html</code>と<code>prompts</code>が入った正しいフォルダであることを確認します。</p></li>
+              <li>
+                <p>編集前に、Codexへ次の確認だけを依頼します。</p>
+                <div class="code-example" role="region" aria-label="Git状態確認の依頼例">
+                  <pre><code>まだ変更は行わないでください。
+現在のディレクトリ、branch、HEAD、working tree、remote、
+現在のbranchとoriginとの差分、主要ファイルを報告してください。</code></pre>
+                </div>
+                <p>remoteが配布元ではなく自分用リポジトリを指し、対象branchと既存の未コミット変更の有無が把握できてから進みます。</p>
+              </li>
+              <li><p>Step 3でChatGPTが作成したCodex用依頼文をコピーして貼り付けます。</p></li>
+              <li><p>Codex自身にも、ローカルリポジトリの<code>prompts/INITIAL_CUSTOMIZATION.md</code>を読んでから作業するよう指示します。</p></li>
+              <li><p>変更、PCとスマートフォンでのブラウザ確認、関連テスト、今回の変更だけのCommit、現在のbranchへのPushまで実行させます。</p></li>
+            </ol>
+            <aside class="callout callout--warning" aria-label="リポジトリが違う場合">
+              <p class="callout__title">結果が違う場合は編集を始めない</p>
+              <p>remoteが配布元の<code>academeia/hp_template</code>を直接指す場合、対象が分からない場合、既存の未コミット変更がある場合は、編集を始めず確認します。</p>
+            </aside>
+            <aside class="completion-condition" aria-label="Step 4の完了条件">
+              <p class="completion-condition__title">このステップの完了</p>
+              <p>Codexが正しいローカルリポジトリで依頼を受け取り、変更、検証、Commit、Pushを完了すれば完了です。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="review-result">
+          <p class="step-number" aria-hidden="true">STEP 5</p>
+          <div class="manual-section__content">
+            <h2 id="review-result">変更結果を確認する</h2>
+            <p class="manual-section__intro">公開へ進む前に、Codexの報告、変更内容、ブラウザ表示、掲載する事実を人が確認します。</p>
+            <ol class="manual-steps">
+              <li><p>Codexの最終報告を読み、実施内容、変更ファイル、テスト結果、未確認事項、残課題を確認します。</p></li>
+              <li><p>変更ファイルを確認し、依頼していないファイルや情報が追加されていないか見ます。</p></li>
+              <li><p>ブラウザでPC表示とスマートフォン表示を確認し、文字、画像、リンク、レイアウトに問題がないか見ます。</p></li>
+              <li><p>氏名、所属、研究テーマ、論文、住所、メールアドレスを原資料と照合し、人物写真やロゴを含む画像の掲載許可を確認します。</p></li>
+              <li><p>関連テストが成功していることと、commit hash、push先、working tree、remoteとの同期状態を最終報告で確認します。</p></li>
+              <li><p>問題があれば同じCodexチャットで、場所、現在の状態、期待する状態を具体的に伝えて修正を依頼します。</p></li>
+            </ol>
+            <aside class="completion-condition" aria-label="Step 5の完了条件">
+              <p class="completion-condition__title">このステップの完了</p>
+              <p>内容と表示に問題がなく、CommitとPushの完了を確認できれば編集完了です。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="manual-editing">
+          <p class="step-number" aria-hidden="true">補足</p>
+          <div class="manual-section__content">
+            <h2 id="manual-editing">HTMLを直接編集する場合</h2>
+            <p class="manual-section__intro">HTMLの手作業編集は、仕組みを理解している人や軽微な修正を行う場合の補足的な方法です。</p>
+            <ul class="manual-list">
+              <li>公開用の編集対象は<code>index.html</code>です。</li>
+              <li><code>sample.html</code>は完成見本なので編集しません。</li>
+              <li>タグやclassは表示や機能に使われるため、不用意に削除しません。</li>
+              <li>詳しい説明は既存の<a href="./HTMLマニュアル.md">HTMLマニュアル</a>を参照してください。</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <nav class="container container--reading page-actions" aria-label="前後の工程">
+        <a class="page-actions__back" href="./setup.html">前へ：利用環境とテンプレートの準備</a>
+        <a class="primary-action" href="./publish.html">次へ：GitHub Pagesで公開する <span aria-hidden="true">→</span></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer"><div class="container"><p>研究室HPテンプレート マニュアル</p></div></footer>
+  </body>
+</html>

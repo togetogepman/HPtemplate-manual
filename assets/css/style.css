@@ -501,6 +501,29 @@ code {
   color: var(--color-text-subtle);
 }
 
+.table-wrapper {
+  max-width: 100%;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table thead th {
+  background: #eef4fc;
+}
+
 .callout {
   margin-top: 1.5rem;
   padding: 1rem 1.25rem;

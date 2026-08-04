@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="研究室ホームページの利用環境と自分用テンプレートを準備する手順です。" />
+    <title>利用環境とテンプレートを準備する | 研究室HPテンプレート マニュアル</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-name" href="./index.html">研究室HPテンプレート マニュアル</a>
+        <nav class="global-nav" aria-label="主要ナビゲーション">
+          <ul>
+            <li><a href="./index.html">ホーム</a></li>
+            <li><a href="./setup.html" aria-current="page">1. 準備</a></li>
+            <li><a href="./edit.html">2. 編集</a></li>
+            <li><a href="./publish.html">3. 公開</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <nav class="container container--reading journey-progress" aria-label="公開までの進捗">
+        <ol>
+          <li aria-current="step">1. 準備</li>
+          <li>2. 編集</li>
+          <li>3. 公開</li>
+        </ol>
+      </nav>
+
+      <header class="page-header">
+        <div class="container container--reading">
+          <p class="eyebrow">Steps 1–2</p>
+          <h1>利用環境とテンプレートを準備する</h1>
+          <p class="lead">必要なアカウントとアプリを用意し、自分用リポジトリをChatGPTから参照できるようにして、パソコンへcloneします。</p>
+        </div>
+      </header>
+
+      <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
+        <h2 id="page-nav-title">このページで行うこと</h2>
+        <ol>
+          <li><a href="#prepare-tools">Step 1：利用環境を準備する</a></li>
+          <li><a href="#prepare-template">Step 2：自分用のテンプレートを準備する</a></li>
+        </ol>
+      </nav>
+
+      <div class="container container--reading section-list section-list--manual">
+        <section class="manual-section manual-section--detailed" aria-labelledby="prepare-tools">
+          <p class="step-number" aria-hidden="true">STEP 1</p>
+          <div class="manual-section__content">
+            <h2 id="prepare-tools">利用環境を準備する</h2>
+            <p class="manual-section__intro">GitHub、GitHub Desktop、Windows版ChatGPTデスクトップアプリへサインインします。この段階では、まだCodexへ切り替えません。</p>
+            <ol class="manual-steps">
+              <li><p><a href="https://github.com/">GitHub</a>でアカウントを作成します。GitHubは、ホームページのファイルと変更履歴をインターネット上で管理するサービスです。</p></li>
+              <li><p><a href="https://desktop.github.com/">GitHub Desktop公式ダウンロードページ</a>から、Windows版GitHub Desktopをインストールします。</p></li>
+              <li><p>GitHub Desktopを開き、ブラウザのGitHubと同じGitHubアカウントでサインインします。</p></li>
+              <li><p><a href="https://learn.chatgpt.com/docs/windows/windows-app">OpenAI公式のWindows版案内</a>を開き、案内に従ってChatGPTデスクトップアプリをインストールします。</p></li>
+              <li><p>ChatGPTデスクトップアプリを起動し、普段使用するChatGPTアカウントでサインインします。</p></li>
+              <li><p>画面左上の選択が<strong>ChatGPT</strong>であることを確認し、通常のチャットを新しく開始できることを確かめます。</p></li>
+            </ol>
+            <aside class="completion-condition" aria-label="Step 1の完了条件">
+              <p class="completion-condition__title">このステップの完了</p>
+              <p>GitHub、GitHub Desktop、ChatGPTデスクトップアプリへサインインし、ChatGPTで通常のチャットを開始できれば完了です。</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="manual-section manual-section--detailed" aria-labelledby="prepare-template">
+          <p class="step-number" aria-hidden="true">STEP 2</p>
+          <div class="manual-section__content">
+            <h2 id="prepare-template">自分用のテンプレートを準備する</h2>
+            <p class="manual-section__intro">配布用テンプレートから自分のリポジトリを作り、ChatGPTへ接続してから、GitHub Desktopでパソコンへcloneします。</p>
+            <dl class="term-list">
+              <div><dt>リモートリポジトリ</dt><dd>GitHub上に保存されているホームページのファイルと変更履歴です。</dd></div>
+              <div><dt>ローカルリポジトリ</dt><dd>GitHub Desktopでcloneして、パソコン上へ保存した作業用フォルダです。</dd></div>
+            </dl>
+
+            <h3 id="create-own-repository">2-1. 自分用リポジトリを作る</h3>
+            <ol class="manual-steps">
+              <li><p><a href="https://github.com/academeia/hp_template"><code>academeia/hp_template</code></a>をブラウザで開きます。</p></li>
+              <li>
+                <p><strong>Use this template</strong>を押し、新しいリポジトリを作成する項目を選びます。</p>
+                <figure class="manual-figure">
+                  <img src="./assets/images/manual/github/use-this-template-button.png" alt="GitHubのリポジトリ画面で、Use this templateメニューからCreate a new repositoryを選ぶ操作" />
+                  <figcaption>GitHub Docsの公式画像：<strong>Use this template</strong>から<strong>Create a new repository</strong>を選びます。</figcaption>
+                </figure>
+              </li>
+              <li>
+                <p>所有者、リポジトリ名、公開範囲を確認します。公開してよい内容であることを確認して<strong>Public</strong>を選び、作成します。</p>
+                <figure class="manual-figure">
+                  <img src="./assets/images/manual/github/create-repository-name.png" alt="GitHubの新規リポジトリ作成画面で、OwnerとRepository nameを確認する入力欄" />
+                  <figcaption>GitHub Docsの公式画像：所有者とリポジトリ名を確認し、公開範囲を選びます。</figcaption>
+                </figure>
+              </li>
+            </ol>
+
+            <h3 id="connect-chatgpt-github">2-2. 自分用リポジトリをChatGPTへ接続する</h3>
+            <p>この接続は、ChatGPTがテンプレートの構造や作業条件を読み、研究室資料を整理するための読み取り専用の参照に使います。ファイルの変更、テスト、Commit、Pushは、Codexがパソコン上のローカルリポジトリに対して行います。</p>
+            <ol class="manual-steps">
+              <li><p>ChatGPTデスクトップアプリを開き、アカウントメニューから<strong>Settings</strong>を開きます。</p></li>
+              <li><p><strong>Apps</strong>を開き、アプリ一覧から<strong>GitHub</strong>を探して接続操作を選びます。</p></li>
+              <li><p>GitHub側でChatGPTアプリを認可します。許可内容を確認し、必要な範囲だけを選びます。</p></li>
+              <li><p>ChatGPTから参照を許可するリポジトリとして、2-1でテンプレートから作成した<strong>自分用リポジトリだけ</strong>を選びます。配布元の<code>academeia/hp_template</code>や無関係なリポジトリを選ぶ必要はありません。</p></li>
+              <li><p>ChatGPTへ戻り、GitHubが接続済みで、自分用リポジトリを参照対象として選べることを確認します。</p></li>
+            </ol>
+            <aside class="callout callout--note" aria-label="GitHubアプリの表示について">
+              <p class="callout__title">表示や反映には違いがあります</p>
+              <p>新しいリポジトリが表示されるまで数分かかる場合があります。また、GitHubアプリの利用可否や表示場所は、ChatGPTのプラン、利用画面、ワークスペースや組織の設定によって異なる場合があります。最新情報は<a href="https://help.openai.com/ja-jp/articles/11145903">OpenAI公式のGitHub接続案内</a>を確認してください。</p>
+            </aside>
+
+            <h3 id="clone-own-repository">2-3. 自分用リポジトリをパソコンへcloneする</h3>
+            <ol class="manual-steps">
+              <li>
+                <p>GitHub Desktopで自分用リポジトリを選び、cloneの操作を開きます。Clone画面で対象リポジトリと<strong>Local Path</strong>の保存場所を確認し、<strong>Clone</strong>を押します。</p>
+                <figure class="manual-figure">
+                  <img src="./assets/images/manual/github/clone-choose-button-url-mac.png" alt="GitHub DesktopのClone a Repository画面で、Local PathのChooseボタンとCloneボタンを示す画面" />
+                  <figcaption>GitHub Docsの公式画像：画面の細かな配置は異なる場合がありますが、リポジトリ、<strong>Local Path</strong>、<strong>Clone</strong>の3点を確認します。</figcaption>
+                </figure>
+              </li>
+              <li><p>GitHub Desktop左上のリポジトリ一覧から、いまcloneした自分用リポジトリを選びます。</p></li>
+              <li><p><strong>Repository</strong>メニューから<strong>Show in Explorer</strong>を選び、保存フォルダを開きます。</p></li>
+              <li><p>開いたフォルダに、<code>index.html</code>、<code>sample.html</code>、<code>prompts</code>、<code>assets</code>、<code>README.md</code>が含まれていることを確認します。</p></li>
+            </ol>
+            <aside class="callout callout--note" aria-labelledby="attachment-fallback-title">
+              <p class="callout__title" id="attachment-fallback-title">GitHubアプリを利用できない場合</p>
+              <p>通常のChatGPTチャットへ、cloneしたフォルダ内の<code>README.md</code>と<code>prompts/INITIAL_CUSTOMIZATION.md</code>を添付し、必要に応じて<code>index.html</code>も添付します。この方法でも、ChatGPTはテンプレートの項目と作業条件を確認できます。</p>
+            </aside>
+            <aside class="callout callout--warning" aria-label="公開するファイルの注意">
+              <p class="callout__title">公開できない情報を入れない</p>
+              <p>Publicリポジトリの内容は誰でも確認できます。パスワード、個人情報、未公開資料を入れないでください。</p>
+            </aside>
+            <aside class="completion-condition" aria-label="Step 2の完了条件">
+              <p class="completion-condition__title">このステップの完了</p>
+              <p>自分用リポジトリが作成され、ChatGPTから参照でき、GitHub Desktopでパソコンへcloneされ、保存フォルダを確認できれば準備完了です。</p>
+            </aside>
+          </div>
+        </section>
+      </div>
+
+      <aside class="container container--reading manual-attribution" aria-label="GitHub Docs画像の出典">
+        <p>GitHubおよびGitHub Desktopの操作画像はGitHub Docsから使用しています（CC BY 4.0、改変なし）。詳しい出典は<a href="./THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>を参照してください。</p>
+      </aside>
+
+      <nav class="container container--reading page-actions" aria-label="前後の工程">
+        <a class="page-actions__back" href="./index.html">トップへ戻る</a>
+        <a class="primary-action" href="./edit.html">次へ：ChatGPTとCodexで編集する <span aria-hidden="true">→</span></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer"><div class="container"><p>研究室HPテンプレート マニュアル</p></div></footer>
+  </body>
+</html>

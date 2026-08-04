@@ -11,8 +11,8 @@
 
 | GitHub Docsの記事名 | `github/docs`内の画像パス | 使用箇所 | 加工 |
 | --- | --- | --- | --- |
-| [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) | `assets/images/help/repository/use-this-template-button.png` | `github.html`：Use this template | なし |
-| [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) | `assets/images/help/repository/create-repository-name.png` | `github.html`：所有者・リポジトリ名の確認 | なし |
-| [Cloning a repository from GitHub to GitHub Desktop](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) | `assets/images/help/desktop/clone-choose-button-url-mac.png` | `github.html`：Clone時のLocal Path | なし |
+| [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) | `assets/images/help/repository/use-this-template-button.png` | `setup.html`：Use this template | なし |
+| [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) | `assets/images/help/repository/create-repository-name.png` | `setup.html`：所有者・リポジトリ名の確認 | なし |
+| [Cloning a repository from GitHub to GitHub Desktop](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) | `assets/images/help/desktop/clone-choose-button-url-mac.png` | `setup.html`：Clone時のLocal Path | なし |
 | [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) | `assets/images/help/pages/publishing-source-drop-down.png` | `publish.html`：公開元branchの選択 | なし |
 | [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) | `assets/images/help/pages/publishing-source-folder-drop-down.png` | `publish.html`：公開元folderの選択 | なし |
