@@ -47,7 +47,6 @@ code { font-family: Consolas, "Yu Gothic", monospace; }
 .page-header { padding: 2.5rem 0 2.2rem; border-block: 1px solid var(--manual-border); background: var(--manual-surface); }
 .page-header h1 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.55rem); font-weight: 600; line-height: 1.4; }
 .page-header .lead { margin: 1rem 0 0; color: var(--manual-subtle); }
-.eyebrow { margin: 0 0 .7rem; color: var(--manual-primary); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .completion-box { margin-top: 1.6rem; padding: 1.25rem 1.4rem; border: 1px solid #bcd8c4; background: var(--manual-success); }
 .completion-box h2 { margin: 0 0 .5rem; color: #166534; font-size: 1rem; }
 .completion-box ul { margin: 0; padding-left: 1.3rem; }
@@ -75,6 +74,13 @@ code { font-family: Consolas, "Yu Gothic", monospace; }
 .callout--tip { border-color: #3a8564; background: var(--manual-tip); }
 .callout__title { margin: 0 0 .25rem; font-weight: 800; }
 .callout p:last-child { margin-bottom: 0; }
+.publication-stages h2 { margin: 0 0 .5rem; font-size: 1.2rem; }
+.publication-stages ol { margin: 0; padding-left: 1.4rem; }
+.publication-stages li + li { margin-top: .55rem; }
+.review-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.4rem; }
+.review-group { padding: 1rem 1.1rem; border: 1px solid var(--manual-border); background: #fafbfc; }
+.review-group h3 { margin: 0 0 .45rem; }
+.review-group .check-list { margin: 0; }
 
 .prompt-box { margin: 1.3rem 0; padding: 1.2rem; border: 1px solid var(--manual-border); background: #172033; color: #fff; }
 .prompt-box pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: .92rem/1.7 Consolas, "Yu Gothic", monospace; }
@@ -98,6 +104,7 @@ code { font-family: Consolas, "Yu Gothic", monospace; }
   .journey-progress li { padding-inline: .25rem; font-size: .76rem; }
   .page-nav ul { display: block; }
   .term-list > div { grid-template-columns: 1fr; gap: .1rem; }
+  .review-groups { grid-template-columns: 1fr; }
   .manual-section { padding: 1.25rem 1rem; }
   .page-actions { align-items: stretch; flex-direction: column; }
   .page-actions a { justify-content: center; }
