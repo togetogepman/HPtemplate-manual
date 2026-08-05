@@ -11,6 +11,9 @@
 
 .template-skip-link:focus { transform: none; }
 
+#header .header-box { display: none; }
+#header .header-title { gap: 0; }
+
 .template-mv { position: relative; min-height: 480px; overflow: hidden; }
 .template-mv > picture img { min-height: 480px; object-fit: cover; filter: brightness(.55); }
 .template-mv-copy {
@@ -38,8 +41,6 @@
 .faq-details summary { cursor: pointer; color: var(--color-text); font-size: 15px; font-weight: 700; line-height: 1.7; }
 .faq-details p { margin-top: 12px; color: var(--color-text); font-size: 14px; font-weight: 400; line-height: 1.9; }
 .template-contact-link { color: #fff; text-decoration: none; }
-.support-guide ul { display: grid; gap: 8px; margin-top: 10px; }
-.support-guide a { color: var(--color-link); font-weight: 700; }
 
 @media (min-width: 769px) {
   .template-mv { min-height: 620px; }

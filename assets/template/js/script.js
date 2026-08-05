@@ -214,6 +214,14 @@
         }
       }
 
+      var viewportBottom = window.scrollY + window.innerHeight;
+      var documentHeight = document.documentElement.scrollHeight;
+      var isAtBottom = viewportBottom >= documentHeight - 2;
+
+      if (isAtBottom && navEntries.length > 0) {
+        currentIndex = navEntries.length - 1;
+      }
+
       if (currentIndex >= 0 && navEntries[currentIndex]) {
         navEntries[currentIndex].navItem.classList.add("current");
         const currentLink = navEntries[currentIndex].navItem.querySelector("a");
@@ -243,14 +251,15 @@
         var pos = Math.round(
           target.getBoundingClientRect().top + window.scrollY - headerH
         );
-        window.scrollTo({
-          top: pos,
-          behavior: "smooth",
-        });
 
         if (isOpen && window.innerWidth <= windowSm) {
           closeMenu();
         }
+
+        window.scrollTo({
+          top: pos,
+          behavior: "smooth",
+        });
       });
     });
 

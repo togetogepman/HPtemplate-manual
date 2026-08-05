@@ -20,7 +20,7 @@
 | `index.html` | テンプレートの紹介、完成サンプル・本体・マニュアルへの導線 |
 | `setup.html` | アカウント、アプリ、自分用リポジトリ、cloneの準備 |
 | `edit.html` | Excel入力、写真保存、ローカルCodexによる反映 |
-| `publish.html` | 人による確認、GitHub Pages設定、公開URLでの再確認 |
+| `publish.html` | 人による最終確認、Public化、GitHub Pages設定、公開URLでの再確認 |
 
 初めて利用する場合は、`index.html`で内容と完成例を確認した後、`setup.html` → `edit.html` → `publish.html`の順に進みます。
 
@@ -28,12 +28,13 @@
 
 1. 紹介ページで内容と完成例を確認する
 2. GitHubと必要アプリを準備する
-3. テンプレートから自分用リポジトリを作る
+3. テンプレートからPrivateの自分用リポジトリを作る
 4. GitHub Desktopでcloneする
 5. Excelへ入力し、写真をローカル保存する
-6. ローカルCodexで初期カスタマイズする
-7. 人が内容と表示を確認する
-8. GitHub Pagesで公開し、公開URLで再確認する
+6. ローカルCodexで初期カスタマイズし、自分用リポジトリへ保存する
+7. Privateのまま、人が内容、権利、表示、GitHub上のファイルと履歴を確認する
+8. 確認完了後にリポジトリをPublicへ変更し、シークレットウィンドウから閲覧できることを確認する
+9. 別工程としてGitHub Pagesを設定し、公開URLをシークレットウィンドウとPC・スマートフォンで再確認する
 
 専用GPT、通常のChatGPTによるExcel監査・Codex依頼文生成、ChatGPTとGitHubの接続、Codexクラウドは標準工程に含めません。通常のChatGPTは文章整理やエラー説明の任意補助手段です。
 

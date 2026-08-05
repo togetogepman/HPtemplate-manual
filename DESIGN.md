@@ -16,8 +16,10 @@
 - `body#top`、`header#header`、`nav#g-nav`、`main > .main-contents`の基本構造を維持する
 - セクションの`data-accordion`、`data-class`、`data-title`、`scroll-point`を維持する
 - JavaScriptによるナビゲーション自動生成、現在地表示、スマートフォンメニュー、「もっと見る」を利用する
+- 左ナビゲーションは最終セクションを含む現在地を表示し、色だけでなくリンクの`aria-current="location"`も更新する
 - 本体の見出し、余白、交互背景、研究室向けセクション、レスポンシブ挙動を利用する
 - 紹介内容だけを、特徴、完成サンプル、利用方法、配布導線、FAQ、既存サポート向けに置き換える
+- 紹介ページのヘッダーでは、内容を持たない青い四角を表示しない
 
 ### 不採用
 
@@ -26,7 +28,7 @@
 - 本体と異なる簡略ヘッダー・ナビゲーション
 - 本体JavaScriptの挙動を模倣した別実装
 
-紹介ページ用資産は`assets/template/`に配置し、マニュアル資産から独立させる。コピー元の`HPtemplate`は変更せず、このリポジトリ内だけで参照を完結させる。
+紹介ページ用資産は`assets/template/`に配置し、マニュアル資産から独立させる。紹介ページ固有の調整は`assets/template/css/site.css`へ置き、HPtemplate本体由来の`assets/template/css/style.css`へ混在させない。コピー元の`HPtemplate`は変更せず、このリポジトリ内だけで参照を完結させる。
 
 ## 2. マニュアルページ
 
@@ -52,6 +54,8 @@
 - `assets/template/`内のCSS・JavaScript
 
 マニュアル用資産は`assets/manual/`に配置する。
+
+紹介ページの現在地表示やヘッダーに対する今回の調整は、マニュアル3ページのデザインへ持ち込まない。
 
 ## 3. 共通化の範囲
 
