@@ -3,91 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="ChatGPTとCodexを使い、研究室ホームページを準備・編集・公開する順序を案内するマニュアルです。"
-    />
-    <title>研究室HPテンプレート マニュアル</title>
+    <meta name="description" content="無料で利用できる研究室HPテンプレートの特徴、完成サンプル、ExcelとローカルCodexを使った作成・公開方法をご案内します。" />
+    <title>研究室HPテンプレート｜紹介・配布・利用ガイド</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
-
     <header class="site-header">
-      <div class="site-header__inner">
-        <a class="site-name" href="./index.html">研究室HPテンプレート マニュアル</a>
+      <div class="container site-header__inner">
+        <a class="site-identity" href="./index.html" aria-label="研究室HPテンプレート ホーム">
+          <span><span>研究室HPテンプレート</span><span class="site-identity__en">LABORATORY WEBSITE TEMPLATE</span></span>
+        </a>
         <nav class="global-nav" aria-label="主要ナビゲーション">
           <ul>
             <li><a href="./index.html" aria-current="page">ホーム</a></li>
-            <li><a href="./setup.html">準備</a></li>
-            <li><a href="./edit.html">編集</a></li>
-            <li><a href="./publish.html">公開</a></li>
+            <li><a href="#features">特徴</a></li>
+            <li><a href="#how-to-use">利用方法</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="./setup.html">マニュアル</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="container container--reading">
-          <p class="eyebrow">はじめに</p>
-          <h1 id="page-title">研究室HPテンプレート マニュアル</h1>
-          <p class="lead">ChatGPTで研究室情報を整理し、Codexでサイトを編集して、GitHub Pagesで公開するところまでを上から順に案内します。</p>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <p class="eyebrow">Free laboratory website template</p>
+          <h1 id="hero-title"><span>無料の研究室HPを、</span><span>LLMを利用して簡単に</span><span>作成・更新</span></h1>
+          <p class="lead">研究室に必要な構成を備えた静的HTMLテンプレートです。Excelへ情報を入力し、ローカルCodexへ反映を依頼するため、プログラミング知識を前提としません。</p>
+          <div class="hero__actions">
+            <a class="button" href="#how-to-use">利用方法を見る</a>
+            <a class="button button--secondary" href="https://academeia.github.io/web_template.github.io/sample/sample.html">完成サンプルを見る</a>
+          </div>
         </div>
       </section>
 
-      <section class="container container--reading workflow-overview" aria-labelledby="workflow-title">
-        <h2 id="workflow-title">このマニュアルでできること</h2>
-        <p>初めての方でも、必要なアプリとテンプレートの準備から、内容確認、公開までを一つの流れで進められます。</p>
-
-        <h2>公開までの3ステップ</h2>
-        <ol class="workflow-steps">
-          <li>
-            <span>1</span>
-            <div class="workflow-step__content">
-              <strong>準備</strong>
-              <p>アプリ、アカウント、自分用リポジトリを準備します。</p>
-            </div>
-          </li>
-          <li>
-            <span>2</span>
-            <div class="workflow-step__content">
-              <strong>編集</strong>
-              <p>ChatGPTで依頼文を作り、Codexでサイトを編集・確認します。</p>
-            </div>
-          </li>
-          <li>
-            <span>3</span>
-            <div class="workflow-step__content">
-              <strong>公開</strong>
-              <p>GitHubへの反映を確認し、GitHub Pagesで公開します。</p>
-            </div>
-          </li>
-        </ol>
-
-        <aside class="callout callout--note" aria-label="初めて利用する方へ">
-          <p class="callout__title">初めての方へ</p>
-          <p>準備から順番に進んでください。各ページの「完了条件」を確認してから、次へ進みます。</p>
-        </aside>
-
-        <div class="start-action">
-          <a class="primary-action" href="./setup.html">1. 準備から始める <span aria-hidden="true">→</span></a>
+      <section class="landing-section" aria-labelledby="about-title">
+        <div class="container intro-grid">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 class="section-heading" id="about-title">研究室ホームページ作成に特化したテンプレート</h2>
+            <p>研究内容、NEWS、メンバー、プロフィール、論文・研究発表、Contactなど、研究室サイトに必要な主要セクションを備えています。予算と作業を抑えながら、確認済みの文章と写真を中心に研究活動を紹介できます。</p>
+            <p>HTMLを一つずつ直接書き換える代わりに、配布されるExcelへ情報を整理し、ローカルCodexがテンプレートへ反映します。AIが反映した内容は、公開前に必ず人が確認します。</p>
+          </div>
+          <div class="lab-preview" aria-label="研究室HPテンプレートの画面構成イメージ">
+            <div class="lab-preview__header"><span class="lab-preview__mark"></span><span>研究室名<br />Laboratory Name</span></div>
+            <div class="lab-preview__visual"></div>
+            <div class="lab-preview__body"><strong>研究テーマ</strong><div class="lab-preview__line"></div><div class="lab-preview__line"></div><div class="lab-preview__line"></div></div>
+          </div>
         </div>
+      </section>
 
-        <nav class="resume-links" aria-label="途中から再開する">
-          <p>途中から再開する方</p>
-          <ul>
-            <li><a href="./edit.html">編集から再開する</a></li>
-            <li><a href="./publish.html">公開から再開する</a></li>
-          </ul>
-        </nav>
+      <section class="landing-section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <p class="eyebrow">Features</p>
+          <h2 class="section-heading" id="features-title">3つの特徴</h2>
+          <div class="feature-grid">
+            <article class="feature-card"><span class="feature-card__number">FEATURE 01</span><h3>無料範囲で作成・公開</h3><p>テンプレートは無料で利用できます。GitHub Pagesなどを使い、費用を抑えて公開できます。</p></article>
+            <article class="feature-card"><span class="feature-card__number">FEATURE 02</span><h3>研究室向けの構成</h3><p>研究テーマ、メンバー、論文・発表など、研究室HPでよく使う情報を整理して掲載できます。</p></article>
+            <article class="feature-card"><span class="feature-card__number">FEATURE 03</span><h3>ExcelとCodexで反映</h3><p>所定のExcelと写真を準備し、一文の指示でローカルCodexへ初期カスタマイズを依頼します。</p></article>
+          </div>
+          <p class="notice-inline">各サービスの提供内容、利用上限、利用条件は変更される場合があります。最新条件は各サービスの公式情報をご確認ください。</p>
+        </div>
+      </section>
+
+      <section class="landing-section" id="how-to-use" aria-labelledby="how-to-title">
+        <div class="container">
+          <p class="eyebrow">How to use</p>
+          <h2 class="section-heading" id="how-to-title">利用方法</h2>
+          <p>初めての方は、複数の方法を混ぜず、次の順序で進めてください。</p>
+          <div class="route-grid">
+            <article class="route-card"><span class="route-card__number">STEP 1</span><h3>準備する</h3><p>GitHub、必要なアプリ、自分用リポジトリ、clone先を準備します。</p><span class="status">完了：ローカルCodexでclone先を開ける</span><a href="./setup.html">準備方法を見る →</a></article>
+            <article class="route-card"><span class="route-card__number">STEP 2</span><h3>情報と写真を入れる</h3><p>配布されたExcelの各シートへ入力し、写真を所定のフォルダへ保存します。</p><span class="status">完了：入力と素材の配置が終わる</span><a href="./edit.html#input">入力方法を見る →</a></article>
+            <article class="route-card"><span class="route-card__number">STEP 3</span><h3>HPへ反映する</h3><p>ローカルCodexへ一文で依頼し、Excelと写真をテンプレートへ反映します。</p><span class="status">完了：変更結果と未確認事項を確認する</span><a href="./edit.html#codex">反映方法を見る →</a></article>
+            <article class="route-card"><span class="route-card__number">STEP 4</span><h3>確認して公開する</h3><p>内容、権利、PC・スマートフォン表示を人が確認してから公開します。</p><span class="status">完了：公開URLでもう一度確認する</span><a href="./publish.html">公開方法を見る →</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section" aria-labelledby="links-title">
+        <div class="container">
+          <p class="eyebrow">Template &amp; guide</p>
+          <h2 class="section-heading" id="links-title">テンプレートとマニュアル</h2>
+          <div class="link-grid">
+            <article class="link-card"><h3>テンプレート本体</h3><p>配布ファイル、利用条件、詳細文書を確認します。</p><a href="https://github.com/togetogepman/HPtemplate">GitHubで開く →</a></article>
+            <article class="link-card"><h3>完成サンプル</h3><p>研究テーマやメンバーなどを掲載した画面例を確認します。</p><a href="https://academeia.github.io/web_template.github.io/sample/sample.html">サンプルを開く →</a></article>
+            <article class="link-card"><h3>利用マニュアル</h3><p>準備、入力・反映、公開を順番に進めます。</p><a href="./setup.html">準備から読む →</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-heading" id="faq-title">よくある質問</h2>
+          <div class="faq-list">
+            <details><summary>無料で利用できますか？</summary><div><p>テンプレートは無料で利用できます。GitHub Pagesにも無料利用枠がありますが、サービスの提供内容や条件は変更される場合があります。最新の公式情報をご確認ください。</p></div></details>
+            <details><summary>プログラミング知識は必要ですか？</summary><div><p>標準手順では、HTMLを直接編集せず、ExcelとローカルCodexを使います。AIの出力、掲載事実、表示結果を人が確認できることは必要です。</p></div></details>
+            <details><summary>どのようなデザインですか？</summary><div><p>青と白を基調に、研究内容、メンバー、論文・発表などを縦長のセクションで掲載する、落ち着いた研究室向けデザインです。完成サンプルで全体像を確認できます。</p></div></details>
+            <details><summary>GitHub Pages以外でも利用できますか？</summary><div><p>静的HTMLを公開できる他のサービスでも利用できます。ただし、設定、料金、利用条件はサービスごとに異なり、このマニュアルの検証対象はGitHub Pagesです。</p></div></details>
+            <details><summary>独自ドメインを利用できますか？</summary><div><p>GitHub Pagesでは独自ドメインを設定できます。ドメインの取得・維持費と設定方法は提供元の公式情報をご確認ください。</p></div></details>
+            <details><summary>ライセンスと著作権表示はどうなっていますか？</summary><div><p>無料利用時はテンプレート本体のライセンスとフッターの帰属表示に従ってください。最新条件はテンプレート本体の<code>LICENSE.md</code>をご確認ください。</p></div></details>
+            <details><summary>モバイル表示に対応していますか？</summary><div><p>PCとスマートフォンに対応するレスポンシブ設計です。公開前と公開後に、両方の表示を確認してください。</p></div></details>
+            <details><summary>テンプレート画像はそのまま使えますか？</summary><div><p>テンプレート同梱画像は、テンプレート本体の利用条件と出典表示に従ってください。自分で追加する写真やロゴは、掲載権利を確認してください。</p></div></details>
+            <details><summary>困った場合はどう伝えればよいですか？</summary><div><p>「どの画面で」「何を押したら」「何と表示されたか」の3点と、省略していないエラー文をCodexまたはChatGPTへ伝えてください。原因を自分で推測する必要はありません。</p></div></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section" aria-labelledby="support-title">
+        <div class="container container--reading">
+          <p class="eyebrow">Support</p>
+          <h2 class="section-heading" id="support-title">サポートについて</h2>
+          <p>既存の導入・カスタマイズ支援については、アカデメイアの案内ページから確認できます。提供内容、料金、契約条件は個別にご確認ください。</p>
+          <a class="button button--secondary" href="https://www.academeia15.co.jp/web-template">既存の案内・Contactを確認する</a>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>研究室HPテンプレート マニュアル</p>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="container site-footer__inner"><p>研究室HPテンプレート 公式ガイド</p><p><a href="https://www.academeia15.co.jp/web-template">Created with Academeia</a></p></div></footer>
   </body>
 </html>

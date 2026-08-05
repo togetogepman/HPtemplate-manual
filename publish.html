@@ -3,162 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Codexの変更をGitHubで確認し、GitHub Pagesで公開・更新する手順です。" />
-    <title>GitHub Pagesで公開・更新する | 研究室HPテンプレート マニュアル</title>
+    <meta name="description" content="研究室HPの内容と表示を人が確認し、GitHubへPushしてGitHub Pagesで公開し、公開URLで再確認する手順です。" />
+    <title>公開｜研究室HPテンプレート 利用マニュアル</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body class="manual-page">
     <a class="skip-link" href="#main-content">本文へ移動</a>
-
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="site-name" href="./index.html">研究室HPテンプレート マニュアル</a>
-        <nav class="global-nav" aria-label="主要ナビゲーション">
-          <ul>
-            <li><a href="./index.html">ホーム</a></li>
-            <li><a href="./setup.html">準備</a></li>
-            <li><a href="./edit.html">編集</a></li>
-            <li><a href="./publish.html" aria-current="page">公開</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+    <header class="site-header"><div class="container site-header__inner"><a class="site-identity" href="./index.html"><span><span>研究室HPテンプレート</span><span class="site-identity__en">USER GUIDE</span></span></a><nav class="global-nav" aria-label="主要ナビゲーション"><ul><li><a href="./index.html">ホーム</a></li><li><a href="./setup.html">準備</a></li><li><a href="./edit.html">入力・反映</a></li><li><a href="./publish.html" aria-current="page">公開</a></li></ul></nav></div></header>
     <main id="main-content">
-      <section class="container container--reading journey-progress" aria-label="公開までの進捗">
-        <ol>
-          <li>1. 準備</li>
-          <li>2. 編集</li>
-          <li aria-current="step">3. 公開</li>
-        </ol>
-      </section>
-
-      <header class="page-header">
-        <div class="container container--reading">
-          <h1>GitHub Pagesで公開・更新する</h1>
-          <p class="lead">Codexの変更がGitHubへPushされていることを確認し、GitHub Pagesで研究室サイトを公開します。</p>
-        </div>
-      </header>
-
-      <nav class="container container--reading page-nav" aria-labelledby="page-nav-title">
-        <h2 id="page-nav-title">このページで行うこと</h2>
-        <ul>
-          <li><a href="#confirm-github">GitHubへの反映を確認する</a></li>
-          <li><a href="#github-pages">GitHub Pagesで公開する</a></li>
-          <li><a href="#daily-update">公開後に更新する</a></li>
-        </ul>
-      </nav>
-
-      <div class="container container--reading section-list section-list--manual">
-        <section class="manual-section manual-section--detailed" aria-labelledby="confirm-github">
-          <div class="manual-section__content">
-            <h2 id="confirm-github">GitHubへの反映を確認する</h2>
-            <p class="manual-section__intro">Codexが今回の変更をCommitし、作業branchをGitHubへPushしたことを確認します。</p>
-            <dl class="term-list">
-              <div>
-                <dt>Commit（コミット）</dt>
-                <dd>選んだ変更内容を、一つの記録としてパソコン上に保存することです。</dd>
-              </div>
-              <div>
-                <dt>Push（プッシュ）</dt>
-                <dd>パソコン上のCommitをGitHubへ送ることです。</dd>
-              </div>
-            </dl>
-            <ol class="manual-steps">
-              <li>
-                <p>Codexの最終報告で、commit hashとpush先が自分のリポジトリと作業branchに対応していることを確認します。</p>
-              </li>
-              <li>
-                <p>必要な場合はGitHub Desktopで<strong>History</strong>を開き、今回のCommitを確認します。未コミット変更が残っていないかは<strong>Changes</strong>で確認できます。</p>
-              </li>
-              <li>
-                <p>CommitだけでPushされていない場合は、GitHub上のリポジトリへ変更が反映されていません。</p>
-              </li>
-            </ol>
-
-            <aside class="callout callout--note" aria-labelledby="manual-push-title">
-              <p class="callout__title" id="manual-push-title">CodexがCommit・Pushしていない場合</p>
-              <p>利用者が手動操作する必要がある場合だけ、次の最小手順を行います。</p>
-              <ol class="manual-steps">
-                <li>
-                  <p>GitHub Desktopの<strong>Changes</strong>で変更ファイルを確認し、<strong>Summary</strong>へ短い説明を入力します。</p>
-                </li>
-                <li>
-                  <p><strong>Commit to main</strong>を押します。別のbranchを選んでいる場合は、そのbranch名がボタンに表示されます。</p>
-                </li>
-                <li>
-                  <p>Commit後に<strong>Push origin</strong>を押し、変更をGitHubへ送ります。</p>
-                </li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="manual-section manual-section--detailed" aria-labelledby="github-pages">
-          <div class="manual-section__content">
-            <h2 id="github-pages">GitHub Pagesで公開する</h2>
-            <p class="manual-section__intro">GitHub上の自分のリポジトリを、ホームページとして公開します。</p>
-            <ol class="manual-steps">
-              <li><p>ブラウザで、テンプレートから作成した自分のリポジトリを開きます。</p></li>
-              <li><p>リポジトリの<strong>Settings</strong>を開きます。見当たらない場合は、リポジトリ上部の追加メニューも確認します。</p></li>
-              <li><p>Settings内の<strong>Pages</strong>を開きます。</p></li>
-              <li><p><strong>Build and deployment</strong>の<strong>Source</strong>で、<strong>Deploy from a branch</strong>を選びます。</p></li>
-              <li>
-                <p>公開元のbranchに<strong>main</strong>、フォルダに<strong>/(root)</strong>を選び、<strong>Save</strong>を押します。</p>
-                <figure class="manual-figure manual-figure--pair">
-                  <img src="./assets/images/manual/github/publishing-source-drop-down.png" alt="GitHub Pagesの設定画面で、公開元のbranchを選ぶドロップダウンを示す画面" />
-                  <img src="./assets/images/manual/github/publishing-source-folder-drop-down.png" alt="GitHub Pagesの設定画面で、公開元のfolderとして/(root)を選ぶドロップダウンを示す画面" />
-                  <figcaption>GitHub Docsの公式画像：公開元のbranchで<strong>main</strong>、folderで<strong>/(root)</strong>を選びます。</figcaption>
-                </figure>
-              </li>
-              <li><p>設定を保存します。</p></li>
-              <li><p>公開処理が完了するまで待ちます。初回は表示まで数分かかる場合があります。</p></li>
-              <li>
-                <p>Pagesに表示された公開URLを開き、文字や画像が正しく表示されるか確認します。</p>
-              </li>
-            </ol>
-            <aside class="callout callout--warning" aria-label="公開範囲の注意">
-              <p class="callout__title">公開範囲を確認</p>
-              <p>GitHub Pagesのサイトはインターネット上から見えます。意図しない文章、画像、個人情報が含まれていないか確認してください。</p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="manual-section manual-section--detailed manual-section--secondary" aria-labelledby="daily-update">
-          <div class="manual-section__content">
-            <h2 id="daily-update">公開後に更新する</h2>
-            <p class="manual-section__intro">ここからは初回公開後の日常更新です。最初に作った同じローカルリポジトリを使います。</p>
-            <ol class="manual-steps">
-              <li><p>同じローカルリポジトリをCodexで開きます。</p></li>
-              <li><p>変更したい内容を具体的に依頼します。詳しい依頼方法は<a href="./edit.html#codex-edit">Codexで編集する</a>を参照してください。</p></li>
-              <li><p>変更後の表示と、氏名や研究内容などの事実を確認します。</p></li>
-              <li><p>Commit・Pushの完了と、push先を確認します。</p></li>
-              <li><p>公開ページを再読み込みし、更新が反映されたことを確認します。</p></li>
-            </ol>
-            <aside class="callout callout--warning" aria-label="更新時の注意">
-              <p class="callout__title">更新のたびにリポジトリを作り直さない</p>
-              <p>テンプレートから新しいリポジトリを作る操作は初回だけです。以後は、同じリポジトリ内のファイルを更新します。</p>
-            </aside>
-            <aside class="completion-condition" aria-label="このページの完了条件">
-              <p class="completion-condition__title">このページの完了条件</p>
-              <p>公開URLで研究室サイトを表示し、内容が正しいことを確認できれば公開完了です。</p>
-            </aside>
-          </div>
-        </section>
+      <div class="container container--reading journey-progress" aria-label="公開までの進捗"><ol><li>1. 準備</li><li>2. 入力・反映</li><li aria-current="step">3. 公開</li></ol></div>
+      <header class="page-header"><div class="container container--reading"><p class="eyebrow">Step 3</p><h1>人が確認し、GitHub Pagesで公開する</h1><p class="lead">Codexの変更をそのまま公開せず、事実、権利、表示、Push先を人が確認します。GitHub Pagesの設定後、公開URLでもう一度確認して完了です。</p><section class="completion-box" aria-labelledby="completion-title"><h2 id="completion-title">このページの完了条件</h2><ul><li>掲載内容、連絡先、画像の権利、未公開情報を確認した</li><li>PCとスマートフォンで表示、リンク、画像を確認した</li><li>Push先の自分用リポジトリとbranchを確認した</li><li>GitHub Pagesの公開URLを開いた</li><li>公開URLで内容と表示を再確認した</li></ul></section></div></header>
+      <nav class="container container--reading page-nav" aria-labelledby="page-nav-title"><h2 id="page-nav-title">このページで行うこと</h2><ul><li><a href="#content-review">内容と権利</a></li><li><a href="#display-review">表示確認</a></li><li><a href="#push">Push先</a></li><li><a href="#pages">GitHub Pages</a></li><li><a href="#final-review">公開URL</a></li></ul></nav>
+      <div class="container container--reading section-list">
+        <section class="manual-section" aria-labelledby="content-review"><h2 id="content-review">掲載内容と権利を人が確認する</h2><p class="manual-section__intro">AIや自動テストでは判断できない項目を、研究代表者または公開責任者が確認します。</p><ul class="check-list"><li>研究内容が正確で、公開してよい表現になっている</li><li>氏名、所属、肩書が最新である</li><li>論文・業績の著者名、題名、年、リンクが正しい</li><li>問い合わせ先が正しく、公開してよい</li><li>写真・ロゴの掲載権利と必要な同意を確認した</li><li>未公開の研究情報、個人情報、認証情報が混入していない</li><li>テンプレートのライセンスと帰属表示を維持している</li></ul><aside class="callout callout--warning"><p class="callout__title">判断をAIへ任せない</p><p>事実関係、掲載許可、画像の権利、未公開情報の有無は、人が原資料と関係者への確認に基づいて判断してください。</p></aside></section>
+        <section class="manual-section" aria-labelledby="display-review"><h2 id="display-review">PCとスマートフォンの表示を確認する</h2><ol class="manual-steps"><li><p>ローカル表示をPC相当の幅で開き、メニュー、見出し、文章、リンク、画像、Contactを確認します。</p></li><li><p>スマートフォン相当の幅でも開き、横スクロール、文字のはみ出し、メニュー操作、画像の切れがないか確認します。</p></li><li><p>内部リンクと外部リンクを開き、意図したページへ移動することを確認します。</p></li><li><p>画像が表示され、内容に合う代替テキストが設定されていることを確認します。</p></li></ol><aside class="callout"><p class="callout__title">成功状態</p><p>PCとスマートフォンの両方で、主要情報へ到達でき、誤った文章・リンク・画像がない状態です。</p></aside></section>
+        <section class="manual-section" aria-labelledby="push"><h2 id="push">Push先を確認する</h2><ol class="manual-steps"><li><p>GitHub Desktopで、左上のCurrent repositoryが自分用リポジトリであることを確認します。</p></li><li><p>Current branchが、公開に使う予定のbranchであることを確認します。分からない場合は推測せず、リポジトリ管理者へ確認します。</p></li><li><p>変更一覧とcommit内容を確認し、公開不要なローカル入力ファイルや認証情報が含まれていないことを確認します。</p></li><li><p>Codexがまだcommit・pushしていない場合は、確認済みの変更だけをcommit・pushするようCodexへ依頼します。</p></li><li><p>GitHub上の自分用リポジトリを開き、変更が反映されていることを確認します。</p></li></ol></section>
+        <section class="manual-section" aria-labelledby="pages"><h2 id="pages">GitHub Pagesを設定する</h2><p class="manual-section__intro">GitHubの画面表示は変更される場合があります。項目名が異なる場合は、GitHub公式のPages文書を確認してください。</p><ol class="manual-steps"><li><p>GitHub上の自分用リポジトリで<strong>Settings</strong>を開き、左側の<strong>Pages</strong>を選びます。</p></li><li><p><strong>Build and deployment</strong>で、テンプレート本体の案内に従って公開元を選びます。標準構成では<strong>Deploy from a branch</strong>を使います。</p></li><li><p>公開するbranchと<strong>/(root)</strong>を選び、保存します。</p><figure class="manual-figure"><img src="./assets/images/manual/github/publishing-source-drop-down.png" alt="GitHub Pagesの設定画面で公開元のbranchを選ぶドロップダウン" /><figcaption>一画像一操作：公開元のbranchを選びます。</figcaption></figure><figure class="manual-figure"><img src="./assets/images/manual/github/publishing-source-folder-drop-down.png" alt="GitHub Pagesの設定画面で公開元のfolderとしてrootを選ぶドロップダウン" /><figcaption>一画像一操作：公開元フォルダに/(root)を選びます。</figcaption></figure></li><li><p>GitHubが表示する公開URLを確認します。反映まで時間がかかる場合は、表示される案内に従って待ちます。</p></li></ol><p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub公式：公開元を設定する</a></p></section>
+        <section class="manual-section" aria-labelledby="final-review"><h2 id="final-review">公開URLでもう一度確認する</h2><ol class="manual-steps"><li><p>GitHub Pagesに表示された公開URLを新しいタブで開きます。</p></li><li><p>トップページ、ナビゲーション、研究内容、人物情報、論文・業績、Contact、画像、外部リンクを確認します。</p></li><li><p>PCとスマートフォンの両方で確認します。ローカルでは表示できても、ファイル名の大文字・小文字やパスの違いで公開環境だけ画像が欠ける場合があります。</p></li><li><p>問題がなければ公開完了です。問題があれば「どの画面で／何を押したら／何と表示されたか」をCodexへ伝え、修正後にもう一度公開URLを確認します。</p></li></ol><aside class="callout callout--tip"><p class="callout__title">設定保存だけでは完了ではありません</p><p>このマニュアルでは、公開URLで正しい内容と表示を確認した時点を公開完了とします。</p></aside></section>
+        <p class="manual-figure">GitHubおよびGitHub Desktopの操作画像はGitHub Docsから使用しています（CC BY 4.0、改変なし）。詳しい出典は<a href="./THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>を参照してください。</p>
+        <nav class="page-actions" aria-label="前後のページ"><a href="./edit.html">← 前へ：入力・反映</a><a class="button" href="./index.html">紹介ページへ戻る →</a></nav>
       </div>
-
-      <aside class="container container--reading manual-attribution" aria-label="GitHub Docs画像の出典">
-        <p>GitHubおよびGitHub Desktopの操作画像はGitHub Docsから使用しています（CC BY 4.0、改変なし）。詳しい出典は<a href="./THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>を参照してください。</p>
-      </aside>
-
-      <nav class="container container--reading page-actions page-actions--final" aria-label="前後の工程">
-        <a class="page-actions__back" href="./edit.html">前へ：編集へ戻る</a>
-        <a class="page-actions__home" href="./index.html">ホームへ戻る</a>
-      </nav>
     </main>
-
-    <footer class="site-footer">
-      <div class="container"><p>研究室HPテンプレート マニュアル</p></div>
-    </footer>
+    <footer class="site-footer"><div class="container site-footer__inner"><p>研究室HPテンプレート 利用マニュアル</p><p><a href="./index.html">紹介ページ</a> / <a href="https://github.com/togetogepman/HPtemplate">テンプレート本体</a> / <a href="https://academeia.github.io/web_template.github.io/sample/sample.html">完成サンプル</a></p></div></footer>
   </body>
 </html>
