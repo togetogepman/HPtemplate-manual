@@ -13,6 +13,9 @@
 
 #header .header-box { display: none; }
 #header .header-title { gap: 0; }
+#header .header-name { font-weight: 700; }
+#header .header-name-wrapp-ja { font-size: 13px; line-height: 1.25; }
+#header .header-name-wrapp-en { margin-top: 2px; font-size: 10px; line-height: 1.2; }
 
 .template-mv { position: relative; min-height: 480px; overflow: hidden; }
 .template-mv > picture img { min-height: 480px; object-fit: cover; filter: brightness(.55); }
@@ -41,12 +44,34 @@
 .faq-details summary { cursor: pointer; color: var(--color-text); font-size: 15px; font-weight: 700; line-height: 1.7; }
 .faq-details p { margin-top: 12px; color: var(--color-text); font-size: 14px; font-weight: 400; line-height: 1.9; }
 .template-contact-link { color: #fff; text-decoration: none; }
+.support-intro { font-size: 16px; font-weight: 700; line-height: 1.8; }
+.support-services { border-top: 1px solid var(--color-border); }
+.support-service { padding: 24px 0; border-bottom: 1px solid var(--color-border); }
+.support-service h3 { margin-bottom: 10px; }
+.support-nowrap { white-space: nowrap; }
+.support-service > p { font-size: 14px; line-height: 1.9; }
+.support-audience { margin-top: 12px; color: var(--color-muted); }
+.support-audience strong { color: var(--color-text); }
+.support-contact { padding-top: 26px; }
+.support-contact > p { font-size: 14px; line-height: 1.9; }
+.support-contact .contact-btn { width: fit-content; margin: 20px 0 0; }
+#contact h2 { font-size: 27px; }
 
 @media (min-width: 769px) {
+  :root { --header-height-desktop: 70px; --nav-width-desktop: 220px; }
+  #header { height: var(--header-height-desktop); min-height: var(--header-height-desktop); padding: 12px 30px; }
+  #header .header-name-wrapp-ja { font-size: 14px; }
+  #header .header-name-wrapp-en { margin-top: 3px; font-size: 11px; }
+  #header .logo-university-pc { height: 30px; }
+  #g-nav .nav-inner { padding: 32px 20px; }
   .template-mv { min-height: 620px; }
   .template-mv > picture img { min-height: 620px; }
   .template-mv-copy { padding: 80px 130px; }
   .template-section-intro { margin-top: -24px; }
+  #contact h2 { font-size: 45px; }
+  .support-intro { font-size: 18px; }
+  .support-service { padding: 28px 0; }
+  .support-service > p, .support-contact > p { font-size: 15px; }
 }
 
 @media (max-width: 768px) {

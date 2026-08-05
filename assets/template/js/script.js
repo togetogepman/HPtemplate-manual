@@ -246,15 +246,15 @@
         }
 
         event.preventDefault();
+        if (isOpen && window.innerWidth <= windowSm) {
+          closeMenu();
+        }
+
         var header = document.getElementById("header");
         var headerH = header ? header.offsetHeight : 0;
         var pos = Math.round(
           target.getBoundingClientRect().top + window.scrollY - headerH
         );
-
-        if (isOpen && window.innerWidth <= windowSm) {
-          closeMenu();
-        }
 
         window.scrollTo({
           top: pos,
@@ -464,7 +464,6 @@
 
     setupMoreButton("#news", ".news-li-wrapp > [data-more]", 3);
     setupMoreButton("#member", ".member-wrapp > [data-more]", 2);
-    setupMoreButton("#faq", ".news-li-wrapp > [data-more]", 3);
 
     // @@@@@ メールのコピー
     const copyButton = document.getElementById("contact-btn");
