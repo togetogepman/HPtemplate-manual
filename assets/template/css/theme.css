@@ -1,0 +1,47 @@
+/*
+ * Design tokens for the Laboratory HP Template.
+ * Change values here for broad visual adjustments; keep layout rules in style.css.
+ */
+:root {
+  --color-primary: #2269d3;
+  --color-primary-dark: #2a5eab;
+  --color-text: #302f37;
+  --color-surface: #fff;
+  --color-surface-selected: #f3f4fb;
+  --color-section-alternate: #fbfcff;
+  --color-link: #1a55ad;
+  --color-muted: #a0a0a0;
+  --color-border: #d4dbe1;
+  --color-tab-surface: #f9f9f9;
+  --color-tab-control: hsla(0, 0%, 86%, .7);
+  --color-notice-surface: #fff8e1;
+  --color-notice-border: #e5c867;
+  --color-focus: #2269d3;
+
+  --font-family-base: "Noto Sans JP", sans-serif;
+  --font-size-base: 16px;
+
+  /* The current layout is fluid and intentionally has no global max width. */
+  --content-max-width: none;
+  --section-padding-block-mobile: 50px;
+  --section-padding-inline-mobile: 30px;
+  --section-padding-block-desktop: 5pc;
+  --section-padding-inline-desktop: 130px;
+
+  --radius-small: 4px;
+  --radius-card: 6px;
+  --radius-panel: 10px;
+  --radius-pill: 100vh;
+
+  /* Height includes the 1px bottom border; the mobile content offset remains 66px. */
+  --header-height-mobile: 67px;
+  --header-offset-mobile: 66px;
+  --header-height-desktop: 83px;
+  --nav-width-mobile: 300px;
+  --nav-width-desktop: 250px;
+
+  --duration-fast: .2s;
+  --duration-base: .3s;
+  --duration-slow: .4s;
+  --duration-menu: .55s;
+}
