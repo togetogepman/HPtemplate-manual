@@ -30,7 +30,7 @@
     <header id="header">
       <div class="header-contents">
         <a href="#top" class="header-title" aria-label="ページ先頭へ戻る">
-          <div class="header-box" aria-hidden="true"></div>
+          <img class="header-brand-logo" src="./assets/template/images/logo-academeia.svg" alt="アカデメイア" />
           <div class="header-name">
             <h1 class="header-name-wrapp">
               <span class="header-name-wrapp-ja">研究室HPテンプレート</span>
@@ -42,7 +42,6 @@
           <span class="header-burger"></span><span class="header-burger"></span><span class="header-burger"></span>
         </button>
       </div>
-      <div class="logo-university-pc is-pc"><img src="./assets/template/images/logo-university.svg" alt="" /></div>
     </header>
 
     <main id="main-content">
@@ -92,22 +91,19 @@
 
         <section data-accordion="normal" data-class="nav-default" data-title="利用方法" id="how-to-use" class="scroll-point">
           <h2>利用方法</h2>
-          <p class="template-section-intro">初めての方は複数の方法を混ぜず、次の順序で進めてください。</p>
-          <ol class="theme-wrapp template-route">
-            <li class="theme-item"><h3>準備する</h3><div class="theme-body"><p>GitHub、必要なアプリ、Privateの自分用リポジトリ、clone先を準備します。</p><p class="template-completion">完了：Privateのclone先をローカルCodexで開ける</p><a class="template-inline-link" href="./setup.html">準備方法を見る</a></div></li>
-            <li class="theme-item"><h3>情報と写真を入れる</h3><div class="theme-body"><p>配布されたExcelの各シートへ入力し、写真を所定のフォルダへ保存します。</p><p class="template-completion">完了：入力と素材の配置が終わる</p><a class="template-inline-link" href="./edit.html#input">入力方法を見る</a></div></li>
-            <li class="theme-item"><h3>HPへ反映する</h3><div class="theme-body"><p>ローカルCodexへ一文で依頼し、Excelと写真をテンプレートへ反映します。</p><p class="template-completion">完了：変更結果と未確認事項を確認する</p><a class="template-inline-link" href="./edit.html#codex">反映方法を見る</a></div></li>
-            <li class="theme-item"><h3>確認して公開する</h3><div class="theme-body"><p>Privateのまま内容、権利、PC・スマートフォン表示を人が確認し、その後にPublic化とGitHub Pages設定を順に行います。</p><p class="template-completion">完了：リポジトリと公開URLを外部から確認する</p><a class="template-inline-link" href="./publish.html">公開方法を見る</a></div></li>
-          </ol>
-        </section>
-
-        <section data-accordion="normal" data-class="nav-default" data-title="配布・マニュアル" id="guide" class="scroll-point">
-          <h2>配布・マニュアル</h2>
-          <ul class="theme-wrapp">
-            <li class="theme-item"><h3>テンプレート本体</h3><div class="theme-body"><p>配布ファイル、利用条件、詳細文書を確認します。</p><a class="template-inline-link" href="https://github.com/togetogepman/HPtemplate">GitHubで開く</a></div></li>
-            <li class="theme-item"><h3>完成サンプル</h3><div class="theme-body"><p>研究テーマやメンバーなどを掲載した画面例を確認します。</p><a class="template-inline-link" href="https://academeia.github.io/web_template.github.io/sample/sample.html">サンプルを開く</a></div></li>
-            <li class="theme-item"><h3>利用マニュアル</h3><div class="theme-body"><p>準備、入力・反映、公開を順番に進めます。</p><a class="template-inline-link" href="./setup.html">準備から読む</a></div></li>
-          </ul>
+          <div class="how-to-panel">
+            <h3>公開までの4ステップ</h3>
+            <ol class="how-to-list">
+              <li><h4>準備する</h4><p>GitHubと必要なアプリを用意し、Privateの自分用リポジトリを作ります。</p></li>
+              <li><h4>情報と写真を入れる</h4><p>Excelへ研究室情報を入力し、掲載する写真を所定のフォルダへ保存します。</p></li>
+              <li><h4>HPへ反映する</h4><p>ローカルCodexへ短い指示を渡し、Excelと写真をテンプレートへ反映します。</p></li>
+              <li><h4>確認して公開する</h4><p>人が内容と表示を確認した後、リポジトリをPublicへ変更してGitHub Pagesで公開します。</p></li>
+            </ol>
+            <div class="how-to-actions">
+              <a class="template-action" href="./setup.html">詳しい利用手順を見る</a>
+              <a class="template-action template-action--secondary" href="https://github.com/togetogepman/HPtemplate">テンプレート本体を開く</a>
+            </div>
+          </div>
         </section>
 
         <section data-accordion="normal" data-class="nav-default" data-title="FAQ" id="faq" class="scroll-point">

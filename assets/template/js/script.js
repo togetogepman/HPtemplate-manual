@@ -2,15 +2,6 @@
   "use strict";
 
   document.addEventListener("DOMContentLoaded", () => {
-    // @@@ 大学ロゴを違う要素に複製する
-    const targetLogo = document.querySelector(".logo-university img");
-    const targetLogoPcImg = document.querySelector(".logo-university-pc img");
-    const src = targetLogo ? targetLogo.getAttribute("src") : "";
-    if (targetLogoPcImg && src && src.trim()) {
-      targetLogoPcImg.setAttribute("src", src);
-      targetLogoPcImg.setAttribute("alt", targetLogo.getAttribute("alt") || "");
-    }
-
     // @@@@ コンテンツのセクションを見てグローバルナビに項目を生成
     const globalNav = document.getElementById("nav-list");
     const sections = document.querySelectorAll("section");

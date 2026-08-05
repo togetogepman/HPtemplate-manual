@@ -421,7 +421,7 @@ AGENTS.mdの初期カスタマイズ規則に従い、input/local/laboratory-inp
 
 | ページ | 役割 | レイアウト |
 |---|---|---|
-| `index.html` | テンプレートの紹介、配布、完成サンプル、利用案内の入口 | `HPtemplate`本体の実際の構造と資産を使用する紹介ページ |
+| `index.html` | テンプレートの紹介、完成サンプル、4ステップの利用案内と詳細マニュアルへの入口 | `HPtemplate`本体の実際の構造と資産を使用する紹介ページ |
 | `setup.html` | アカウント、アプリ、自分用リポジトリ、cloneの準備 | `DESIGN.md`に従うマニュアル専用レイアウト |
 | `edit.html` | Excel入力、写真保存、ローカルCodexによる反映 | `DESIGN.md`に従うマニュアル専用レイアウト |
 | `publish.html` | 人による確認、GitHub Pages、公開URLでの再確認 | `DESIGN.md`に従うマニュアル専用レイアウト |
